@@ -8,6 +8,8 @@ public class SimpleEnemy : Hitpoints {
     CharacterController2D characterController;
     [Range(0,1)]
     public float movementspeed = 0.5f;
+    private float jumptimer = 0f;
+    private float timebetweenjumps = 0.3f;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +23,7 @@ public class SimpleEnemy : Hitpoints {
     // Update is called once per frame
     protected override void Update()
     {
+        bool shouldjump = false;
         base.Update();
         if (player == null)
             player = GameManager.instance.player.gameObject;
@@ -34,11 +37,21 @@ public class SimpleEnemy : Hitpoints {
             else
                 movement = movementspeed;
         }
-        characterController.Move(movement, !characterController.m_ForwardFree);
+        if (characterController.m_ForwardFree != true)
+        {
+            if (jumptimer <= 0)
+            {
+                shouldjump = true;
+                jumptimer = timebetweenjumps;
+            }
+        }
+        jumptimer -= Time.deltaTime;
+
+        characterController.Move(movement, shouldjump);
     }
 
     protected override void OnDeath()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("enemy died");
     }
 }

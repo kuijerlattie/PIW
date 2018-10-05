@@ -159,7 +159,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 392}
   m_MaxSize: {x: 22012, y: 14042}
   vertical: 0
-  controlID: 115
+  controlID: 143
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_MinSize: {x: 640, y: 392}
   m_MaxSize: {x: 18010, y: 14042}
   vertical: 1
-  controlID: 46
+  controlID: 144
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_MinSize: {x: 640, y: 271}
   m_MaxSize: {x: 18010, y: 10021}
   vertical: 0
-  controlID: 47
+  controlID: 145
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -392,23 +392,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ba080000
-    m_LastClickedID: 0
-    m_ExpandedIDs: e2fbffffe6fbffff00000000
+    m_SelectedIDs: 00f9ffff
+    m_LastClickedID: -1792
+    m_ExpandedIDs: 00f9ffff74f9ffff00000000162e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Player
+      m_OriginalName: Player
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 11798
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
@@ -486,14 +486,14 @@ MonoBehaviour:
     height: 598
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 2579.0789345581306
+  lastFramingTime: 14854.773394201053
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 28.103573, y: -1.0786633, z: 0}
+    m_Target: {x: 15.191261, y: 7.7261796, z: -0.24609375}
     speed: 2
-    m_Value: {x: 28.103573, y: -1.0786633, z: 0}
+    m_Value: {x: 15.191261, y: 7.7261796, z: -0.24609375}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -525,9 +525,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.7602835
+    m_Target: 27.562366
     speed: 2
-    m_Value: 3.7602835
+    m_Value: 27.562366
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -576,20 +576,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Characters
+    - Assets/Scripts/Characters/Enemy
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Characters
+  - Assets/Scripts/Characters/Enemy
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\PIW\Repo\PIW\PaperInfinityWars
+  m_LastProjectPath: E:\minor\PIW\PaperInfinityWars
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3c0a0000
-    m_LastClickedID: 2620
-    m_ExpandedIDs: 000000005e0900003c0a0000b20a0000f40a0000c20b000000ca9a3b
+    m_SelectedIDs: 882d0000
+    m_LastClickedID: 11656
+    m_ExpandedIDs: 000000000c2b0000ea2b0000602c0000a22c0000702d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -617,7 +617,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005e0900003c0a0000b20a0000f40a0000c20b0000
+    m_ExpandedIDs: 000000000c2b0000ea2b0000602c0000a22c0000702d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
