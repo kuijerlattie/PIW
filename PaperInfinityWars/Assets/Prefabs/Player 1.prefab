@@ -252,21 +252,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1646565109092082
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4977346898911814}
-  m_Layer: 8
-  m_Name: ceilingcheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1648312865310432
 GameObject:
   m_ObjectHideFlags: 1
@@ -295,6 +280,7 @@ GameObject:
   - component: {fileID: 50394932403243500}
   - component: {fileID: 70639709076294862}
   - component: {fileID: 61175045607897206}
+  - component: {fileID: 114230622757271242}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: Untagged
@@ -539,11 +525,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719302320050194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.01, y: -1.1848717, z: 0}
+  m_LocalPosition: {x: 0.05, y: -1.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4317596936047166}
-  - {fileID: 4977346898911814}
   - {fileID: 4529723331163332}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -616,7 +601,7 @@ Transform:
   - {fileID: 4051216420787242}
   - {fileID: 4084264686834344}
   m_Father: {fileID: 4423214418364004}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4544381489884848
 Transform:
@@ -758,19 +743,6 @@ Transform:
   m_Father: {fileID: 4512920177046148}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4977346898911814
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1646565109092082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4423214418364004}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50394932403243500
 Rigidbody2D:
   serializedVersion: 4
@@ -849,6 +821,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114230622757271242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1719302320050194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 167af3e1aa91be444a8caf41d0ee1602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitpoints: 3
+  maxHitpoints: 3
+  godmode: 0
+  invincibleAfterHit: 1
+  invincible: 0
+  invincibleTime: 2
+  invincibleTimer: 0
+  alive: 0
 --- !u!114 &114723731707969582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -880,7 +871,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 55
   m_GroundCheck: {fileID: 4317596936047166}
-  m_CeilingCheck: {fileID: 4977346898911814}
   m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:

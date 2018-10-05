@@ -307,8 +307,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Characters\CharacterController2D.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy\SimpleEnemy.cs" />
+    <Compile Include="Assets\Scripts\Characters\Hitpoints.cs" />
+    <Compile Include="Assets\Scripts\Characters\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Characters\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Debug\OnscreenDebug.cs" />
     <Compile Include="Assets\Scripts\Utility\CameraFollowScript.cs" />
+    <Compile Include="Assets\Scripts\Utility\Managers\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Utility\Managers\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Utility\Managers\SavegameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
