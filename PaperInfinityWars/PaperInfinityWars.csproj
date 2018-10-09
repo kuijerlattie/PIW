@@ -316,6 +316,7 @@
     <Compile Include="Assets\Scripts\Utility\Managers\EventManager.cs" />
     <Compile Include="Assets\Scripts\Utility\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Utility\Managers\SavegameManager.cs" />
+    <Compile Include="Assets\Scripts\Weapons\MeleeWeapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />

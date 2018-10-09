@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     public CharacterController2D controller;
+    [SerializeField]
+    private Animator animator;
 
     float horizontalMove = 0f;
     bool jump = false;
@@ -21,11 +23,22 @@ public class PlayerMovement : MonoBehaviour {
         {
             jump = true;
         }
+
+        if (animator != null)
+            SetAnimationParameters();
 	}
 
     private void FixedUpdate()
     {
         controller.Move(horizontalMove, jump);
+        if (animator != null)
+            animator.SetBool("Jump", jump);
         jump = false;
+    }
+
+    private void SetAnimationParameters()
+    {
+        animator.SetFloat("HorizontalSpeed", Mathf.Abs(controller.GetVelocity().x));
+        animator.SetFloat("VerticalSpeed", controller.GetVelocity().y);
     }
 }

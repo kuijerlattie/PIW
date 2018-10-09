@@ -41,7 +41,7 @@ public class CharacterController2D : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(m_GroundCheck.position, -Vector2.up, k_GroundedRadius, m_WhatIsGround);
         if (hit.collider != null)
         {
-            Debug.Log("should be grounded " + hit.collider.name + " with distance " + hit.distance);
+            //Debug.Log("should be grounded " + hit.collider.name + " with distance " + hit.distance);
             m_Grounded = true;
             //if (!wasGrounded)
                 //OnLandEvent.Invoke();
@@ -75,7 +75,7 @@ public class CharacterController2D : MonoBehaviour
 		// If the player should jump...
 		if (m_Grounded && jump)
 		{
-            Debug.Log("jumped");
+            //Debug.Log("jumped");
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
@@ -103,5 +103,10 @@ public class CharacterController2D : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         m_ForwardFree = true;
+    }
+
+    public Vector2 GetVelocity()
+    {
+        return m_Rigidbody2D.velocity;
     }
 }
