@@ -14,8 +14,15 @@ public class MeleeWeapon : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.transform.root != this.transform.root)
+        {
+            Hitpoints enemyhitpoints = collision.GetComponent<Hitpoints>();
+            if (enemyhitpoints != null)
+            {
+                enemyhitpoints.Damage(1);
+            }
+        }
     }
 }

@@ -26,6 +26,12 @@ public class PlayerMovement : MonoBehaviour {
 
         if (animator != null)
             SetAnimationParameters();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (animator != null)
+                animator.SetBool("Attack", true);
+        }
 	}
 
     private void FixedUpdate()
