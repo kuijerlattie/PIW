@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Hitpoints {
+public class Player : WeaponWielder {
 
     void Awake()
     {
     }
 
     // Use this for initialization
-    void Start ()
+    protected override void Start ()
     {
+        base.Start();
         GameManager.instance.player = this;
     }
 	

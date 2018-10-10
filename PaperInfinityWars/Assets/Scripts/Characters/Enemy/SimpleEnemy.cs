@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController2D))]
-public class SimpleEnemy : Hitpoints {
+public class SimpleEnemy : WeaponWielder {
     GameObject player = null;
-    CharacterController2D characterController;
     [Range(0,1)]
     public float movementspeed = 0.5f;
     private float jumptimer = 0f;
     private float timebetweenjumps = 0.3f;
 
 	// Use this for initialization
-	void Start () {
-        characterController = GetComponent<CharacterController2D>();
+	protected override void Start () {
+        base.Start();
         if (player == null)
         {
-            Debug.Log("player wasnt there yet :(");
+                
         }
 	}
 

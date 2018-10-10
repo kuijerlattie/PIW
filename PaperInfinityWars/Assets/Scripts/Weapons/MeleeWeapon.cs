@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeWeapon : MonoBehaviour {
+public class MeleeWeapon : Weapon {
 
 	// Use this for initialization
 	void Start () {

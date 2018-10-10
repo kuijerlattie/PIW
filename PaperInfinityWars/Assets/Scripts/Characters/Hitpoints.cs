@@ -13,8 +13,10 @@ public abstract class Hitpoints : MonoBehaviour {
     protected float invincibleTimer;
     public bool alive;
 
-	// Use this for initialization
-	void Start () {
+    protected CharacterController2D characterController;
+
+    // Use this for initialization
+    protected virtual void Start () {
         hitpoints = 3;
         maxHitpoints = 3;
         godmode = false;
@@ -23,8 +25,17 @@ public abstract class Hitpoints : MonoBehaviour {
         invincibleTime = 0.5f;
         invincibleTimer = 0;
         alive = true;
+        
+        characterController = GetComponent<CharacterController2D>();
 	}
 	
+    void OnSpawn()
+    {
+        hitpoints = maxHitpoints;
+        alive = true;
+        UpdateCharacterControllerEnabled();
+    }
+
 	// Update is called once per frame
 	protected virtual void Update () {
 		if (invincible)
@@ -65,7 +76,16 @@ public abstract class Hitpoints : MonoBehaviour {
     {
         alive = false;
         OnDeath();
+        UpdateCharacterControllerEnabled();
         //do ragdoll code;
     }
     protected abstract void OnDeath();
+
+    private void UpdateCharacterControllerEnabled()
+    {
+        if (characterController != null)
+        {
+            characterController.enabled = alive;
+        }
+    }
 }

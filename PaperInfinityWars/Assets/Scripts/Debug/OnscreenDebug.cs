@@ -7,6 +7,7 @@ public class OnscreenDebug : MonoBehaviour {
 
     bool clickToKill = false;
     public Text clickToKillText;
+    public Text godmodeText;
 
 	// Use this for initialization
 	
@@ -29,6 +30,15 @@ public class OnscreenDebug : MonoBehaviour {
         else
             clickToKillText.text = "Clickdamage \n off";
 
+    }
+
+    public void ToggleGodmode()
+    {
+        GameManager.instance.player.godmode = !GameManager.instance.player.godmode;
+        if (GameManager.instance.player.godmode)
+            godmodeText.text = "Godmode \n on";
+        else
+            godmodeText.text = "Godmode \n off";
     }
 
     void ClickToKill()
