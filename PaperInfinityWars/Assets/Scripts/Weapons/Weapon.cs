@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
+    protected int damage = 0;
+    float attackspeed = 0f;
+    WeaponSlots owner;
+    Animator animator;
+
 	// Use this for initialization
 	void Start () {
 		

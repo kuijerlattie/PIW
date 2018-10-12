@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : WeaponWielder {
+public class Player : KillablePawn {
 
     void Awake()
     {
@@ -13,6 +13,7 @@ public class Player : WeaponWielder {
     {
         base.Start();
         GameManager.instance.player = this;
+        animator = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame

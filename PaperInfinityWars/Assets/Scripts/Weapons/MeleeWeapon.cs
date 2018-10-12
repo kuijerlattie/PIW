@@ -18,10 +18,10 @@ public class MeleeWeapon : Weapon {
     {
         if (collision.transform.root != this.transform.root)
         {
-            Hitpoints enemyhitpoints = collision.GetComponent<Hitpoints>();
+            KillablePawn enemyhitpoints = collision.GetComponent<KillablePawn>();
             if (enemyhitpoints != null)
             {
-                enemyhitpoints.Damage(1);
+                enemyhitpoints.Damage(damage);
             }
         }
     }

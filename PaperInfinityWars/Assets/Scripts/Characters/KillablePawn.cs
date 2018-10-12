@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Hitpoints : MonoBehaviour {
+[RequireComponent(typeof(CharacterController2D))]
+public abstract class KillablePawn : MonoBehaviour {
 
     public int hitpoints;
     public int maxHitpoints;
@@ -12,6 +13,7 @@ public abstract class Hitpoints : MonoBehaviour {
     public float invincibleTime;
     protected float invincibleTimer;
     public bool alive;
+    protected Animator animator;
 
     protected CharacterController2D characterController;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController2D))]
-public class SimpleEnemy : WeaponWielder {
+public class SimpleEnemy : KillablePawn {
     GameObject player = null;
     [Range(0,1)]
     public float movementspeed = 0.5f;

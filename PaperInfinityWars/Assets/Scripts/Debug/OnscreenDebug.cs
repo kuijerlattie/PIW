@@ -48,7 +48,7 @@ public class OnscreenDebug : MonoBehaviour {
         raycastHit = Physics2D.GetRayIntersection(ray, 10);
         if (raycastHit.collider != null)
         {
-            Hitpoints victim = raycastHit.collider.GetComponent<Hitpoints>();
+            KillablePawn victim = raycastHit.collider.GetComponent<KillablePawn>();
             if (victim != null)
             {
                 victim.Damage(1);
