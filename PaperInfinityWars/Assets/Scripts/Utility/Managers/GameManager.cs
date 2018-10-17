@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour {
     public SavegameManager savegameManager;
     [HideInInspector]
     public EventManager eventManager;
+    [HideInInspector]
+    public EnemySpawnManager enemySpawnManager;
 
     private void Awake()
     {

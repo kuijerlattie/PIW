@@ -59,10 +59,14 @@
      <Compile Include="Assets\Scripts\Characters\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Debug\OnscreenDebug.cs" />
+     <Compile Include="Assets\Scripts\GameModes\Survival\WaveSystem.cs" />
      <Compile Include="Assets\Scripts\Utility\CameraFollowScript.cs" />
+     <Compile Include="Assets\Scripts\Utility\EnemySpawnManager.cs" />
+     <Compile Include="Assets\Scripts\Utility\EnemySpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Utility\Managers\EventManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Managers\SavegameManager.cs" />
+     <Compile Include="Assets\Scripts\Utility\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Weapons\MeleeWeapon.cs" />
      <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
      <Compile Include="Assets\Scripts\Weapons\WeaponSlots.cs" />
