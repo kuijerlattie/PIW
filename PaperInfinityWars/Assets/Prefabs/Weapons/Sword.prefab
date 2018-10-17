@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23257920744771034}
   - component: {fileID: 61328920334351152}
   - component: {fileID: 114790321613649268}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,3 +123,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33d9ccf0d7915047b7aea87221e47db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1

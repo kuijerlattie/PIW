@@ -9,7 +9,7 @@ public class WeaponSlots : MonoBehaviour {
     [SerializeField] // remove later
     int selectedweapon = 1;
     [SerializeField] //remove later
-    List<Weapon> weaponlist;
+    Weapon[] weaponlist;
     protected Animator animator;
     public GameObject testweapon;
 
@@ -17,6 +17,8 @@ public class WeaponSlots : MonoBehaviour {
 
     void Start()
     {
+        weaponlist = new Weapon[weaponSlots];
+        selectedweapon = 2;
         EquipWeapon(testweapon);
     }
 
@@ -54,7 +56,7 @@ public class WeaponSlots : MonoBehaviour {
     {
         //instantize weapon to hand
         GameObject weapontoinstantiate = Instantiate(oWeapon, hand.transform);
-        weaponlist[selectedweapon] = weapontoinstantiate.GetComponent<Weapon>();
+        weaponlist[selectedweapon-1] = weapontoinstantiate.GetComponent<Weapon>();
         ShowActiveWeapon();
     }
 
@@ -78,9 +80,9 @@ public class WeaponSlots : MonoBehaviour {
     {
         for (int i = 0; i < weaponSlots; i++)
         {
-            if (weaponlist[i] != null) //why does this error...
+            if (weaponlist[i] != null)
             {
-                weaponlist[i].gameObject.SetActive(i == selectedweapon - 1);
+                weaponlist[i].gameObject.SetActive(i == selectedweapon -1 ? true : false);
             }
         }
     }

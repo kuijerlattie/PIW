@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 77143383}
   - component: {fileID: 77143382}
   - component: {fileID: 77143381}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: simple obstacle 1.8m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 605886976}
   - component: {fileID: 605886975}
   - component: {fileID: 605886974}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: simple obstacle 2m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 957642140}
   - component: {fileID: 957642139}
   - component: {fileID: 957642138}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,12 +841,11 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 114255342653415442, guid: b0705a0b67781554f8a94a4a303d5408,
+    - target: {fileID: 114838815150352264, guid: b0705a0b67781554f8a94a4a303d5408,
         type: 2}
-      propertyPath: testweapon
-      value: 
-      objectReference: {fileID: 1758576468046026, guid: c463a481f6006c64fb22e055c1b2a2d2,
-        type: 2}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 2871
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0705a0b67781554f8a94a4a303d5408, type: 2}
   m_IsPrefabAsset: 0
@@ -1381,7 +1380,7 @@ GameObject:
   - component: {fileID: 1544746964}
   - component: {fileID: 1544746963}
   - component: {fileID: 1544746962}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: simple obstacle 1m
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1545,7 +1544,7 @@ GameObject:
   - component: {fileID: 1924184102}
   - component: {fileID: 1924184101}
   - component: {fileID: 1924184100}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1560,7 +1559,7 @@ Transform:
   m_GameObject: {fileID: 1924184098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.443, y: -4.1, z: 0}
-  m_LocalScale: {x: 45, y: 1, z: 1}
+  m_LocalScale: {x: 417.8025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 12835681}
   m_RootOrder: 0

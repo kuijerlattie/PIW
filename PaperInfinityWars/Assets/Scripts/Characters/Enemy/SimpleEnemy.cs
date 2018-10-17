@@ -52,5 +52,6 @@ public class SimpleEnemy : KillablePawn {
     protected override void OnDeath()
     {
         Debug.Log("enemy died");
+        Destroy(gameObject);
     }
 }

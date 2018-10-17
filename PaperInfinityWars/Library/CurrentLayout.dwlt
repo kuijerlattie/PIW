@@ -40,8 +40,8 @@ MonoBehaviour:
     y: 0
     width: 291
     height: 619
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -156,10 +156,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 957
-  m_MinSize: {x: 915, y: 371}
-  m_MaxSize: {x: 22010, y: 14021}
+  m_MinSize: {x: 917, y: 392}
+  m_MaxSize: {x: 22012, y: 14042}
   vertical: 0
-  controlID: 110
+  controlID: 11
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,10 +180,10 @@ MonoBehaviour:
     y: 0
     width: 1603
     height: 957
-  m_MinSize: {x: 638, y: 371}
-  m_MaxSize: {x: 18008, y: 14021}
+  m_MinSize: {x: 640, y: 392}
+  m_MaxSize: {x: 18010, y: 14042}
   vertical: 1
-  controlID: 111
+  controlID: 12
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -205,10 +205,10 @@ MonoBehaviour:
     y: 0
     width: 1603
     height: 619
-  m_MinSize: {x: 638, y: 271}
-  m_MaxSize: {x: 18008, y: 10021}
+  m_MinSize: {x: 640, y: 271}
+  m_MaxSize: {x: 18010, y: 10021}
   vertical: 0
-  controlID: 112
+  controlID: 13
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -254,8 +254,8 @@ MonoBehaviour:
     y: 619
     width: 1603
     height: 338
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -392,9 +392,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 002bffff
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: b6fbffffb8fbffffbafbffffbcfbffffcafbffffccfbffffcefbffffdcfbffffdefbffffe2fbffffe6fbffff00000000bc0c0000
+    m_ExpandedIDs: f8f8ffff00f9ffff02f9ffff1af9ffff1ef9ffff2af9ffff32f9ffff3cf9ffff46f9ffff5cf9ffff60f9ffff00000000a22e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.5027821, y: -3.987498, z: 3.768512}
+    m_Target: {x: 24.713976, y: 2.819531, z: -11.888733}
     speed: 2
-    m_Value: {x: -1.5027821, y: -3.987498, z: 3.768512}
+    m_Value: {x: 24.713976, y: 2.819531, z: -11.888733}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -555,13 +555,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.20094319, y: -0.17461665, z: 0.06973421, w: 0.96138865}
+    m_Target: {x: 0.1289342, y: -0.015467753, z: 0.0020112544, w: 0.99153054}
     speed: 2
-    m_Value: {x: 0.20094319, y: -0.17461665, z: 0.06973421, w: 0.96138865}
+    m_Value: {x: 0.1289342, y: -0.015467753, z: 0.0020112544, w: 0.99153054}
   m_Size:
-    m_Target: 7.101908
+    m_Target: 27.744307
     speed: 2
-    m_Value: 7.101908
+    m_Value: 27.744307
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -610,20 +610,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Weapons
+    - Assets/Scripts/Utility
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Weapons
+  - Assets/Scripts/Utility
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\minor\PIW\PaperInfinityWars
+  m_LastProjectPath: D:\PIW\Repo\PIW\PaperInfinityWars
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 2a2f0000
-    m_LastClickedID: 12074
-    m_ExpandedIDs: 0000000064090000f0090000200a00005a0a00006a0a0000ca0a00000e0b0000f00b0000f20b000000ca9a3b
+    m_SelectedIDs: 102d0000
+    m_LastClickedID: 11536
+    m_ExpandedIDs: 00000000662b0000f22b0000222c00004e2c00005c2c00006c2c0000cc2c0000102d0000f22d0000f42d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -651,7 +651,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000064090000f00900004c0a00005a0a00006a0a00000e0b0000f00b0000f20b0000
+    m_ExpandedIDs: 00000000662b0000f22b0000222c00005c2c00006c2c0000cc2c0000102d0000f22d0000f42d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

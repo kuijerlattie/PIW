@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
+    [SerializeField]
     protected int damage = 0;
     float attackspeed = 0f;
     WeaponSlots owner;

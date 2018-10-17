@@ -19,6 +19,7 @@ public class CharacterController2D : MonoBehaviour
     public bool m_ForwardFree = true; // For determining if forward movement is possible or not.
 
     new public bool enabled = true;
+    private GameObject _lastTrigger;
 
 	[Header("Events")]
 	[Space]
@@ -47,6 +48,11 @@ public class CharacterController2D : MonoBehaviour
             m_Grounded = true;
             //if (!wasGrounded)
                 //OnLandEvent.Invoke();
+        }
+
+        if (_lastTrigger == null)
+        {
+            m_ForwardFree = true;
         }
 	}
 
@@ -102,8 +108,10 @@ public class CharacterController2D : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject != this.gameObject)
+        if (collision.gameObject != this.gameObject && 
+            collision.gameObject.layer != 10)
         m_ForwardFree = false;
+        _lastTrigger = collision.gameObject;
     }
 
     private void OnTriggerExit2D(Collider2D collision)

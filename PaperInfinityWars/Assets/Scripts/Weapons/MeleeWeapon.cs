@@ -21,6 +21,7 @@ public class MeleeWeapon : Weapon {
             KillablePawn enemyhitpoints = collision.GetComponent<KillablePawn>();
             if (enemyhitpoints != null)
             {
+                Debug.Log("enemy hitpoints arent null");
                 enemyhitpoints.Damage(damage);
             }
         }
