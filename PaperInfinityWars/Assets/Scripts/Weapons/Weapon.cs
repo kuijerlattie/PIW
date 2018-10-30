@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour {
     [SerializeField]
     protected int damage = 0;
     float attackspeed = 0f;
-    WeaponSlots owner;
+    public WeaponSlots owner;
     Animator animator;
 
 	// Use this for initialization

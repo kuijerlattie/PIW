@@ -553,7 +553,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1534425518884176}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.016799927, z: 0}
+  m_LocalPosition: {x: -0.003, y: 0.0043, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4345767930784562}
@@ -799,8 +799,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.8990984}
-  m_Size: {x: 0.5, y: 1.8432226}
+  m_Offset: {x: 0, y: 0.91138095}
+  m_Size: {x: 0.5, y: 1.8186575}
   m_Direction: 0
 --- !u!95 &95572361301847002
 Animator:
@@ -837,9 +837,10 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 2871
   m_GroundCheck: {fileID: 4550816184795962}
   m_ForwardFree: 1
+  enabled: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -878,7 +879,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 87b4ae05eb082884bb6b5ba403e0e9b8, type: 3}
+  - {fileID: 2100000, guid: 31df71e992b6e254ba8f2d0f2b12fee4, type: 2}
   - {fileID: 2100002, guid: 87b4ae05eb082884bb6b5ba403e0e9b8, type: 3}
   - {fileID: 2100004, guid: 87b4ae05eb082884bb6b5ba403e0e9b8, type: 3}
   m_StaticBatchInfo:

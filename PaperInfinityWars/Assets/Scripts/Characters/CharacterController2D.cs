@@ -109,7 +109,8 @@ public class CharacterController2D : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject != this.gameObject && 
-            collision.gameObject.layer != 10)
+            collision.gameObject.layer != 10 &&
+            collision.isTrigger == false) //stop trigger on trigger detection
         m_ForwardFree = false;
         _lastTrigger = collision.gameObject;
     }

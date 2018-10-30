@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class CameraFollowScript : MonoBehaviour {
 
+    [HideInInspector]
     public GameObject target;
     Vector2 displacement;
     Vector2 previouslocation;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    private void Start()
+    {
+        GameManager.instance.SetCameraFollowScript(this);
+    }
+
+    public void Initialize () {
         previouslocation = new Vector2(target.transform.position.x, target.transform.position.y);
         this.transform.position = new Vector3(previouslocation.x, previouslocation.y, -10);
 	}

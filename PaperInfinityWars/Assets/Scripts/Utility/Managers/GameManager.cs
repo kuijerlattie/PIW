@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour {
     public EventManager eventManager;
     [HideInInspector]
     public EnemySpawnManager enemySpawnManager;
+    [HideInInspector]
+    public GameMode gameMode;
+    [HideInInspector]
+    public CameraFollowScript cameraFollowScript;
 
     private void Awake()
     {
@@ -24,6 +28,12 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
 
         DontDestroyOnLoad(this.gameObject);
+
+        //add managers
+        savegameManager = gameObject.AddComponent<SavegameManager>();
+        eventManager = gameObject.AddComponent<EventManager>();
+        enemySpawnManager = gameObject.AddComponent<EnemySpawnManager>();
+
     }
 
     // Use this for initialization
@@ -34,4 +44,20 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void SetGameMode<T>() where T : GameMode
+    {
+        Destroy(GetComponent<GameMode>());
+        gameMode = gameObject.AddComponent<T>();
+    }
+
+    public void SetCameraFollowScript(CameraFollowScript s)
+    {
+        cameraFollowScript = s;
+        if (player != null)
+        {
+            cameraFollowScript.target = player.gameObject;
+            cameraFollowScript.Initialize();
+        }
+    }
 }

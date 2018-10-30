@@ -21,8 +21,8 @@ public class Player : KillablePawn {
         base.Update();	
 	}
 
-    protected override void OnDeath()
+    protected override void OnDeath(KillablePawn victim, KillablePawn killer, Weapon weapon)
     {
-        //trigger playerdeathevent
+        GameManager.instance.eventManager.PlayerDeath.Invoke(this, killer, weapon);
     }
 }

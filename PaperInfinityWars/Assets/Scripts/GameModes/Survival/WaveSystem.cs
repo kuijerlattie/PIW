@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveSystem : MonoBehaviour {
+public class WaveSystem : GameMode {
 
     public enum WaveSystemState
     {
@@ -35,21 +35,21 @@ public class WaveSystem : MonoBehaviour {
     #endregion
 
     #region EnemySettings
-    public List<GameObject> commonEnemies;
-    public List<GameObject> RareEnemies;
-    public List<GameObject> BossEnemies;
+    public List<GameObject> commonEnemies = new List<GameObject>();
+    public List<GameObject> RareEnemies = new List<GameObject>();
+    public List<GameObject> BossEnemies = new List<GameObject>();
     #endregion
 
     // Use this for initialization
     void Start () {
         round = 0;
         enemies = new List<KillablePawn>();
-        
+
         //these two lines to make sure that no on...ended is called yet. use changestate in other situations.
         gamestate = WaveSystemState.Warmup;
         OnWarmupStarted();
-        //follow playerdeath event
-        //follow enemydeath event
+        GameManager.instance.eventManager.PlayerDeath.AddListener(OnPlayerDeath);
+        GameManager.instance.eventManager.EnemyDeath.AddListener(OnEnemyDeath);
 	}
 	
     void ChangeState(WaveSystemState newState)
@@ -95,6 +95,8 @@ public class WaveSystem : MonoBehaviour {
             default:
                 break;
         }
+
+        gamestate = newState;
     }
 
 	// Update is called once per frame
@@ -124,12 +126,12 @@ public class WaveSystem : MonoBehaviour {
         countdown -= Time.deltaTime;
     }
 
-    void OnPlayerDeath()
+    void OnPlayerDeath(KillablePawn victim, KillablePawn killer, Weapon killerweapon)
     {
         ChangeState(WaveSystemState.GameOver);
     }
 
-    void OnEnemyDeath()
+    void OnEnemyDeath(KillablePawn victim, KillablePawn killer, Weapon killerweapon)
     {
         enemies.RemoveAll(X => !X.alive);
     }
@@ -137,29 +139,72 @@ public class WaveSystem : MonoBehaviour {
     #region Warmup
     void OnWarmupStarted()
     {
-
+        countdown = warmupTime;
+        if (commonEnemies.Count < 0)
+            Debug.Log("Common enemies missing");
+        if (RareEnemies.Count < 0)
+            Debug.Log("Rare enemies missing");
+        if (BossEnemies.Count < 0)
+            Debug.Log("Boss enemies missing");
     }
 
     void OnWarmup()
     {
-
+        if (countdown <= 0)
+        {
+            ChangeState(WaveSystemState.Spawning);
+        }
     }
 
     void OnWarmupEnded()
     {
-
+        totalGameTimer = 0f;
     }
     #endregion
 
     #region Spawning
     void OnSpawningStarted()
     {
-
+        round++;
+        CalculateWave();
     }
 
     void OnSpawning()
     {
+        if (enemies.Count < maxSimultaniousEnemies)
+        {
+            if (normalsToSpawn > 0)
+            {
+                //spawn normal enemy
+                GameObject enemy = Instantiate(commonEnemies[0]);
+                KillablePawn commonKillablePawn = enemy.GetComponent<KillablePawn>();
+                enemies.Add(commonKillablePawn);
+                normalsToSpawn--;
+            }
 
+            if (raresToSpawn > 0)
+            {
+                //spawn rare
+                GameObject enemy = Instantiate(RareEnemies[0]);
+                KillablePawn commonKillablePawn = enemy.GetComponent<KillablePawn>();
+                enemies.Add(commonKillablePawn);
+                raresToSpawn--;
+            }
+
+            if (BossesToSpawn > 0)
+            {
+                //spawn boss
+                GameObject enemy = Instantiate(BossEnemies[0]);
+                KillablePawn commonKillablePawn = enemy.GetComponent<KillablePawn>();
+                enemies.Add(commonKillablePawn);
+                BossesToSpawn--;
+            }
+
+            if (normalsToSpawn == 0 && raresToSpawn == 0 && BossesToSpawn == 0)
+            {
+                ChangeState(WaveSystemState.Waiting);
+            }
+        }
     }
 
     void OnSpawningEnded()
@@ -176,7 +221,10 @@ public class WaveSystem : MonoBehaviour {
 
     void OnWaiting()
     {
-
+        if (enemies.Count == 0)
+        {
+            ChangeState(WaveSystemState.Timeout);
+        }
     }
 
     void OnWaitingEnded()
@@ -188,12 +236,15 @@ public class WaveSystem : MonoBehaviour {
     #region Timeout
     void OnTimeoutStarted()
     {
-
+        countdown = timeoutTime;
     }
 
     void OnTimeout()
     {
-
+        if (countdown < 0)
+        {
+            ChangeState(WaveSystemState.Spawning);
+        }
     }
 
     void OnTimeoutEnded()
@@ -205,7 +256,7 @@ public class WaveSystem : MonoBehaviour {
     #region GameOver
     void OnGameOverStarted()
     {
-
+        //save game
     }
 
     void OnGameOver()

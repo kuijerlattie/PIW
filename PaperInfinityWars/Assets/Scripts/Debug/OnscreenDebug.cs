@@ -51,7 +51,7 @@ public class OnscreenDebug : MonoBehaviour {
             KillablePawn victim = raycastHit.collider.GetComponent<KillablePawn>();
             if (victim != null)
             {
-                victim.Damage(1);
+                victim.Damage(1, null);
             }
         }
     }

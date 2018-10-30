@@ -22,7 +22,7 @@ public class MeleeWeapon : Weapon {
             if (enemyhitpoints != null)
             {
                 Debug.Log("enemy hitpoints arent null");
-                enemyhitpoints.Damage(damage);
+                enemyhitpoints.Damage(damage, this);
             }
         }
     }

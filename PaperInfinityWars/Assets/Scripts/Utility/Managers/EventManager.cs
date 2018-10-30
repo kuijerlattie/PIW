@@ -13,7 +13,11 @@ public class EventManager : MonoBehaviour {
     #endregion
 
     #region Combat
-    public UnityEvent PlayerDeath = new UnityEvent();
-    public UnityEvent EnemyDeath = new UnityEvent();
+    /// <summary>
+    /// passes victim, killer, weapon of killer
+    /// </summary>
+    public class OnPawnDeathEvent : UnityEvent<KillablePawn, KillablePawn, Weapon> { }
+    public OnPawnDeathEvent PlayerDeath = new OnPawnDeathEvent();
+    public OnPawnDeathEvent EnemyDeath = new OnPawnDeathEvent();
     #endregion
 }

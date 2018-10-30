@@ -57,6 +57,7 @@ public class WeaponSlots : MonoBehaviour {
         //instantize weapon to hand
         GameObject weapontoinstantiate = Instantiate(oWeapon, hand.transform);
         weaponlist[selectedweapon-1] = weapontoinstantiate.GetComponent<Weapon>();
+        weaponlist[selectedweapon - 1].owner = this;
         ShowActiveWeapon();
     }
 

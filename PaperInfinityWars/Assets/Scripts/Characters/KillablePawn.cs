@@ -50,7 +50,7 @@ public abstract class KillablePawn : MonoBehaviour {
         }
 	}
 
-    public void Damage(int iDamage) //add damage dealer for stats
+    public void Damage(int iDamage, Weapon weapon) //add damage dealer for stats
     {
         if (!invincible && !godmode) //dont deal damage when invincible or in godmode;
         {
@@ -63,7 +63,11 @@ public abstract class KillablePawn : MonoBehaviour {
 
             if (hitpoints <= 0)
             {
-                Die(); //RIP
+                if (weapon != null) //null if using debug for now
+                {
+                    Debug.Log(weapon.owner);
+                    Die(weapon.owner.GetComponent<KillablePawn>(), weapon); //RIP
+                }
             }
         }
     }
@@ -74,14 +78,15 @@ public abstract class KillablePawn : MonoBehaviour {
         hitpoints = Mathf.Clamp(hitpoints, 0, maxHitpoints);
     }
 
-    private void Die()
+    private void Die(KillablePawn killer, Weapon weapon)
     {
         alive = false;
-        OnDeath();
+        characterController.enabled = false;
+        OnDeath(this, killer, weapon);
         UpdateCharacterControllerEnabled();
         //do ragdoll code;
     }
-    protected abstract void OnDeath();
+    protected abstract void OnDeath(KillablePawn victim, KillablePawn killer, Weapon weapon);
 
     private void UpdateCharacterControllerEnabled()
     {

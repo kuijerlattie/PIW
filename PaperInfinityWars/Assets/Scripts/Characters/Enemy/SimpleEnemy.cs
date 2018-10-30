@@ -49,9 +49,13 @@ public class SimpleEnemy : KillablePawn {
         characterController.Move(movement, shouldjump);
     }
 
-    protected override void OnDeath()
+    protected override void OnDeath(KillablePawn victim, KillablePawn killer, Weapon weapon)
     {
+        Debug.Log(this);
+        Debug.Log(killer);
+        Debug.Log(weapon);
+        GameManager.instance.eventManager.EnemyDeath.Invoke(this, killer, weapon);
         Debug.Log("enemy died");
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
