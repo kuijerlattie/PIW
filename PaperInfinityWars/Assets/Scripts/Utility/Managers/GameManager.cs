@@ -5,7 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
     
     public static GameManager instance;
-
+    public bool DebugMenu = false;
+    public GameObject UI;
 
     [HideInInspector]
     public Player player;
