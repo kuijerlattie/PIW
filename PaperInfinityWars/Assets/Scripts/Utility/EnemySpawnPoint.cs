@@ -7,7 +7,12 @@ public class EnemySpawnPoint : SpawnPoint {
 	// Use this for initialization
 	void Start () {
         if (GameManager.instance.enemySpawnManager != null)
+        {
             GameManager.instance.enemySpawnManager.AddSpawn(this);
+            Debug.Log("spawn added");
+        }
+        else
+            Debug.Log("Spawnmanager missing");
         this.GetComponent<Renderer>().enabled = false;
 	}
 	

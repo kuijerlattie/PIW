@@ -12,7 +12,7 @@ public class Player : KillablePawn {
     protected override void Start ()
     {
         base.Start();
-        GameManager.instance.player = this;
+        GameManager.instance.SetPlayer(this);
         animator = GetComponent<Animator>();
     }
 	

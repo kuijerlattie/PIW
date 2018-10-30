@@ -9,21 +9,28 @@ public class EnemySpawnManager : MonoBehaviour {
 	// Use this for initialization
 	void OnEnable () {
         EnemySpawns = new List<SpawnPoint>();
-        GameManager.instance.enemySpawnManager = this;
+        Debug.Log("spawnlist initialized");
 	}
+
+    void Initialize()
+    {
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
 
     public void AddSpawn(SpawnPoint oSpawnPoint)
     {
+        Debug.Log("spawnpoint added");
         EnemySpawns.Add(oSpawnPoint);
     }
 
     public SpawnPoint GetSpawnPoint()
     {
+        Debug.Log(EnemySpawns.Count);
         return EnemySpawns[0];
     }
 }

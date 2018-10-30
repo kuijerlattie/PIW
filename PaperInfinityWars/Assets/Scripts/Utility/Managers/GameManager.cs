@@ -51,10 +51,20 @@ public class GameManager : MonoBehaviour {
         gameMode = gameObject.AddComponent<T>();
     }
 
-    public void SetCameraFollowScript(CameraFollowScript s)
+    public void SetCameraFollowScript(CameraFollowScript oCameraFollowScript)
     {
-        cameraFollowScript = s;
+        cameraFollowScript = oCameraFollowScript;
         if (player != null)
+        {
+            cameraFollowScript.target = player.gameObject;
+            cameraFollowScript.Initialize();
+        }
+    }
+
+    public void SetPlayer(Player oPlayer)
+    {
+        player = oPlayer;
+        if (cameraFollowScript != null)
         {
             cameraFollowScript.target = player.gameObject;
             cameraFollowScript.Initialize();

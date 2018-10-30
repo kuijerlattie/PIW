@@ -59,7 +59,9 @@
      <Compile Include="Assets\Scripts\Characters\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Characters\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Debug\OnscreenDebug.cs" />
+     <Compile Include="Assets\Scripts\GameModes\GameMode.cs" />
      <Compile Include="Assets\Scripts\GameModes\Survival\WaveSystem.cs" />
+     <Compile Include="Assets\Scripts\Temp scripts\Worldswitcher.cs" />
      <Compile Include="Assets\Scripts\Utility\CameraFollowScript.cs" />
      <Compile Include="Assets\Scripts\Utility\EnemySpawnManager.cs" />
      <Compile Include="Assets\Scripts\Utility\EnemySpawnPoint.cs" />
