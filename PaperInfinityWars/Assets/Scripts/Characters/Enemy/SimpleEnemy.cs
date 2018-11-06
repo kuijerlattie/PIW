@@ -36,7 +36,7 @@ public class SimpleEnemy : KillablePawn {
             else
                 movement = movementspeed;
         }
-        if (characterController.m_ForwardFree != true)
+        if (characterController._forwardFree != true)
         {
             if (jumptimer <= 0)
             {

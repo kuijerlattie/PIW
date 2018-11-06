@@ -301,6 +301,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1286251403}
+--- !u!4 &382249373 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4317596936047166, guid: b0705a0b67781554f8a94a4a303d5408,
+    type: 2}
+  m_PrefabInternal: {fileID: 1548038015}
 --- !u!1 &740693884
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +534,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4423214418364004, guid: b0705a0b67781554f8a94a4a303d5408, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838815150352264, guid: b0705a0b67781554f8a94a4a303d5408,
+        type: 2}
+      propertyPath: _groundCheckPosition
+      value: 
+      objectReference: {fileID: 382249373}
+    - target: {fileID: 114838815150352264, guid: b0705a0b67781554f8a94a4a303d5408,
+        type: 2}
+      propertyPath: _groundMasks.m_Bits
+      value: 2055
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838815150352264, guid: b0705a0b67781554f8a94a4a303d5408,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838815150352264, guid: b0705a0b67781554f8a94a4a303d5408,
+        type: 2}
+      propertyPath: _airControl
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

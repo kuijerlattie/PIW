@@ -831,21 +831,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f2289cdc6403540bc7672e3acf4cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 700
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
-  m_WhatIsGround:
+  _jumpForce: 400
+  _movementSmoothing: 0.05
+  _airControl: 0
+  _groundMasks:
     serializedVersion: 2
-    m_Bits: 2871
-  m_GroundCheck: {fileID: 4550816184795962}
-  m_ForwardFree: 1
+    m_Bits: 2055
+  _groundCheckPosition: {fileID: 4550816184795962}
+  _forwardFree: 1
   enabled: 1
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114705235073023158
 MonoBehaviour:
   m_ObjectHideFlags: 1
