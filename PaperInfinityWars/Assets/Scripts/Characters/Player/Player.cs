@@ -13,7 +13,6 @@ public class Player : KillablePawn {
     {
         base.Start();
         GameManager.instance.SetPlayer(this);
-        animator = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
