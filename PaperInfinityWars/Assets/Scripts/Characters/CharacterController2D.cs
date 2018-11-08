@@ -20,10 +20,13 @@ public class CharacterController2D : MonoBehaviour
     new public bool enabled = true;
     private GameObject _lastTrigger;
 
+    private Animator _animator;
+
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
 	private void FixedUpdate()
@@ -46,6 +49,8 @@ public class CharacterController2D : MonoBehaviour
         {
             _forwardFree = true;
         }
+        if (_animator != null)
+            UpdateAnimator();
 	}
 
 
@@ -82,6 +87,8 @@ public class CharacterController2D : MonoBehaviour
                 // Add a vertical force to the player.
                 _grounded = false;
                 _rigidbody.AddForce(new Vector2(0f, _jumpForce));
+                if (_animator != null)
+                    _animator.SetBool("Jump", true);
             }
         }
 	}
@@ -115,5 +122,11 @@ public class CharacterController2D : MonoBehaviour
     public Vector2 GetVelocity()
     {
         return _rigidbody.velocity;
+    }
+
+    private void UpdateAnimator()
+    {
+        _animator.SetFloat("HorizontalSpeed", Mathf.Abs(_rigidbody.velocity.x));
+        _animator.SetFloat("VerticalSpeed", _rigidbody.velocity.y);
     }
 }

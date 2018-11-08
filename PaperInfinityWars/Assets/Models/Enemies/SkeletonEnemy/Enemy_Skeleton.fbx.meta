@@ -292,7 +292,7 @@ ModelImporter:
       scale: {x: 0.014, y: 0.014, z: 0.014}
     - name: Character1_Hips
       parentName: Character1_Reference
-      position: {x: -0, y: 59.211823, z: -0.000000014901161}
+      position: {x: -0, y: 59.21182, z: -0.000000014901161}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_LeftUpLeg
@@ -302,12 +302,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_LeftLeg
       parentName: Character1_LeftUpLeg
-      position: {x: -1.5264095, y: -28.761343, z: 1.680647}
+      position: {x: -1.5264094, y: -28.761343, z: 1.6806469}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_LeftFoot
       parentName: Character1_LeftLeg
-      position: {x: -0.068133175, y: -24.299232, z: -1.8495224}
+      position: {x: -0.06813317, y: -24.299232, z: -1.8495224}
       rotation: {x: 0.0000030745805, y: -0.0000026874861, z: 8.262892e-12, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Spine
@@ -317,7 +317,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Spine1
       parentName: Character1_Spine
-      position: {x: -0, y: 12.666664, z: 0}
+      position: {x: -0, y: 12.666663, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Spine2
@@ -337,7 +337,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_LeftForeArm
       parentName: Character1_LeftArm
-      position: {x: -19.307096, y: -5.5138116e-12, z: 0.0000051785664}
+      position: {x: -19.307095, y: -5.5138116e-12, z: 0.000005178566}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_LeftHand
@@ -352,7 +352,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Head
       parentName: Character1_Neck
-      position: {x: -0, y: 24.607574, z: 0}
+      position: {x: -0, y: 24.607573, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_RightShoulder
@@ -362,7 +362,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_RightArm
       parentName: Character1_RightShoulder
-      position: {x: 2.9290605, y: -0.07415827, z: 9.0886635e-18}
+      position: {x: 2.9290602, y: -0.07415827, z: 9.0886635e-18}
       rotation: {x: 0, y: 0, z: 0.000006416546, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_RightForeArm
@@ -372,22 +372,22 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_RightArm 1
       parentName: Character1_RightForeArm
-      position: {x: 22.022799, y: -1.2465146, z: 0.0000019465645}
+      position: {x: 22.022797, y: -1.2465146, z: 0.0000019465645}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_RightLegUP
       parentName: Character1_Hips
-      position: {x: 3.03037, y: -4.370121, z: 0}
+      position: {x: 3.0303698, y: -4.3701205, z: 0}
       rotation: {x: 1, y: 0, z: -0, w: 0.0000015767291}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_RightLeg
       parentName: Character1_RightLegUP
-      position: {x: 1.5264033, y: 28.76133, z: -1.6809342}
+      position: {x: 1.5264033, y: 28.76133, z: -1.6809341}
       rotation: {x: -0.000002361362, y: 0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_RightFoot
       parentName: Character1_RightLeg
-      position: {x: 0.068150595, y: 24.299242, z: 1.8495215}
+      position: {x: 0.068150595, y: 24.299242, z: 1.8495214}
       rotation: {x: 0.000003938091, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Enemy_Skeleton

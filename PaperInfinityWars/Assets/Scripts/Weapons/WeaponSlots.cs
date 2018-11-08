@@ -6,19 +6,23 @@ public class WeaponSlots : MonoBehaviour {
 
     [Header("Weapon settings")]
     public int weaponSlots = 4;
-    [SerializeField] // remove later
     int selectedweapon = 1;
-    [SerializeField] //remove later
     Weapon[] weaponlist;
-    protected Animator animator;
+    protected Animator _animator;
     public GameObject testweapon;
+
+    public Weapon currentweapon
+    {
+        get { return weaponlist[selectedweapon - 1]; }
+    }
 
     public GameObject hand;
 
     void Start()
     {
         weaponlist = new Weapon[weaponSlots];
-        selectedweapon = 2;
+        _animator = GetComponentInChildren<Animator>();
+        selectedweapon = 1;
         EquipWeapon(testweapon);
     }
 
@@ -38,18 +42,24 @@ public class WeaponSlots : MonoBehaviour {
 
     protected void NextWeapon()
     {
-        selectedweapon += 1;
-        if (selectedweapon > weaponSlots)
-            selectedweapon = 1;
-        ShowActiveWeapon();
+        if (!currentweapon.isAttacking)
+        {
+            selectedweapon += 1;
+            if (selectedweapon > weaponSlots)
+                selectedweapon = 1;
+            ShowActiveWeapon();
+        }
     }
 
     protected void PreviousWeapon()
     {
-        selectedweapon -= 1;
-        if (selectedweapon <= 0)
-            selectedweapon = weaponSlots;
-        ShowActiveWeapon();
+        if (!currentweapon.isAttacking)
+        {
+            selectedweapon -= 1;
+            if (selectedweapon <= 0)
+                selectedweapon = weaponSlots;
+            ShowActiveWeapon();
+        }
     }
 
     protected void EquipWeapon(GameObject oWeapon)
@@ -58,6 +68,7 @@ public class WeaponSlots : MonoBehaviour {
         GameObject weapontoinstantiate = Instantiate(oWeapon, hand.transform);
         weaponlist[selectedweapon-1] = weapontoinstantiate.GetComponent<Weapon>();
         weaponlist[selectedweapon - 1].owner = this;
+        weapontoinstantiate.GetComponent<Weapon>().setanimator(_animator);
         ShowActiveWeapon();
     }
 

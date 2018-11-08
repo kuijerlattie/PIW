@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\attackanimationtestscript.cs" />
      <Compile Include="Assets\Scripts\Characters\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\Characters\Enemy\SimpleEnemy.cs" />
      <Compile Include="Assets\Scripts\Characters\KillablePawn.cs" />

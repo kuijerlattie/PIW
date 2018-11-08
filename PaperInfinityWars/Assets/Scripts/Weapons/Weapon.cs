@@ -6,9 +6,12 @@ public class Weapon : MonoBehaviour {
 
     [SerializeField]
     protected int damage = 0;
-    float attackspeed = 0f;
+    [SerializeField]
+    protected float attackspeed = 1f;
+    protected float attackCooldown = 0f;
+    public bool isAttacking = false;
     public WeaponSlots owner;
-    Animator animator;
+    protected Animator _animator;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +19,22 @@ public class Weapon : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	protected virtual void Update () {
+		if (attackCooldown > 0)
+        {
+            attackCooldown -= Time.deltaTime;
+        }
 	}
+
+    public void setanimator(Animator oAnimator)
+    {
+        _animator = oAnimator;
+    }
+
+    public void AnimationOver()
+    {
+        isAttacking = false;
+    }
+
+    public virtual void Attack() { }
 }
