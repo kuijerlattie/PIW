@@ -43,6 +43,7 @@ MonoBehaviour:
     width: 1920
     height: 957
 <<<<<<< develop
+<<<<<<< develop
   m_MinSize: {x: 683, y: 342}
   m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
@@ -53,6 +54,12 @@ MonoBehaviour:
   vertical: 0
   controlID: 22
 >>>>>>> xp start
+=======
+  m_MinSize: {x: 683, y: 342}
+  m_MaxSize: {x: 12008, y: 8042}
+  vertical: 0
+  controlID: 85
+>>>>>>> xp and hitpoints are now visible on screen
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -100,8 +107,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 379
+    width: 363
     height: 579
+<<<<<<< develop
 <<<<<<< develop
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -109,6 +117,10 @@ MonoBehaviour:
 =======
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> xp and hitpoints are now visible on screen
   m_ActualView: {fileID: 15}
 >>>>>>> xp start
   m_Panes:
@@ -133,12 +145,21 @@ MonoBehaviour:
     y: 579
     width: 1531
     height: 378
+<<<<<<< develop
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 14}
   - {fileID: 19}
+=======
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 13}
+  - {fileID: 18}
+>>>>>>> xp and hitpoints are now visible on screen
   m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &6
@@ -226,6 +247,7 @@ MonoBehaviour:
     width: 1531
     height: 957
 <<<<<<< develop
+<<<<<<< develop
   m_MinSize: {x: 406, y: 342}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
@@ -236,6 +258,12 @@ MonoBehaviour:
   vertical: 1
   controlID: 23
 >>>>>>> xp start
+=======
+  m_MinSize: {x: 406, y: 342}
+  m_MaxSize: {x: 8006, y: 8042}
+  vertical: 1
+  controlID: 86
+>>>>>>> xp and hitpoints are now visible on screen
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -256,14 +284,18 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 579
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
+<<<<<<< develop
 <<<<<<< develop
   controlID: 77
 =======
   controlID: 24
 >>>>>>> xp start
+=======
+  controlID: 87
+>>>>>>> xp and hitpoints are now visible on screen
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,10 +310,11 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 379
+    x: 363
     y: 0
-    width: 1152
+    width: 1168
     height: 579
+<<<<<<< develop
 <<<<<<< develop
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
@@ -289,6 +322,10 @@ MonoBehaviour:
 =======
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
+>>>>>>> xp and hitpoints are now visible on screen
   m_ActualView: {fileID: 16}
 >>>>>>> xp start
   m_Panes:
@@ -437,6 +474,7 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< develop
+<<<<<<< develop
     - Assets/Prefabs/Weapons
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -449,11 +487,19 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts/Utility/Managers
 >>>>>>> xp start
+=======
+    - Assets/Scripts/UI
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scripts/UI
+>>>>>>> xp and hitpoints are now visible on screen
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\minor\PIW\PaperInfinityWars
+  m_LastProjectPath: D:\PIW\Repo\PIW\PaperInfinityWars
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< develop
 <<<<<<< develop
     scrollPos: {x: 0, y: 32}
     m_SelectedIDs: dc0a0000
@@ -465,6 +511,12 @@ MonoBehaviour:
     m_LastClickedID: 2924
     m_ExpandedIDs: 00000000700900009e090000000a0000340a0000640a0000720a0000820a0000e40a0000180b00002c0b0000da0b00001a0c00001c0c000000ca9a3b
 >>>>>>> xp start
+=======
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: da310000
+    m_LastClickedID: 12762
+    m_ExpandedIDs: 00000000b22b0000402c0000742c0000a42c0000b22c0000c22c0000582d00006c2d0000182e0000582e00005a2e0000b2300000be30000000ca9a3b
+>>>>>>> xp and hitpoints are now visible on screen
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -493,10 +545,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< develop
+<<<<<<< develop
     m_ExpandedIDs: 00000000720900009e090000000a0000340a0000640a0000720a0000820a0000e40a0000180b00002c0b0000d60b0000160c0000180c0000720c0000682f0000
 =======
     m_ExpandedIDs: 00000000700900009e090000000a0000340a0000640a0000720a0000820a0000e40a0000180b00002c0b0000da0b00001a0c00001c0c0000
 >>>>>>> xp start
+=======
+    m_ExpandedIDs: 00000000b22b0000de2b0000402c0000742c0000a42c0000b22c0000c22c0000242d0000582d00006c2d0000182e0000582e00005a2e0000
+>>>>>>> xp and hitpoints are now visible on screen
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -521,10 +577,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< develop
     m_SelectedInstanceIDs: 889ffdff
     m_LastClickedInstanceID: -155768
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000722b0000
+=======
+    m_SelectedInstanceIDs: e0310000
+    m_LastClickedInstanceID: 12768
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000c4300000
+>>>>>>> xp and hitpoints are now visible on screen
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -607,7 +670,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
-    width: 377
+    width: 361
     height: 558
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
@@ -622,14 +685,19 @@ MonoBehaviour:
       m_OriginalName: player
 =======
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e4fbffff
-    m_LastClickedID: -1052
-    m_ExpandedIDs: e6fbffff00000000
+    m_SelectedIDs: 50f9ffff
+    m_LastClickedID: -1712
+    m_ExpandedIDs: f4d3feffd001ffffb45efffff6b3ffff52f9fffff4ffffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
+<<<<<<< develop
       m_Name: GameManager
       m_OriginalName: GameManager
 >>>>>>> xp start
+=======
+      m_Name: 
+      m_OriginalName: 
+>>>>>>> xp and hitpoints are now visible on screen
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
@@ -637,13 +705,17 @@ MonoBehaviour:
         width: 0
         height: 0
 <<<<<<< develop
+<<<<<<< develop
       m_UserData: -75212
 =======
       m_UserData: -1052
 >>>>>>> xp start
+=======
+      m_UserData: 0
+>>>>>>> xp and hitpoints are now visible on screen
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -673,21 +745,26 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 381
+    x: 365
     y: 92
-    width: 1148
+    width: 1164
     height: 558
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
+<<<<<<< develop
 <<<<<<< develop
   lastFramingTime: 1095.4955117055517
 =======
   lastFramingTime: 2364.2523531302004
 >>>>>>> xp start
+=======
+  lastFramingTime: 1826.9951386877901
+>>>>>>> xp and hitpoints are now visible on screen
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< develop
 <<<<<<< develop
     m_Target: {x: 38.302483, y: -0.22223634, z: 0.3523848}
     speed: 2
@@ -697,6 +774,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 1.5204762, y: -5.13062, z: 0.6078495}
 >>>>>>> xp start
+=======
+    m_Target: {x: 7.869243, y: 1.8064489, z: -9.167969}
+    speed: 2
+    m_Value: {x: 7.869243, y: 1.8064489, z: -9.167969}
+>>>>>>> xp and hitpoints are now visible on screen
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -729,6 +811,7 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< develop
+<<<<<<< develop
     m_Target: 13.094247
     speed: 2
     m_Value: 13.094247
@@ -737,6 +820,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 22
 >>>>>>> xp start
+=======
+    m_Target: 23.377272
+    speed: 2
+    m_Value: 23.377272
+>>>>>>> xp and hitpoints are now visible on screen
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -768,23 +856,23 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 381
+    x: 365
     y: 92
-    width: 1148
+    width: 1164
     height: 558
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -574
-    m_HBaseRangeMax: 574
+    m_HBaseRangeMin: -481
+    m_HBaseRangeMax: 481
     m_VBaseRangeMin: -270.5
     m_VBaseRangeMax: 270.5
     m_HAllowExceedBaseRangeMin: 1
@@ -795,7 +883,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -804,25 +892,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 1148
+      width: 1164
       height: 541
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 574, y: 270.5}
+    m_Translation: {x: 582, y: 270.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -574
+      x: -582
       y: -270.5
-      width: 1148
+      width: 1164
       height: 541
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1148, y: 558}
+  m_LastWindowPixelSize: {x: 1164, y: 558}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
