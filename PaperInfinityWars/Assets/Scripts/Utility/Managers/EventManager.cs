@@ -20,4 +20,11 @@ public class EventManager : MonoBehaviour {
     public OnPawnDeathEvent PlayerDeath = new OnPawnDeathEvent();
     public OnPawnDeathEvent EnemyDeath = new OnPawnDeathEvent();
     #endregion
+
+    #region Player
+    public class PlayerHitpointsChangedEvent : UnityEvent<KillablePawn> { }
+    public PlayerHitpointsChangedEvent PlayerHitpointsChanged = new PlayerHitpointsChangedEvent();
+    public class PlayerXPChangedEvent : UnityEvent<Player> { }
+    public PlayerXPChangedEvent playerXPChanged = new PlayerXPChangedEvent();
+    #endregion
 }

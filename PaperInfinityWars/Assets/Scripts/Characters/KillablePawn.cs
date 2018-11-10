@@ -5,8 +5,19 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController2D))]
 public abstract class KillablePawn : MonoBehaviour {
 
-    public int hitpoints;
-    public int maxHitpoints;
+    //make all private
+    protected int _hitpoints;
+    public int HitPoints
+    {
+        get { return _hitpoints; }
+        set { _hitpoints = value; OnHitpointsChanged(); }
+    }
+    protected int _maxHitpoints;
+    public int MaxHitpoints
+    {
+        get { return _maxHitpoints; }
+        set { _maxHitpoints = value; OnMaxHitpointsChanged(); }
+    }
     public bool godmode;
     public bool invincibleAfterHit;
     protected bool invincible;
@@ -19,8 +30,8 @@ public abstract class KillablePawn : MonoBehaviour {
 
     // Use this for initialization
     protected virtual void Start () {
-        hitpoints = 3;
-        maxHitpoints = 3;
+        _hitpoints = 1;
+        _maxHitpoints = 1;
         godmode = false;
         invincibleAfterHit = true;
         invincible = false;
@@ -30,10 +41,10 @@ public abstract class KillablePawn : MonoBehaviour {
         
         characterController = GetComponent<CharacterController2D>();
 	}
-	
+
     void OnSpawn()
     {
-        hitpoints = maxHitpoints;
+        _hitpoints = _maxHitpoints;
         alive = true;
         UpdateCharacterControllerEnabled();
     }
@@ -54,14 +65,15 @@ public abstract class KillablePawn : MonoBehaviour {
     {
         if (!invincible && !godmode) //dont deal damage when invincible or in godmode;
         {
-            hitpoints -= iDamage;
+            _hitpoints -= iDamage;
+            OnDamageTaken();
             if (invincibleAfterHit) //if you are invincible after being hit, start invincible timer and set invincible to true.
             {
                 invincibleTimer = invincibleTime;
                 invincible = true;
             }
 
-            if (hitpoints <= 0)
+            if (_hitpoints <= 0)
             {
                 if (weapon != null) //null if using debug for now
                 {
@@ -70,12 +82,13 @@ public abstract class KillablePawn : MonoBehaviour {
                 }
             }
         }
+
     }
 
     public void Heal(int iAmount)
     {
-        hitpoints += iAmount;
-        hitpoints = Mathf.Clamp(hitpoints, 0, maxHitpoints);
+        _hitpoints += iAmount;
+        _hitpoints = Mathf.Clamp(_hitpoints, 0, _maxHitpoints);
     }
 
     private void Die(KillablePawn killer, Weapon weapon)
@@ -87,6 +100,9 @@ public abstract class KillablePawn : MonoBehaviour {
         //do ragdoll code;
     }
     protected abstract void OnDeath(KillablePawn victim, KillablePawn killer, Weapon weapon);
+    protected virtual void OnDamageTaken() { }
+    protected virtual void OnHitpointsChanged() { }
+    protected virtual void OnMaxHitpointsChanged() { }
 
     private void UpdateCharacterControllerEnabled()
     {
