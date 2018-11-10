@@ -21,6 +21,11 @@ public class Player : KillablePawn {
         HitPoints = 3;
         MaxHitpoints = 3;
         GameManager.instance.SetPlayer(this);
+<<<<<<< HEAD
+=======
+        animator = GetComponent<Animator>();
+        CalculateCurrentLevel();
+>>>>>>> XPGains
     }
 	
 	// Update is called once per frame

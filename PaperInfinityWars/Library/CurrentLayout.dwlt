@@ -42,6 +42,7 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 957
+<<<<<<< HEAD
 <<<<<<< develop
 <<<<<<< develop
   m_MinSize: {x: 683, y: 342}
@@ -60,6 +61,12 @@ MonoBehaviour:
   vertical: 0
   controlID: 85
 >>>>>>> xp and hitpoints are now visible on screen
+=======
+  m_MinSize: {x: 683, y: 342}
+  m_MaxSize: {x: 12008, y: 8042}
+  vertical: 0
+  controlID: 85
+>>>>>>> XPGains
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -78,11 +85,14 @@ MonoBehaviour:
     y: 0
     width: 389
     height: 957
+<<<<<<< HEAD
 <<<<<<< develop
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
 =======
+=======
+>>>>>>> XPGains
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
@@ -145,6 +155,7 @@ MonoBehaviour:
     y: 579
     width: 1531
     height: 378
+<<<<<<< HEAD
 <<<<<<< develop
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
@@ -153,13 +164,18 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 19}
 =======
+=======
+>>>>>>> XPGains
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
+<<<<<<< HEAD
 >>>>>>> xp and hitpoints are now visible on screen
+=======
+>>>>>>> XPGains
   m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &6
@@ -246,6 +262,7 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 957
+<<<<<<< HEAD
 <<<<<<< develop
 <<<<<<< develop
   m_MinSize: {x: 406, y: 342}
@@ -264,6 +281,12 @@ MonoBehaviour:
   vertical: 1
   controlID: 86
 >>>>>>> xp and hitpoints are now visible on screen
+=======
+  m_MinSize: {x: 406, y: 342}
+  m_MaxSize: {x: 8006, y: 8042}
+  vertical: 1
+  controlID: 86
+>>>>>>> XPGains
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -287,6 +310,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
+<<<<<<< HEAD
 <<<<<<< develop
 <<<<<<< develop
   controlID: 77
@@ -296,6 +320,9 @@ MonoBehaviour:
 =======
   controlID: 87
 >>>>>>> xp and hitpoints are now visible on screen
+=======
+  controlID: 87
+>>>>>>> XPGains
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -473,6 +500,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
 <<<<<<< develop
 <<<<<<< develop
     - Assets/Prefabs/Weapons
@@ -494,11 +522,19 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts/UI
 >>>>>>> xp and hitpoints are now visible on screen
+=======
+    - Assets/Scripts/UI
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scripts/UI
+>>>>>>> XPGains
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\PIW\Repo\PIW\PaperInfinityWars
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< develop
 <<<<<<< develop
     scrollPos: {x: 0, y: 32}
@@ -512,11 +548,16 @@ MonoBehaviour:
     m_ExpandedIDs: 00000000700900009e090000000a0000340a0000640a0000720a0000820a0000e40a0000180b00002c0b0000da0b00001a0c00001c0c000000ca9a3b
 >>>>>>> xp start
 =======
+=======
+>>>>>>> XPGains
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: da310000
     m_LastClickedID: 12762
     m_ExpandedIDs: 00000000b22b0000402c0000742c0000a42c0000b22c0000c22c0000582d00006c2d0000182e0000582e00005a2e0000b2300000be30000000ca9a3b
+<<<<<<< HEAD
 >>>>>>> xp and hitpoints are now visible on screen
+=======
+>>>>>>> XPGains
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -544,6 +585,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
 <<<<<<< develop
 <<<<<<< develop
     m_ExpandedIDs: 00000000720900009e090000000a0000340a0000640a0000720a0000820a0000e40a0000180b00002c0b0000d60b0000160c0000180c0000720c0000682f0000
@@ -553,6 +595,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000b22b0000de2b0000402c0000742c0000a42c0000b22c0000c22c0000242d0000582d00006c2d0000182e0000582e00005a2e0000
 >>>>>>> xp and hitpoints are now visible on screen
+=======
+    m_ExpandedIDs: 00000000b22b0000de2b0000402c0000742c0000a42c0000b22c0000c22c0000242d0000582d00006c2d0000182e0000582e00005a2e0000
+>>>>>>> XPGains
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -577,6 +622,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
 <<<<<<< develop
     m_SelectedInstanceIDs: 889ffdff
     m_LastClickedInstanceID: -155768
@@ -588,6 +634,12 @@ MonoBehaviour:
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000c4300000
 >>>>>>> xp and hitpoints are now visible on screen
+=======
+    m_SelectedInstanceIDs: e0310000
+    m_LastClickedInstanceID: 12768
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000c4300000
+>>>>>>> XPGains
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -751,6 +803,7 @@ MonoBehaviour:
     height: 558
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
+<<<<<<< HEAD
 <<<<<<< develop
 <<<<<<< develop
   lastFramingTime: 1095.4955117055517
@@ -760,10 +813,14 @@ MonoBehaviour:
 =======
   lastFramingTime: 1826.9951386877901
 >>>>>>> xp and hitpoints are now visible on screen
+=======
+  lastFramingTime: 1826.9951386877901
+>>>>>>> XPGains
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< develop
 <<<<<<< develop
     m_Target: {x: 38.302483, y: -0.22223634, z: 0.3523848}
@@ -779,6 +836,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 7.869243, y: 1.8064489, z: -9.167969}
 >>>>>>> xp and hitpoints are now visible on screen
+=======
+    m_Target: {x: 7.869243, y: 1.8064489, z: -9.167969}
+    speed: 2
+    m_Value: {x: 7.869243, y: 1.8064489, z: -9.167969}
+>>>>>>> XPGains
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -810,6 +872,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
 <<<<<<< develop
 <<<<<<< develop
     m_Target: 13.094247
@@ -825,6 +888,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 23.377272
 >>>>>>> xp and hitpoints are now visible on screen
+=======
+    m_Target: 23.377272
+    speed: 2
+    m_Value: 23.377272
+>>>>>>> XPGains
   m_Ortho:
     m_Target: 1
     speed: 2
