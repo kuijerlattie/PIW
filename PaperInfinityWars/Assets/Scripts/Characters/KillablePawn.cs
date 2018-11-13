@@ -41,6 +41,7 @@ public abstract class KillablePawn : MonoBehaviour {
 
         animator = GetComponentInChildren<Animator>();
         characterController = GetComponent<CharacterController2D>();
+        OnSpawn();
 	}
 
     void OnSpawn()

@@ -30,7 +30,7 @@ public class WaveSystem : GameMode {
     #endregion
 
     #region Settings
-    float warmupTime = 15f; //time before game starts in seconds
+    float warmupTime = 10f; //time before game starts in seconds
     float timeoutTime = 10f; //time between rounds in seconds
     int maxSimultaniousEnemies = 30;
     #endregion
@@ -136,6 +136,7 @@ public class WaveSystem : GameMode {
     void OnEnemyDeath(KillablePawn victim, KillablePawn killer, Weapon killerweapon)
     {
         enemies.RemoveAll(X => !X.alive);
+        killcounter++;
     }
 
     #region Warmup

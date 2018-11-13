@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class Player : KillablePawn {
 
-    private int xP;
-    private int currentLevel;
-    private int xPForNextLevel;
-    private int xPForLevelStart;
-    private int MaxLevel = 60;
+    private int xP = 0;
+    private int currentLevel = 0;
+    private int xPForNextLevel = 100;
+    private int xPForLevelStart = 0;
+    private int maxLevel = 60;
 
-    void Awake()
-    {
-    }
+    private int coins;
 
-    // Use this for initialization
     protected override void Start ()
     {
         base.Start();
@@ -22,12 +19,23 @@ public class Player : KillablePawn {
         MaxHitpoints = 3;
         GameManager.instance.SetPlayer(this);
         CalculateCurrentLevel();
+        GameManager.instance.eventManager.XPDrop.AddListener(GainXP);
+        GameManager.instance.eventManager.CoinsChanged.Invoke(coins);
     }
-	
-	// Update is called once per frame
+
+    void OnDisable()
+    {
+        GameManager.instance.eventManager.XPDrop.RemoveListener(GainXP);
+    }
+    
 	protected override void Update () {
-        base.Update();	
-	}
+        base.Update();
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            AddCoins(1);
+            Debug.Log("coin added, total now: " + coins);
+        }
+    }
 
     protected override void OnDeath(KillablePawn victim, KillablePawn killer, Weapon weapon)
     {
@@ -49,7 +57,7 @@ public class Player : KillablePawn {
         GameManager.instance.eventManager.PlayerHitpointsChanged.Invoke(this);
     }
 
-    void GainXP(int oXP)
+    void GainXP(int oXP, KillablePawn xpgiver)
     {
         xP += oXP;
         //show xp popup
@@ -58,7 +66,8 @@ public class Player : KillablePawn {
 
     void CalculateCurrentLevel()
     {
-        GameManager.instance.eventManager.playerXPChanged.Invoke(this);
+        //add level calculating code
+        GameManager.instance.eventManager.PlayerXPChanged.Invoke(this);
     }
 
     public int GetXP()
@@ -79,5 +88,17 @@ public class Player : KillablePawn {
     public int GetLevel()
     {
         return currentLevel;
+    }
+
+    public void AddCoins(int amount)
+    {
+        coins += amount;
+        GameManager.instance.eventManager.CoinsChanged.Invoke(coins);
+    }
+
+    public void RemoveCoins(int amount)
+    {
+        coins -= amount;
+        GameManager.instance.eventManager.CoinsChanged.Invoke(coins);
     }
 }

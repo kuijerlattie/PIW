@@ -9,14 +9,11 @@ public class SimpleEnemy : KillablePawn {
     public float movementspeed = 0.5f;
     private float jumptimer = 0f;
     private float timebetweenjumps = 0.3f;
+    int xpforkill = 10;
 
 	// Use this for initialization
 	protected override void Start () {
         base.Start();
-        if (player == null)
-        {
-                
-        }
 	}
 
     // Update is called once per frame
@@ -56,6 +53,8 @@ public class SimpleEnemy : KillablePawn {
         Debug.Log(weapon);
         GameManager.instance.eventManager.EnemyDeath.Invoke(this, killer, weapon);
         Debug.Log("enemy died");
-        //Destroy(gameObject);
+
+        GameManager.instance.eventManager.XPDrop.Invoke(xpforkill, this);
+        Destroy(gameObject, 15f);
     }
 }

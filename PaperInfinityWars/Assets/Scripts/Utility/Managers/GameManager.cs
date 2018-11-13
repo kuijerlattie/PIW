@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     
     public static GameManager instance;
     public bool DebugMenu = false;
     public GameObject UI;
+    protected GameObject UIinstance;
 
     [HideInInspector]
     public Player player;
@@ -34,7 +36,12 @@ public class GameManager : MonoBehaviour {
         savegameManager = gameObject.AddComponent<SavegameManager>();
         eventManager = gameObject.AddComponent<EventManager>();
         enemySpawnManager = gameObject.AddComponent<EnemySpawnManager>();
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     // Use this for initialization
@@ -45,6 +52,14 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (UIinstance == null)
+        {
+            UIinstance = GameObject.Instantiate(UI);
+        }
+    }
 
     public void SetGameMode<T>() where T : GameMode
     {

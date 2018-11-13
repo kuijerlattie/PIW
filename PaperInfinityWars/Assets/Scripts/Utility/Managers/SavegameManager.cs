@@ -38,8 +38,7 @@ public class SavegameManager : MonoBehaviour {
 
 public class SaveData
 {
-    int health = 0;
-    int maxhealth = 0;
     int xp = 0;
+    int coins = 0;
 }
 

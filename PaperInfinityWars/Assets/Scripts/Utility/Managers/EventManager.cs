@@ -22,9 +22,13 @@ public class EventManager : MonoBehaviour {
     #endregion
 
     #region Player
-    public class PlayerHitpointsChangedEvent : UnityEvent<KillablePawn> { }
+    public class PlayerHitpointsChangedEvent : UnityEvent<Player> { }
     public PlayerHitpointsChangedEvent PlayerHitpointsChanged = new PlayerHitpointsChangedEvent();
     public class PlayerXPChangedEvent : UnityEvent<Player> { }
-    public PlayerXPChangedEvent playerXPChanged = new PlayerXPChangedEvent();
+    public PlayerXPChangedEvent PlayerXPChanged = new PlayerXPChangedEvent();
+    public class XPDropEvent : UnityEvent<int, KillablePawn> { }
+    public XPDropEvent XPDrop = new XPDropEvent();
+    public class CoinsChangedEvent : UnityEvent<int> { }
+    public CoinsChangedEvent CoinsChanged = new CoinsChangedEvent();
     #endregion
 }
