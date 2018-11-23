@@ -10,6 +10,7 @@ public class SimpleEnemy : KillablePawn {
     private float jumptimer = 0f;
     private float timebetweenjumps = 0.3f;
     int xpforkill = 10;
+    WeaponSlots weaponSlots = null;
 
 	// Use this for initialization
 	protected override void Start () {
@@ -22,7 +23,13 @@ public class SimpleEnemy : KillablePawn {
         bool shouldjump = false;
         base.Update();
         if (player == null)
+        {
             player = GameManager.instance.player.gameObject;
+            if (player == null)
+            {
+                return;
+            }
+        }
         //cheapest ai ever
         float movement = 0;
 
@@ -44,6 +51,8 @@ public class SimpleEnemy : KillablePawn {
         jumptimer -= Time.deltaTime;
 
         characterController.Move(movement, shouldjump);
+
+        
     }
 
     protected override void OnDeath(KillablePawn victim, KillablePawn killer, Weapon weapon)

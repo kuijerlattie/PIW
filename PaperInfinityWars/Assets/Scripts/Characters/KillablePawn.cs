@@ -28,6 +28,8 @@ public abstract class KillablePawn : MonoBehaviour {
 
     protected CharacterController2D characterController;
 
+    DropTable dropTable = null;
+
     // Use this for initialization
     protected virtual void Start () {
         _hitpoints = 1;
@@ -41,6 +43,7 @@ public abstract class KillablePawn : MonoBehaviour {
 
         animator = GetComponentInChildren<Animator>();
         characterController = GetComponent<CharacterController2D>();
+        dropTable = GetComponent<DropTable>();
         OnSpawn();
 	}
 
@@ -98,6 +101,7 @@ public abstract class KillablePawn : MonoBehaviour {
     {
         alive = false;
         characterController.enabled = false;
+        if (dropTable != null) dropTable.Drop();
         OnDeath(this, killer, weapon);
         UpdateCharacterControllerEnabled();
         EnableRagdoll();
