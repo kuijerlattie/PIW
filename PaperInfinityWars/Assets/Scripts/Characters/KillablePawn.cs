@@ -95,6 +95,7 @@ public abstract class KillablePawn : MonoBehaviour {
     {
         _hitpoints += iAmount;
         _hitpoints = Mathf.Clamp(_hitpoints, 0, _maxHitpoints);
+        OnHitpointsChanged();
     }
 
     private void Die(KillablePawn killer, Weapon weapon)

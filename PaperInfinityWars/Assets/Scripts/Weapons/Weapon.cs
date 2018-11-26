@@ -8,6 +8,7 @@ public class Weapon : MonoBehaviour {
     protected int damage = 0;
     [SerializeField]
     protected float attackspeed = 1f;
+    public float range = 2f;
     protected float attackCooldown = 0f;
     public bool isAttacking = false;
     public WeaponSlots owner;

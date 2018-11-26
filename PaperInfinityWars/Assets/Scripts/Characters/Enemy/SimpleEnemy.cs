@@ -15,6 +15,7 @@ public class SimpleEnemy : KillablePawn {
 	// Use this for initialization
 	protected override void Start () {
         base.Start();
+        weaponSlots = GetComponent<WeaponSlots>();
 	}
 
     // Update is called once per frame
@@ -30,7 +31,9 @@ public class SimpleEnemy : KillablePawn {
                 return;
             }
         }
-        //cheapest ai ever
+
+        
+    
         float movement = 0;
 
         if (Vector2.Distance(player.transform.position, this.transform.position) < 10)
@@ -51,6 +54,14 @@ public class SimpleEnemy : KillablePawn {
         jumptimer -= Time.deltaTime;
 
         characterController.Move(movement, shouldjump);
+
+        if (weaponSlots != null)
+        {
+            if (Vector2.Distance(player.transform.position, this.transform.position) < weaponSlots.currentweapon.range)
+            {
+                weaponSlots.currentweapon.Attack();
+            }
+        }
 
         
     }

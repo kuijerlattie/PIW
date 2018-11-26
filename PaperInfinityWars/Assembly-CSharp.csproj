@@ -64,8 +64,11 @@
      <Compile Include="Assets\Scripts\GameModes\GameMode.cs" />
      <Compile Include="Assets\Scripts\GameModes\Survival\WaveSystem.cs" />
      <Compile Include="Assets\Scripts\Pickups\CoinsScript.cs" />
+     <Compile Include="Assets\Scripts\Pickups\HealthPickupScript.cs" />
      <Compile Include="Assets\Scripts\Pickups\PickupBaseScript.cs" />
      <Compile Include="Assets\Scripts\Temp scripts\Worldswitcher.cs" />
+     <Compile Include="Assets\Scripts\UI\GameModeStarter.cs" />
+     <Compile Include="Assets\Scripts\UI\In-world UI\ShowUIScript.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerInfoUIScript.cs" />
      <Compile Include="Assets\Scripts\Utility\CameraFollowScript.cs" />
      <Compile Include="Assets\Scripts\Utility\EnemySpawnManager.cs" />
