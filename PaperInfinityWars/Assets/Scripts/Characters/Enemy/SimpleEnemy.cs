@@ -74,7 +74,8 @@ public class SimpleEnemy : KillablePawn {
         GameManager.instance.eventManager.EnemyDeath.Invoke(this, killer, weapon);
         Debug.Log("enemy died");
 
-        GameManager.instance.eventManager.XPDrop.Invoke(xpforkill, this);
+        if (killer.tag == "Player")
+            GameManager.instance.eventManager.XPDrop.Invoke(xpforkill, this);
         Destroy(gameObject, 15f);
     }
 }

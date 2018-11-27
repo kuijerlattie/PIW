@@ -25,7 +25,7 @@ public class Worldswitcher : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 //switch scene to w1c1
-                GameManager.instance.SetGameMode<WaveSystem>();
+                //GameManager.instance.SetGameMode<WaveSystem>();
                 WaveSystem system = (WaveSystem) GameManager.instance.gameMode;
                 system.commonEnemies.Add(enemy);
                 system.RareEnemies.Add(enemy);

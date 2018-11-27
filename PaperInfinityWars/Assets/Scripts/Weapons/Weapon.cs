@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour {
     [SerializeField]
     protected int damage = 0;
     [SerializeField]
-    protected float attackspeed = 1f;
+    protected float attackCooldownTime = 1f;
     public float range = 2f;
     protected float attackCooldown = 0f;
     public bool isAttacking = false;
@@ -35,6 +35,12 @@ public class Weapon : MonoBehaviour {
     public void AnimationOver()
     {
         isAttacking = false;
+        attackCooldown = attackCooldownTime;
+    }
+
+    public void AnimationStarted()
+    {
+        isAttacking = true;
     }
 
     public virtual void Attack() { }

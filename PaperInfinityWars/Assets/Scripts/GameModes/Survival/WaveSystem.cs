@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveSystem : GameMode {
 
@@ -22,6 +23,7 @@ public class WaveSystem : GameMode {
     int raresToSpawn;
     int BossesToSpawn;
     EnemySpawnManager enemySpawnManager;
+    bool LoadingHub = false;
     #endregion
 
     #region game stats
@@ -30,8 +32,9 @@ public class WaveSystem : GameMode {
     #endregion
 
     #region Settings
-    float warmupTime = 10f; //time before game starts in seconds
+    float warmupTime = 5f; //time before game starts in seconds
     float timeoutTime = 10f; //time between rounds in seconds
+    float gameOverTime = 5f; //time after dying before returning to hubworld
     int maxSimultaniousEnemies = 30;
     #endregion
 
@@ -259,12 +262,16 @@ public class WaveSystem : GameMode {
     #region GameOver
     void OnGameOverStarted()
     {
-        //save game
+        countdown = gameOverTime;
     }
 
     void OnGameOver()
     {
-
+        if (countdown <= 0)
+        {
+            SceneManager.LoadScene(previousHub);
+            Destroy(this);
+        }
     }
 
     void OnGameOverEnded()

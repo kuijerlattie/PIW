@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class GameMode : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public string previousHub = "";
+
 }

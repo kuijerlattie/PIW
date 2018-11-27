@@ -53,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\attackanimationtestscript.cs" />
      <Compile Include="Assets\Scripts\Characters\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\Characters\Enemy\DropTable.cs" />
      <Compile Include="Assets\Scripts\Characters\Enemy\SimpleEnemy.cs" />
@@ -63,11 +62,12 @@
      <Compile Include="Assets\Scripts\Debug\OnscreenDebug.cs" />
      <Compile Include="Assets\Scripts\GameModes\GameMode.cs" />
      <Compile Include="Assets\Scripts\GameModes\Survival\WaveSystem.cs" />
+     <Compile Include="Assets\Scripts\GameModes\Survival\WaveSystemSO.cs" />
      <Compile Include="Assets\Scripts\Pickups\CoinsScript.cs" />
      <Compile Include="Assets\Scripts\Pickups\HealthPickupScript.cs" />
      <Compile Include="Assets\Scripts\Pickups\PickupBaseScript.cs" />
      <Compile Include="Assets\Scripts\Temp scripts\Worldswitcher.cs" />
-     <Compile Include="Assets\Scripts\UI\GameModeStarter.cs" />
+     <Compile Include="Assets\Scripts\UI\GameModeStarters\WaveModeStarter.cs" />
      <Compile Include="Assets\Scripts\UI\In-world UI\ShowUIScript.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerInfoUIScript.cs" />
      <Compile Include="Assets\Scripts\Utility\CameraFollowScript.cs" />
@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\Utility\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Weapons\MeleeWeapon.cs" />
      <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Weapons\WeaponAnimationTriggerScript.cs" />
      <Compile Include="Assets\Scripts\Weapons\WeaponSlots.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

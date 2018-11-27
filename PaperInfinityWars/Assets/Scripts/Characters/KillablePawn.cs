@@ -69,7 +69,7 @@ public abstract class KillablePawn : MonoBehaviour {
 
     public void Damage(int iDamage, Weapon weapon) //add damage dealer for stats
     {
-        if (!invincible && !godmode) //dont deal damage when invincible or in godmode;
+        if (!invincible && !godmode && weapon.owner.tag != tag) //dont deal damage when invincible or in godmode;
         {
             _hitpoints -= iDamage;
             OnDamageTaken();

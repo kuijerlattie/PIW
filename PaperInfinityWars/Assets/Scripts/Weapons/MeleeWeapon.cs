@@ -17,18 +17,28 @@ public class MeleeWeapon : Weapon {
 
     public override void Attack()
     {
-        if (attackCooldown <= 0)
+        if (attackCooldown <= 0 && !isAttacking)
         {
             isAttacking = true;
             if (_animator != null)
+            {
                 _animator.SetBool("Attack", true);
-            attackCooldown = attackspeed;
+                _animator.SetInteger("AttackChain", 0);
+            }
+            attackCooldown = attackCooldownTime;
+
         }
-        else if (isAttacking)
+        if (isAttacking)
         {
-            //attack chains here i guess;
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1"))
+                _animator.SetInteger("AttackChain", 1);
+
+            if (_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack2"))
+                _animator.SetInteger("AttackChain", 2);
         }
     }
+
+    //attack1, attack2, attack3. if not in time, cooldown -> attack1 again
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
