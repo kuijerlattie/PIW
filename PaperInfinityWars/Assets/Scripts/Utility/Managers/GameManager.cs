@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
     public bool DebugMenu = false;
     public GameObject UI;
     protected GameObject UIinstance;
+    public ItemDatabase itemManager;
 
     [HideInInspector]
     public Player player;

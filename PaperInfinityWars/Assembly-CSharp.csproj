@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\Utility\CameraFollowScript.cs" />
      <Compile Include="Assets\Scripts\Utility\EnemySpawnManager.cs" />
      <Compile Include="Assets\Scripts\Utility\EnemySpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\Utility\ItemDatabase.cs" />
      <Compile Include="Assets\Scripts\Utility\Managers\CurrencyManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Managers\EventManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Managers\GameManager.cs" />

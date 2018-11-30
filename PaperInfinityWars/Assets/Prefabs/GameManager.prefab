@@ -53,7 +53,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebugMenu: 0
   UI: {fileID: 1462604576375542, guid: 65c7fd20d8a3a9045bf28bed13954054, type: 2}
+  itemManager: {fileID: 11400000, guid: 2ea19aaf92d9b5244a80a3132df046b3, type: 2}
   player: {fileID: 0}
+  currencyManager: {fileID: 0}
   savegameManager: {fileID: 0}
   eventManager: {fileID: 0}
   enemySpawnManager: {fileID: 0}

@@ -27,26 +27,16 @@ public class SavegameManager : MonoBehaviour {
     public void Save()
     {
         GameManager.instance.eventManager.OnSave.Invoke();
-        SaveAfterPrepping();
-        //StartCoroutine(SaveAfterPrepping());
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Path.Combine(Application.persistentDataPath, _SaveGameString));
+        bf.Serialize(file, saveData);
+        file.Close();
     }
 
     public void Load()
     {
         LoadData();
         GameManager.instance.eventManager.OnLoad.Invoke(saveData);
-    }
-
-    private void SaveAfterPrepping()
-    {
-        //wait for next frame to make sure all objects that need to fill in save info are done
-        //actual save code here
-        Debug.Log(saveData.coins + " coins / xp " + saveData.xp);
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Path.Combine(Application.persistentDataPath, _SaveGameString));
-        bf.Serialize(file, saveData);
-        file.Close();
-        //return null;
     }
 
     private void LoadData()

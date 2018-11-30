@@ -95,6 +95,7 @@ public class WeaponSlots : MonoBehaviour {
             if (weaponlist[i] != null)
             {
                 weaponlist[i].gameObject.SetActive(i == selectedweapon -1 ? true : false);
+                weaponlist[i].OnEquip();
             }
         }
     }

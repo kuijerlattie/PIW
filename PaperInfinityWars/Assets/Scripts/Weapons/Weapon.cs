@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
+    [HideInInspector]
+    public int ID = 0;
     [SerializeField]
     protected int damage = 0;
     [SerializeField]
     protected float attackCooldownTime = 1f;
     public float range = 2f;
     protected float attackCooldown = 0f;
+    [HideInInspector]
     public bool isAttacking = false;
+    [HideInInspector]
     public WeaponSlots owner;
     protected Animator _animator;
+    public AnimatorOverrideController animationOverrideController;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +35,11 @@ public class Weapon : MonoBehaviour {
     public void setanimator(Animator oAnimator)
     {
         _animator = oAnimator;
+    }
+
+    public void OnEquip()
+    {
+        _animator.runtimeAnimatorController = animationOverrideController;
     }
 
     public void AnimationOver()

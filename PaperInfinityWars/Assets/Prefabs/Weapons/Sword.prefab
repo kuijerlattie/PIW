@@ -123,8 +123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33d9ccf0d7915047b7aea87221e47db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 0
   damage: 1
   attackCooldownTime: 0.3
   range: 1
   isAttacking: 0
   owner: {fileID: 0}
+  animationOverrideController: {fileID: 22100000, guid: 46d5af63cff7c7a48beeaa599223d57f,
+    type: 2}

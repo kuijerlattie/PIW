@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "WaveModeSO", menuName = "GameModes/WaveModeTemplate", order = 1)]
+[CreateAssetMenu(fileName = "WaveModeSO", menuName = "SO/GameModes/WaveModeTemplate", order = 1)]
 public class WaveSystemSO : ScriptableObject {
     public string SceneName = "";
     public List<GameObject> CommonEnemyList = new List<GameObject>();
