@@ -83,7 +83,6 @@ public abstract class KillablePawn : MonoBehaviour {
             {
                 if (weapon != null) //null if using debug for now
                 {
-                    Debug.Log(weapon.owner);
                     Die(weapon.owner.GetComponent<KillablePawn>(), weapon); //RIP
                 }
             }

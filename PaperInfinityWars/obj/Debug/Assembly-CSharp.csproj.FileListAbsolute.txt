@@ -1,0 +1,2 @@
+E:\minor\PIW\PaperInfinityWars\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+E:\minor\PIW\PaperInfinityWars\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

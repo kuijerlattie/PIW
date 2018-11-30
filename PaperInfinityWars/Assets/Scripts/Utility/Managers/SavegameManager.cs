@@ -1,44 +1,79 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class SavegameManager : MonoBehaviour {
 
-    private SaveData saveData = new SaveData();
-	// Use this for initialization
-	void Start () {
+    public SaveData saveData = new SaveData();
+    private string _SaveGameString = "SaveGame.sav";
+    // Use this for initialization
+    void Start () {
         Load();
+        GameManager.instance.eventManager.GameOver.AddListener(GameOverListener);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+	void OnDisable()
+    {
+        GameManager.instance.eventManager.GameOver.RemoveListener(GameOverListener);
+    }
+    
+    void GameOverListener(GameMode gameMode)
+    {
+        Save();
+    }
 
     public void Save()
     {
-        GameManager.instance.eventManager.OnSave.Invoke(saveData);
-        StartCoroutine(SaveAfterPrepping());
+        GameManager.instance.eventManager.OnSave.Invoke();
+        SaveAfterPrepping();
+        //StartCoroutine(SaveAfterPrepping());
     }
 
     public void Load()
     {
-        //load stuff
+        LoadData();
         GameManager.instance.eventManager.OnLoad.Invoke(saveData);
     }
 
-    private IEnumerator SaveAfterPrepping()
+    private void SaveAfterPrepping()
     {
         //wait for next frame to make sure all objects that need to fill in save info are done
         //actual save code here
-        return null;
+        Debug.Log(saveData.coins + " coins / xp " + saveData.xp);
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Path.Combine(Application.persistentDataPath, _SaveGameString));
+        bf.Serialize(file, saveData);
+        file.Close();
+        //return null;
+    }
+
+    private void LoadData()
+    {
+        if (File.Exists(Path.Combine(Application.persistentDataPath, _SaveGameString)))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Path.Combine(Application.persistentDataPath, _SaveGameString), FileMode.Open);
+            saveData = (SaveData)bf.Deserialize(file);
+            file.Close();
+        }
     }
 }
 
+[Serializable]
 public class SaveData
 {
-    int xp = 0;
-    int coins = 0;
+    public int xp = 0;
+    public int coins = 0;
+
+    //wavemode stats;
+    public int wmBestRound = 0;
+    public int wmTotalRounds = 0;
+    public int wmTotalMatches = 0;
+    public int wmBestKills = 0;
+    public int wmTotalKills = 0;
+    public float wmTotalGameTime = 0f;
+    public float wmLongestMatch = 0f;
 }
 

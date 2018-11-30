@@ -32,15 +32,13 @@ public class PlayerInfoUIScript : MonoBehaviour {
     void OnEnable()
     {
         GameManager.instance.eventManager.PlayerHitpointsChanged.AddListener(OnPlayerHitpointsChanged);
-        GameManager.instance.eventManager.PlayerXPChanged.AddListener(OnPlayerXPChanged);
-        GameManager.instance.eventManager.CoinsChanged.AddListener(OnCoinsChanged);
+        GameManager.instance.eventManager.PlayerCurrencyChanged.AddListener(OnPlayerCurrencyChanged);
     }
 
     void OnDisable()
     {
         GameManager.instance.eventManager.PlayerHitpointsChanged.RemoveListener(OnPlayerHitpointsChanged);
-        GameManager.instance.eventManager.PlayerXPChanged.RemoveListener(OnPlayerXPChanged);
-        GameManager.instance.eventManager.CoinsChanged.RemoveListener(OnCoinsChanged);
+        GameManager.instance.eventManager.PlayerCurrencyChanged.RemoveListener(OnPlayerCurrencyChanged);
     }
 
     // Update is called once per frame
@@ -89,18 +87,18 @@ public class PlayerInfoUIScript : MonoBehaviour {
         maxhitpoints = player.MaxHitpoints;
     }
 
-    void OnPlayerXPChanged(Player player)
+    void OnPlayerCurrencyChanged(CurrencyManager currency)
     {
-        xp = player.GetXP();
-        maxXp = player.GetXPForNextLevel();
-        minxp = player.GetXPForLevelStart();
-        level = player.GetLevel();
-    }
-
-    void OnCoinsChanged(int newcoins)
-    {
-        coins = newcoins;
-        coinsFadeTimer = 5f;
-        coinsImage.gameObject.SetActive(true);
+        xp = currency.GetXP();
+        maxXp = currency.GetXPForNextLevel();
+        minxp = currency.GetXPForLevelStart();
+        level = currency.GetLevel();
+        if (coins != currency.GetCoins())
+        {
+            int difference = currency.GetCoins() - coins;
+            coins = currency.GetCoins();
+            coinsFadeTimer = 5f;
+            coinsImage.gameObject.SetActive(true);
+        }
     }
 }

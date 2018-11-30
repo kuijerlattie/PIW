@@ -68,11 +68,7 @@ public class SimpleEnemy : KillablePawn {
 
     protected override void OnDeath(KillablePawn victim, KillablePawn killer, Weapon weapon)
     {
-        Debug.Log(this);
-        Debug.Log(killer);
-        Debug.Log(weapon);
         GameManager.instance.eventManager.EnemyDeath.Invoke(this, killer, weapon);
-        Debug.Log("enemy died");
 
         if (killer.tag == "Player")
             GameManager.instance.eventManager.XPDrop.Invoke(xpforkill, this);

@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]
     public Player player;
     [HideInInspector]
+    public CurrencyManager currencyManager;
+    [HideInInspector]
     public SavegameManager savegameManager;
     [HideInInspector]
     public EventManager eventManager;
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
 
         //add managers
+        currencyManager = gameObject.AddComponent<CurrencyManager>();
         savegameManager = gameObject.AddComponent<SavegameManager>();
         eventManager = gameObject.AddComponent<EventManager>();
         enemySpawnManager = gameObject.AddComponent<EnemySpawnManager>();

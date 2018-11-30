@@ -127,7 +127,8 @@ public class WaveSystem : GameMode {
                 break;
         }
 
-        totalGameTimer += Time.deltaTime;
+        if (gamestate != WaveSystemState.GameOver)
+            totalGameTimer += Time.deltaTime;
         countdown -= Time.deltaTime;
     }
 
@@ -263,6 +264,15 @@ public class WaveSystem : GameMode {
     void OnGameOverStarted()
     {
         countdown = gameOverTime;
+
+        GameManager.instance.savegameManager.saveData.wmTotalMatches += 1;
+        GameManager.instance.savegameManager.saveData.wmTotalGameTime += totalGameTimer;
+        if (GameManager.instance.savegameManager.saveData.wmLongestMatch < totalGameTimer) GameManager.instance.savegameManager.saveData.wmLongestMatch = totalGameTimer;
+        GameManager.instance.savegameManager.saveData.wmTotalRounds += round-1;
+        if (GameManager.instance.savegameManager.saveData.wmBestRound < round - 1) GameManager.instance.savegameManager.saveData.wmBestRound = round - 1;
+        GameManager.instance.savegameManager.saveData.wmTotalKills += killcounter;
+        if (GameManager.instance.savegameManager.saveData.wmTotalKills < killcounter) GameManager.instance.savegameManager.saveData.wmTotalKills = killcounter;
+        GameManager.instance.savegameManager.Save();
     }
 
     void OnGameOver()

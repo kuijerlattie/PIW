@@ -8,6 +8,6 @@ public class CoinsScript : PickupBaseScript {
     
     protected override void OnPickup()
     {
-        GameManager.instance.player.AddCoins(coinvalue);
+        GameManager.instance.currencyManager.AddCoins(coinvalue);
     }
 }
