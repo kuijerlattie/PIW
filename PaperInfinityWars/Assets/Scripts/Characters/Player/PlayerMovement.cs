@@ -9,13 +9,20 @@ public class PlayerMovement : MonoBehaviour {
     float horizontalMove = 0f;
     bool jump = false;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+        GameManager.instance.eventManager.OnSave.AddListener(SetSaveData);
+        GameManager.instance.eventManager.OnLoad.AddListener(SetLoadData);
+    }
+
+    void OnDisable()
+    {
+        GameManager.instance.eventManager.OnSave.RemoveListener(SetSaveData);
+        GameManager.instance.eventManager.OnLoad.RemoveListener(SetLoadData);
+    }
+
+    // Update is called once per frame
+    void Update () {
         horizontalMove = Input.GetAxisRaw("Horizontal");
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -23,8 +30,28 @@ public class PlayerMovement : MonoBehaviour {
         }
         if (Input.GetMouseButtonDown(0))
         {
-            GetComponent<WeaponSlots>().currentweapon.Attack();
+            GetComponent<WeaponSlots>().Attack();
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            //q scroll weapon back
+            GetComponent<WeaponSlots>().NextWeapon();
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            //e to scroll weapon forward
+            GetComponent<WeaponSlots>().PreviousWeapon();
+        }
+    }
+
+    void SetSaveData()
+    {
+        GetComponent<WeaponSlots>().SaveEquipedWeapons();
+    }
+
+    void SetLoadData(SaveData saveData)
+    {
+        GetComponent<WeaponSlots>().LoadEquipedWeapons(saveData);
     }
 
     private void FixedUpdate()

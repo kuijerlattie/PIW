@@ -40,6 +40,7 @@ public class CurrencyManager : MonoBehaviour {
         {
             CalculateCurrentLevel();
         }
+        GameManager.instance.eventManager.PlayerCurrencyChanged.Invoke(this);
     }
 
     void CalculateCurrentLevel()
@@ -68,7 +69,6 @@ public class CurrencyManager : MonoBehaviour {
             }
         }
 
-    GameManager.instance.eventManager.PlayerCurrencyChanged.Invoke(this);
 
     }
 

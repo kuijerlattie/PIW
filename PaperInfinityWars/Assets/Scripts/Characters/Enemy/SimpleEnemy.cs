@@ -57,9 +57,9 @@ public class SimpleEnemy : KillablePawn {
 
         if (weaponSlots != null)
         {
-            if (Vector2.Distance(player.transform.position, this.transform.position) < weaponSlots.currentweapon.range)
+            if (Vector2.Distance(player.transform.position, this.transform.position) < weaponSlots.GetRange())
             {
-                weaponSlots.currentweapon.Attack();
+                weaponSlots.Attack();
             }
         }
 

@@ -6,7 +6,7 @@ public class WeaponSlots : MonoBehaviour {
 
     [Header("Weapon settings")]
     public int weaponSlots = 4;
-    int selectedweapon = 1;
+    [SerializeField] int selectedweapon = 1;
     Weapon[] weaponlist;
     protected Animator _animator;
     public GameObject testweapon;
@@ -26,23 +26,9 @@ public class WeaponSlots : MonoBehaviour {
         EquipWeapon(testweapon);
     }
 
-    void Update()
+    public void NextWeapon()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            //q scroll weapon back
-            NextWeapon();
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            //e to scroll weapon forward
-            PreviousWeapon();
-        }
-    }
-
-    protected void NextWeapon()
-    {
-        if (!currentweapon.isAttacking)
+        if (currentweapon == null || (currentweapon != null && !currentweapon.isAttacking))
         {
             selectedweapon += 1;
             if (selectedweapon > weaponSlots)
@@ -51,9 +37,9 @@ public class WeaponSlots : MonoBehaviour {
         }
     }
 
-    protected void PreviousWeapon()
+    public void PreviousWeapon()
     {
-        if (!currentweapon.isAttacking)
+        if (currentweapon == null || (currentweapon != null && !currentweapon.isAttacking))
         {
             selectedweapon -= 1;
             if (selectedweapon <= 0)
@@ -65,6 +51,7 @@ public class WeaponSlots : MonoBehaviour {
     protected void EquipWeapon(GameObject oWeapon)
     {
         //instantize weapon to hand
+        RemoveWeapon();
         GameObject weapontoinstantiate = Instantiate(oWeapon, hand.transform);
         weaponlist[selectedweapon-1] = weapontoinstantiate.GetComponent<Weapon>();
         weaponlist[selectedweapon - 1].owner = this;
@@ -80,12 +67,16 @@ public class WeaponSlots : MonoBehaviour {
 
     protected void RemoveWeapon()
     {
-        weaponlist[selectedweapon] = null;
+        RemoveWeapon(selectedweapon);
     }
 
     protected void RemoveWeapon(int iSlot)
     {
-        weaponlist[iSlot] = null;
+        if (weaponlist[iSlot -1] != null)
+        {
+            Destroy(weaponlist[iSlot - 1].gameObject);
+            weaponlist[iSlot - 1] = null;
+        }
     }
 
     protected void ShowActiveWeapon()
@@ -97,6 +88,54 @@ public class WeaponSlots : MonoBehaviour {
                 weaponlist[i].gameObject.SetActive(i == selectedweapon -1 ? true : false);
                 weaponlist[i].OnEquip();
             }
+        }
+    }
+
+    public void Attack()
+    {
+        if (currentweapon != null)
+        {
+            currentweapon.Attack();
+        }
+    }
+
+    public float GetRange()
+    {
+        if (currentweapon != null)
+        {
+            return currentweapon.range;
+        }
+        else
+        {
+            return float.PositiveInfinity;
+        }
+    }
+
+    public void SaveEquipedWeapons()
+    {
+        GameManager.instance.savegameManager.saveData.weaponslot1 = weaponlist[0] == null ? 0 : weaponlist[0].ID;
+        GameManager.instance.savegameManager.saveData.weaponslot2 = weaponlist[1] == null ? 0 : weaponlist[1].ID;
+        GameManager.instance.savegameManager.saveData.weaponslot3 = weaponlist[2] == null ? 0 : weaponlist[2].ID;
+        GameManager.instance.savegameManager.saveData.weaponslot4 = weaponlist[3] == null ? 0 : weaponlist[3].ID;
+    }
+
+    public void LoadEquipedWeapons(SaveData saveData)
+    {
+        if (saveData.weaponslot1 != 0)
+        {
+            EquipWeapon(1, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot1));
+        }
+        if (saveData.weaponslot1 != 0)
+        {
+            EquipWeapon(2, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot1));
+        }
+        if (saveData.weaponslot1 != 0)
+        {
+            EquipWeapon(3, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot1));
+        }
+        if (saveData.weaponslot1 != 0)
+        {
+            EquipWeapon(4, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot1));
         }
     }
 }

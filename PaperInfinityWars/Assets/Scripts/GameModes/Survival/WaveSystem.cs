@@ -36,6 +36,7 @@ public class WaveSystem : GameMode {
     float timeoutTime = 10f; //time between rounds in seconds
     float gameOverTime = 5f; //time after dying before returning to hubworld
     int maxSimultaniousEnemies = 30;
+    float MaxSpawnRange = 60;
     #endregion
 
     #region EnemySettings
@@ -183,7 +184,7 @@ public class WaveSystem : GameMode {
             if (normalsToSpawn > 0)
             {
                 //spawn normal enemy
-                GameObject enemy = Instantiate(commonEnemies[0], enemySpawnManager.GetSpawnPoint().transform.position, Quaternion.identity);
+                GameObject enemy = Instantiate(commonEnemies[0], enemySpawnManager.GetRandomSpawnPointInPlayerRange(MaxSpawnRange).transform.position, Quaternion.identity);
                 KillablePawn commonKillablePawn = enemy.GetComponent<KillablePawn>();
                 enemies.Add(commonKillablePawn);
                 normalsToSpawn--;
@@ -192,7 +193,7 @@ public class WaveSystem : GameMode {
             if (raresToSpawn > 0)
             {
                 //spawn rare
-                GameObject enemy = Instantiate(RareEnemies[0], enemySpawnManager.GetSpawnPoint().transform.position, Quaternion.identity);
+                GameObject enemy = Instantiate(RareEnemies[0], enemySpawnManager.GetRandomSpawnPointInPlayerRange(MaxSpawnRange).transform.position, Quaternion.identity);
                 KillablePawn commonKillablePawn = enemy.GetComponent<KillablePawn>();
                 enemies.Add(commonKillablePawn);
                 raresToSpawn--;
@@ -201,7 +202,7 @@ public class WaveSystem : GameMode {
             if (BossesToSpawn > 0)
             {
                 //spawn boss
-                GameObject enemy = Instantiate(BossEnemies[0], enemySpawnManager.GetSpawnPoint().transform.position, Quaternion.identity);
+                GameObject enemy = Instantiate(BossEnemies[0], enemySpawnManager.GetRandomSpawnPointInPlayerRange(MaxSpawnRange).transform.position, Quaternion.identity);
                 KillablePawn commonKillablePawn = enemy.GetComponent<KillablePawn>();
                 enemies.Add(commonKillablePawn);
                 BossesToSpawn--;

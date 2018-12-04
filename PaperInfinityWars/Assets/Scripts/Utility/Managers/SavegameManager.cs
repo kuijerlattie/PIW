@@ -54,8 +54,13 @@ public class SavegameManager : MonoBehaviour {
 [Serializable]
 public class SaveData
 {
+    //player stats/info
     public int xp = 0;
     public int coins = 0;
+    public int weaponslot1 = 0;
+    public int weaponslot2 = 0;
+    public int weaponslot3 = 0;
+    public int weaponslot4 = 0;
 
     //wavemode stats;
     public int wmBestRound = 0;

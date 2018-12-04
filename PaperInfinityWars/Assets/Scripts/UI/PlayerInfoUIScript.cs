@@ -62,7 +62,7 @@ public class PlayerInfoUIScript : MonoBehaviour {
         else
             experienceFill.fillAmount = 0;
 
-        xpText.text = xp.ToString() + " / " + maxXp.ToString();
+        xpText.text = (xp - minxp).ToString() + " / " + (maxXp - minxp).ToString();
         xpText.enabled = showXPText;
 
         levelNumber.SetText(level.ToString());
