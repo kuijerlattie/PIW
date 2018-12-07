@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Editor\CalculateNavigation.cs" />
      <Compile Include="Assets\Scripts\Editor\ResetPlayerProgress.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>E:/minor/PIW/PaperInfinityWars/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

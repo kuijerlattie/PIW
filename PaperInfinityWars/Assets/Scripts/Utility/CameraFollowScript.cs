@@ -13,11 +13,12 @@ public class CameraFollowScript : MonoBehaviour {
     private void Start()
     {
         GameManager.instance.SetCameraFollowScript(this);
+        this.transform.rotation = Quaternion.Euler(new Vector3(22.5f, 0, 0));
     }
 
     public void Initialize () {
         previouslocation = new Vector2(target.transform.position.x, target.transform.position.y);
-        this.transform.position = new Vector3(previouslocation.x, previouslocation.y, -10);
+        this.transform.position = new Vector3(previouslocation.x, previouslocation.y + 4, -7);
 	}
 	
 	// Update is called once per frame

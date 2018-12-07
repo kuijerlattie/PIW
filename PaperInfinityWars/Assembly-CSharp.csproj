@@ -63,6 +63,8 @@
      <Compile Include="Assets\Scripts\GameModes\GameMode.cs" />
      <Compile Include="Assets\Scripts\GameModes\Survival\WaveSystem.cs" />
      <Compile Include="Assets\Scripts\GameModes\Survival\WaveSystemSO.cs" />
+     <Compile Include="Assets\Scripts\navigation\NavConnection.cs" />
+     <Compile Include="Assets\Scripts\navigation\NavNode.cs" />
      <Compile Include="Assets\Scripts\Pickups\CoinsScript.cs" />
      <Compile Include="Assets\Scripts\Pickups\HealthPickupScript.cs" />
      <Compile Include="Assets\Scripts\Pickups\PickupBaseScript.cs" />
