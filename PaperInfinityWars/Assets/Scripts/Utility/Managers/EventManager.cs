@@ -26,7 +26,7 @@ public class EventManager : MonoBehaviour {
     public PlayerHitpointsChangedEvent PlayerHitpointsChanged = new PlayerHitpointsChangedEvent();
     public class PlayerCurrencyChangedEvent : UnityEvent<CurrencyManager> { }
     public PlayerCurrencyChangedEvent PlayerCurrencyChanged = new PlayerCurrencyChangedEvent();
-    public class XPDropEvent : UnityEvent<int, KillablePawn> { }
+    public class XPDropEvent : UnityEvent<int> { }
     public XPDropEvent XPDrop = new XPDropEvent();
     public class LevelUpEvent : UnityEvent<CurrencyManager> { }
     public LevelUpEvent LevelUp = new LevelUpEvent();
@@ -35,5 +35,19 @@ public class EventManager : MonoBehaviour {
     #region GameStates
     public class GameOverEvent : UnityEvent<GameMode>{}
     public GameOverEvent GameOver = new GameOverEvent();
+    #endregion
+
+    #region WaveModeEvents
+    public class WMOnRoundEndEvent : UnityEvent<int> { }
+    public WMOnRoundEndEvent WMOnRoundEnd = new WMOnRoundEndEvent();
+    public class WMOnRoundCountdownEvent : UnityEvent<int, WaveSystem.WaveSystemState> { }
+    public WMOnRoundCountdownEvent WMOnRoundCountdown = new WMOnRoundCountdownEvent();
+    public class WMOnRoundStartEvent : UnityEvent<int> { }
+    public WMOnRoundStartEvent WMOnRoundStart = new WMOnRoundStartEvent();
+    #endregion
+
+    #region Notifications
+    public class ShowNotificationEvent : UnityEvent<Notification> { }
+    public ShowNotificationEvent ShowNotification = new ShowNotificationEvent();
     #endregion
 }

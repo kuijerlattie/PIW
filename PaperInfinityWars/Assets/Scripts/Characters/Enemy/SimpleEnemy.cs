@@ -9,7 +9,7 @@ public class SimpleEnemy : KillablePawn {
     public float movementspeed = 0.5f;
     private float jumptimer = 0f;
     private float timebetweenjumps = 0.3f;
-    int xpforkill = 10;
+    int xpforkill = 100;
     WeaponSlots weaponSlots = null;
 
 	// Use this for initialization
@@ -71,7 +71,7 @@ public class SimpleEnemy : KillablePawn {
         GameManager.instance.eventManager.EnemyDeath.Invoke(this, killer, weapon);
 
         if (killer.tag == "Player")
-            GameManager.instance.eventManager.XPDrop.Invoke(xpforkill, this);
+            GameManager.instance.eventManager.XPDrop.Invoke(xpforkill);
         Destroy(gameObject, 15f);
     }
 }

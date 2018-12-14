@@ -3462,6 +3462,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114527061450119822, guid: 21288d25293d6a446986b2519de703cd,
+        type: 2}
+      propertyPath: notificationDataBase
+      value: 
+      objectReference: {fileID: 11400000, guid: c6dc73af054c41c4285b5770734a598f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21288d25293d6a446986b2519de703cd, type: 2}
   m_IsPrefabAsset: 0

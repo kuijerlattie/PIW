@@ -32,7 +32,7 @@ public class CurrencyManager : MonoBehaviour {
 
     }
 
-    void GainXP(int oXP, KillablePawn xpgiver)
+    void GainXP(int oXP)
     {
         xP += oXP;
         //show xp popup

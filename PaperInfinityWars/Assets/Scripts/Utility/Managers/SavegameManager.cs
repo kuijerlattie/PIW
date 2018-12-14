@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using UnityEngine;
 
-public class SavegameManager : MonoBehaviour {
-
+public class SavegameManager : MonoBehaviour
+{
     public SaveData saveData = new SaveData();
     private string _SaveGameString = "SaveGame.sav";
     // Use this for initialization
@@ -54,7 +54,7 @@ public class SavegameManager : MonoBehaviour {
 [Serializable]
 public class SaveData
 {
-    //player stats/info
+    //player stats/info;
     public int xp = 0;
     public int coins = 0;
     public int weaponslot1 = 0;
@@ -70,5 +70,19 @@ public class SaveData
     public int wmTotalKills = 0;
     public float wmTotalGameTime = 0f;
     public float wmLongestMatch = 0f;
+
+    //challenge progress;
+    public List<ChallengeProgress> challenges = new List<ChallengeProgress>();
 }
+
+[Serializable]
+public class ChallengeProgress
+{
+    public int challengeID = 0;
+    public int progress = 0;
+    public int currenttier = 0;
+    public bool Completed = false;
+}
+
+
 

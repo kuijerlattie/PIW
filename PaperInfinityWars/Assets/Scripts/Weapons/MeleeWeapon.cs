@@ -6,7 +6,7 @@ public class MeleeWeapon : Weapon {
 
 	// Use this for initialization
 	void Start () {
-		
+        weaponType = WeaponType.Melee;
 	}
 	
 	// Update is called once per frame

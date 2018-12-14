@@ -1,7 +1,8 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Challenges;
 
 public class GameManager : MonoBehaviour {
     
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour {
     public GameObject UI;
     protected GameObject UIinstance;
     public ItemDatabase itemManager;
+    public NotificationDataBase notificationDataBase;
+    public int randomid = 0;
 
     [HideInInspector]
     public Player player;
@@ -22,12 +25,15 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]
     public EnemySpawnManager enemySpawnManager;
     [HideInInspector]
+    public ChallengeManager challengeManager;
+    [HideInInspector]
     public GameMode gameMode;
     [HideInInspector]
     public CameraFollowScript cameraFollowScript;
 
     private void Awake()
     {
+        randomid = Random.Range(1, 999999);
         if (instance == null)
             instance = this;
         else if (instance != this)
@@ -36,9 +42,11 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
 
         //add managers
-        currencyManager = gameObject.AddComponent<CurrencyManager>();
-        savegameManager = gameObject.AddComponent<SavegameManager>();
         eventManager = gameObject.AddComponent<EventManager>();
+        currencyManager = gameObject.AddComponent<CurrencyManager>();
+        challengeManager = gameObject.AddComponent<ChallengeManager>();
+        challengeManager.Initialize();
+        savegameManager = gameObject.AddComponent<SavegameManager>();
         enemySpawnManager = gameObject.AddComponent<EnemySpawnManager>();
         SceneManager.sceneLoaded += OnSceneLoaded;
     }

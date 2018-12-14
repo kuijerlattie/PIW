@@ -53,6 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\achievables\Challenges\ChallengeBase.cs" />
+     <Compile Include="Assets\Scripts\achievables\Challenges\ChallengeNotification.cs" />
+     <Compile Include="Assets\Scripts\achievables\Challenges\Killer\MeleeKillerChallenge.cs" />
      <Compile Include="Assets\Scripts\Characters\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\Characters\Enemy\DropTable.cs" />
      <Compile Include="Assets\Scripts\Characters\Enemy\SimpleEnemy.cs" />
@@ -69,17 +72,23 @@
      <Compile Include="Assets\Scripts\Pickups\HealthPickupScript.cs" />
      <Compile Include="Assets\Scripts\Pickups\PickupBaseScript.cs" />
      <Compile Include="Assets\Scripts\Temp scripts\Worldswitcher.cs" />
+     <Compile Include="Assets\Scripts\UI\CountdownUIScript.cs" />
      <Compile Include="Assets\Scripts\UI\GameModeStarters\WaveModeStarter.cs" />
      <Compile Include="Assets\Scripts\UI\In-world UI\ShowUIScript.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerInfoUIScript.cs" />
+     <Compile Include="Assets\Scripts\UI\RoundCounter.cs" />
      <Compile Include="Assets\Scripts\Utility\CameraFollowScript.cs" />
      <Compile Include="Assets\Scripts\Utility\EnemySpawnManager.cs" />
      <Compile Include="Assets\Scripts\Utility\EnemySpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Utility\ItemDatabase.cs" />
+     <Compile Include="Assets\Scripts\Utility\Managers\ChallengeManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Managers\CurrencyManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Managers\EventManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Utility\Managers\NotificationManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Managers\SavegameManager.cs" />
+     <Compile Include="Assets\Scripts\Utility\Notification.cs" />
+     <Compile Include="Assets\Scripts\Utility\NotificationDataBase.cs" />
      <Compile Include="Assets\Scripts\Utility\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Weapons\MeleeWeapon.cs" />
      <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />

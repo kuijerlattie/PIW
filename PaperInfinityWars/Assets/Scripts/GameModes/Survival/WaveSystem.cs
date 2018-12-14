@@ -17,6 +17,7 @@ public class WaveSystem : GameMode {
     #region General variables
     int round;
     List<KillablePawn> enemies;
+    List<GameObject> spawnPool;
     public WaveSystemState gamestate;
     public float countdown = 0f;
     int normalsToSpawn;
@@ -24,6 +25,7 @@ public class WaveSystem : GameMode {
     int BossesToSpawn;
     EnemySpawnManager enemySpawnManager;
     bool LoadingHub = false;
+    int countdownevent = 5;
     #endregion
 
     #region game stats
@@ -131,6 +133,11 @@ public class WaveSystem : GameMode {
         if (gamestate != WaveSystemState.GameOver)
             totalGameTimer += Time.deltaTime;
         countdown -= Time.deltaTime;
+        if (countdown < countdownevent && countdownevent > 0)
+        {
+            GameManager.instance.eventManager.WMOnRoundCountdown.Invoke(countdownevent, gamestate);
+            countdownevent--;
+        }
     }
 
     void OnPlayerDeath(KillablePawn victim, KillablePawn killer, Weapon killerweapon)
@@ -175,40 +182,24 @@ public class WaveSystem : GameMode {
     {
         round++;
         CalculateWave();
+        GameManager.instance.eventManager.WMOnRoundStart.Invoke(round);
     }
 
     void OnSpawning()
     {
         if (enemies.Count < maxSimultaniousEnemies)
         {
-            if (normalsToSpawn > 0)
+            if (spawnPool.Count > 0)
             {
-                //spawn normal enemy
-                GameObject enemy = Instantiate(commonEnemies[0], enemySpawnManager.GetRandomSpawnPointInPlayerRange(MaxSpawnRange).transform.position, Quaternion.identity);
+                int randomspawnid = Random.Range(0, spawnPool.Count - 1);
+                
+                GameObject enemy = Instantiate(spawnPool[randomspawnid], enemySpawnManager.GetRandomSpawnPointInPlayerRange(MaxSpawnRange).transform.position, Quaternion.identity);
                 KillablePawn commonKillablePawn = enemy.GetComponent<KillablePawn>();
                 enemies.Add(commonKillablePawn);
-                normalsToSpawn--;
+                spawnPool.RemoveAt(randomspawnid);
             }
 
-            if (raresToSpawn > 0)
-            {
-                //spawn rare
-                GameObject enemy = Instantiate(RareEnemies[0], enemySpawnManager.GetRandomSpawnPointInPlayerRange(MaxSpawnRange).transform.position, Quaternion.identity);
-                KillablePawn commonKillablePawn = enemy.GetComponent<KillablePawn>();
-                enemies.Add(commonKillablePawn);
-                raresToSpawn--;
-            }
-
-            if (BossesToSpawn > 0)
-            {
-                //spawn boss
-                GameObject enemy = Instantiate(BossEnemies[0], enemySpawnManager.GetRandomSpawnPointInPlayerRange(MaxSpawnRange).transform.position, Quaternion.identity);
-                KillablePawn commonKillablePawn = enemy.GetComponent<KillablePawn>();
-                enemies.Add(commonKillablePawn);
-                BossesToSpawn--;
-            }
-
-            if (normalsToSpawn == 0 && raresToSpawn == 0 && BossesToSpawn == 0)
+            if (spawnPool.Count == 0)
             {
                 ChangeState(WaveSystemState.Waiting);
             }
@@ -245,6 +236,7 @@ public class WaveSystem : GameMode {
     void OnTimeoutStarted()
     {
         countdown = timeoutTime;
+        countdownevent = 5;
     }
 
     void OnTimeout()
@@ -293,19 +285,28 @@ public class WaveSystem : GameMode {
 
     private void CalculateWave()
     {
-        normalsToSpawn = round * 3 + 3;
-        raresToSpawn = Mathf.CeilToInt((round - 5f) / 6f);
-        if (raresToSpawn < 0) raresToSpawn = 0;
+
+        spawnPool = new List<GameObject>();
+        int amount = 0; //result of enemy amount calculation
+        amount = round * 3 + 3;
+        for (int i = 0; i < amount; i++)
+        {
+            spawnPool.Add(commonEnemies[Random.Range(0, commonEnemies.Count - 1)]);
+        }
+        amount = Mathf.CeilToInt((round - 5f) / 6f);
+        for (int i = 0; i < amount; i++)
+        {
+            spawnPool.Add(RareEnemies[Random.Range(0, commonEnemies.Count - 1)]);
+        }
 
         if (round % 5 == 0)
         {
-            BossesToSpawn = Mathf.FloorToInt(round + 5 / 10);
-            if (BossesToSpawn < 0) BossesToSpawn = 0;
-        }
-        else
-        {
-            //no bosses this round;
-            BossesToSpawn = 0;
+
+            amount = Mathf.FloorToInt(round + 5 / 10);
+            for (int i = 0; i < amount; i++)
+            {
+                spawnPool.Add(BossEnemies[Random.Range(0, commonEnemies.Count - 1)]);
+            }
         }
 
     }

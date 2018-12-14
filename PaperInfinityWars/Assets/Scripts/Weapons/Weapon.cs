@@ -19,6 +19,15 @@ public class Weapon : MonoBehaviour {
     protected Animator _animator;
     public AnimatorOverrideController animationOverrideController;
 
+    public enum WeaponType
+    {
+        Melee,
+        Gun,
+        Explosive
+    }
+
+    public WeaponType weaponType = WeaponType.Melee;
+
 	// Use this for initialization
 	void Start () {
 		
