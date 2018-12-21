@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour {
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (UIinstance == null)
+        if (UIinstance == null && scene.name != "MainMenu")
         {
             UIinstance = GameObject.Instantiate(UI);
         }

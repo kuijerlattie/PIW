@@ -8,6 +8,7 @@ public class SavegameManager : MonoBehaviour
 {
     public SaveData saveData = new SaveData();
     private string _SaveGameString = "SaveGame.sav";
+    public bool SaveExists = false;
     // Use this for initialization
     void Start () {
         Load();
@@ -47,6 +48,11 @@ public class SavegameManager : MonoBehaviour
             FileStream file = File.Open(Path.Combine(Application.persistentDataPath, _SaveGameString), FileMode.Open);
             saveData = (SaveData)bf.Deserialize(file);
             file.Close();
+            SaveExists = true;
+        }
+        else
+        {
+            SaveExists = false;
         }
     }
 }
@@ -61,6 +67,7 @@ public class SaveData
     public int weaponslot2 = 0;
     public int weaponslot3 = 0;
     public int weaponslot4 = 0;
+    public string lastHub = "";
 
     //wavemode stats;
     public int wmBestRound = 0;

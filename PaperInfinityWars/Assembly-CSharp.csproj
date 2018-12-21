@@ -53,9 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\achievables\Challenges\Carreer\CareerKillerChallenge.cs" />
      <Compile Include="Assets\Scripts\achievables\Challenges\ChallengeBase.cs" />
      <Compile Include="Assets\Scripts\achievables\Challenges\ChallengeNotification.cs" />
      <Compile Include="Assets\Scripts\achievables\Challenges\Killer\MeleeKillerChallenge.cs" />
+     <Compile Include="Assets\Scripts\achievables\Challenges\Survival\WaveMasterChallenge.cs" />
+     <Compile Include="Assets\Scripts\achievables\Challenges\Survival\WaveSurviverChallenge.cs" />
      <Compile Include="Assets\Scripts\Characters\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\Characters\Enemy\DropTable.cs" />
      <Compile Include="Assets\Scripts\Characters\Enemy\SimpleEnemy.cs" />
@@ -72,9 +75,13 @@
      <Compile Include="Assets\Scripts\Pickups\HealthPickupScript.cs" />
      <Compile Include="Assets\Scripts\Pickups\PickupBaseScript.cs" />
      <Compile Include="Assets\Scripts\Temp scripts\Worldswitcher.cs" />
+     <Compile Include="Assets\Scripts\UI\ChallengeHoverScript.cs" />
+     <Compile Include="Assets\Scripts\UI\ChallengesScript.cs" />
      <Compile Include="Assets\Scripts\UI\CountdownUIScript.cs" />
      <Compile Include="Assets\Scripts\UI\GameModeStarters\WaveModeStarter.cs" />
      <Compile Include="Assets\Scripts\UI\In-world UI\ShowUIScript.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenuChallengeUI.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerInfoUIScript.cs" />
      <Compile Include="Assets\Scripts\UI\RoundCounter.cs" />
      <Compile Include="Assets\Scripts\Utility\CameraFollowScript.cs" />

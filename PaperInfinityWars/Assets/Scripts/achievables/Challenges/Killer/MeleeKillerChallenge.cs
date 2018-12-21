@@ -12,17 +12,15 @@ namespace Challenges
         int[] Rewards = new int[5] {10, 15, 25, 50, 100};
         
         int progress = 0;
-        int currentTier = 0;
-        bool completed = false;
 
         public MeleeKillerChallenge()
         {
             challengeID = 1;
-            challengeName = "Melee Killer";
+            highestTier = 5;
+            challengeName = "Melee killer";
             challengeDescription = "Get {0} kills with melee weapons";
             challengeCategory = ChallengeCategory.Killer;
             GameManager.instance.eventManager.OnLoad.AddListener(OnLoad);
-            Debug.Log(challengeName + " instantiated");
             GetNotification();
         }
 
@@ -30,7 +28,6 @@ namespace Challenges
         {
             GameManager.instance.eventManager.EnemyDeath.AddListener(OnEnemyDeath);
             GameManager.instance.eventManager.OnSave.AddListener(OnSave);
-            Debug.Log("registered for progress!");
         }
 
         public override void DeRegisterForEvents()
@@ -42,29 +39,58 @@ namespace Challenges
 
         void OnEnemyDeath(KillablePawn oVictim, KillablePawn oKiller, Weapon oWeapon)
         {
-            Debug.Log("kill registered!");
             if (oWeapon.weaponType == Weapon.WeaponType.Melee)
             {
-                progress += 1;
+                progress ++;
                 if (progress == Goals[currentTier])
                 {
-                    Debug.Log("kill registered!");
                     GameManager.instance.eventManager.XPDrop.Invoke(Rewards[currentTier]);
                     Notification notification = new Notification();
                     GameManager.instance.eventManager.ShowNotification.Invoke(notificationObject);
                     currentTier++;
+                    if (currentTier == highestTier)
+                    {
+                        completed = true;
+                    }
                 }
             }
         }
 
-        public override void GetProgress()
+        public override int GetProgress()
         {
-            throw new NotImplementedException();
+            return progress;
         }
 
-        public override void GetCurrentTier()
+        public override int GetReward()
         {
-            throw new NotImplementedException();
+            if (currentTier != highestTier)
+            {
+                return Rewards[currentTier];
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public override int GetGoal()
+        {
+            if (currentTier != highestTier)
+            {
+                return Goals[currentTier];
+            }
+            else
+            {
+                return Goals[highestTier-1];
+            }
+        }
+
+        public override string GetDescription()
+        {
+            if (completed)
+                return string.Format(challengeDescription, Goals[currentTier - 1]);
+            else
+                return string.Format(challengeDescription, Goals[currentTier]);
         }
 
         void OnLoad(SaveData oSaveData)
@@ -72,9 +98,12 @@ namespace Challenges
             if (oSaveData.challenges.Count != 0)
             {
                 ChallengeProgress challengeProgress = oSaveData.challenges.Find(X => X.challengeID == this.challengeID);
-                this.currentTier = challengeProgress.currenttier;
-                this.progress = challengeProgress.progress;
-                this.completed = challengeProgress.Completed;
+                if (challengeProgress != null)
+                {
+                    this.currentTier = challengeProgress.currenttier;
+                    this.progress = challengeProgress.progress;
+                    this.completed = challengeProgress.Completed;
+                }
             }
         }
 

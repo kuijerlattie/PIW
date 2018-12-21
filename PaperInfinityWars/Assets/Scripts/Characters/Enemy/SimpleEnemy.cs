@@ -9,7 +9,7 @@ public class SimpleEnemy : KillablePawn {
     public float movementspeed = 0.5f;
     private float jumptimer = 0f;
     private float timebetweenjumps = 0.3f;
-    int xpforkill = 100;
+    int xpforkill = 10;
     WeaponSlots weaponSlots = null;
 
 	// Use this for initialization

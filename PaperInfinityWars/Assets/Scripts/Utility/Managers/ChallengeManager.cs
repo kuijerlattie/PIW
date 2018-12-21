@@ -12,16 +12,26 @@ namespace Challenges
         List<ChallengeBase> challenges = new List<ChallengeBase>();
 
         //required levels for unlocking challenges
-        int bootcampLevel = 7;
-        int killerLevel = 10;
-        int survivalLevel = 15;
+        public int careerLevel = 6;
+        public int killerLevel = 10;
+        public int survivalLevel = 10;
         bool initialunlock = true;
 
         public void Initialize()
         {
             Debug.Log("challengemanager enabled!");
             GameManager.instance.eventManager.LevelUp.AddListener(OnLevelUp);
+
+            //adding challenges
+            //carreer challenges
+            challenges.Add(new CareerKillerChallenge());
+
+            //killer challenges
             challenges.Add(new MeleeKillerChallenge());
+
+            //survivalChallenges
+            challenges.Add(new WaveSurviverChallenge());
+            challenges.Add(new WaveMasterChallenge());
         }
 
         void OnEnable()
@@ -53,8 +63,8 @@ namespace Challenges
             {
                 switch (challenge.challengeCategory)
                 {
-                    case ChallengeBase.ChallengeCategory.Bootcamp:
-                        if (oLevel == bootcampLevel)
+                    case ChallengeBase.ChallengeCategory.Career:
+                        if (oLevel == careerLevel)
                             challenge.RegisterForEvents();
                         break;
                     case ChallengeBase.ChallengeCategory.Killer:
@@ -78,8 +88,8 @@ namespace Challenges
             {
                 switch (challenge.challengeCategory)
                 {
-                    case ChallengeBase.ChallengeCategory.Bootcamp:
-                        if (oLevel >= bootcampLevel)
+                    case ChallengeBase.ChallengeCategory.Career:
+                        if (oLevel >= careerLevel)
                             challenge.RegisterForEvents();
                         break;
                     case ChallengeBase.ChallengeCategory.Killer:
@@ -94,6 +104,16 @@ namespace Challenges
                         break;
                 }
             }
+        }
+
+        public List<ChallengeBase> GetAllChallenges()
+        {
+            return challenges;
+        }
+
+        public ChallengeBase GetChallengeByID(int iChallengeID)
+        {
+            return challenges.Find(X => X.challengeID == iChallengeID);
         }
     }
 }
