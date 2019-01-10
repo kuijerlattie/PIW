@@ -78,10 +78,12 @@
      <Compile Include="Assets\Scripts\UI\ChallengeHoverScript.cs" />
      <Compile Include="Assets\Scripts\UI\ChallengesScript.cs" />
      <Compile Include="Assets\Scripts\UI\CountdownUIScript.cs" />
+     <Compile Include="Assets\Scripts\UI\FloatingTextScript.cs" />
      <Compile Include="Assets\Scripts\UI\GameModeStarters\WaveModeStarter.cs" />
      <Compile Include="Assets\Scripts\UI\In-world UI\ShowUIScript.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuChallengeUI.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScript.cs" />
+     <Compile Include="Assets\Scripts\UI\PauseScript.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerInfoUIScript.cs" />
      <Compile Include="Assets\Scripts\UI\RoundCounter.cs" />
      <Compile Include="Assets\Scripts\Utility\CameraFollowScript.cs" />

@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
     public bool DebugMenu = false;
     public GameObject UI;
     protected GameObject UIinstance;
+    public GameObject PauseUI;
+    protected GameObject PauseUIInstance;
     public ItemDatabase itemManager;
     public NotificationDataBase notificationDataBase;
     public int randomid = 0;
@@ -35,20 +37,23 @@ public class GameManager : MonoBehaviour {
     {
         randomid = Random.Range(1, 999999);
         if (instance == null)
+        {
             instance = this;
+
+            //add managers
+            eventManager = gameObject.AddComponent<EventManager>();
+            currencyManager = gameObject.AddComponent<CurrencyManager>();
+            challengeManager = gameObject.AddComponent<ChallengeManager>();
+            challengeManager.Initialize();
+            savegameManager = gameObject.AddComponent<SavegameManager>();
+            enemySpawnManager = gameObject.AddComponent<EnemySpawnManager>();
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
         else if (instance != this)
             Destroy(gameObject);
 
         DontDestroyOnLoad(this.gameObject);
 
-        //add managers
-        eventManager = gameObject.AddComponent<EventManager>();
-        currencyManager = gameObject.AddComponent<CurrencyManager>();
-        challengeManager = gameObject.AddComponent<ChallengeManager>();
-        challengeManager.Initialize();
-        savegameManager = gameObject.AddComponent<SavegameManager>();
-        enemySpawnManager = gameObject.AddComponent<EnemySpawnManager>();
-        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void OnDisable()

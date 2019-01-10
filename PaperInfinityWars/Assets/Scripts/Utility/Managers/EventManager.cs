@@ -35,6 +35,8 @@ public class EventManager : MonoBehaviour {
     #region GameStates
     public class GameOverEvent : UnityEvent<GameMode>{}
     public GameOverEvent GameOver = new GameOverEvent();
+    public class EndGameEvent : UnityEvent { }
+    public EndGameEvent EndGame = new EndGameEvent();
     #endregion
 
     #region WaveModeEvents

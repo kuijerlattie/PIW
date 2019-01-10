@@ -57,6 +57,7 @@ public class WaveSystem : GameMode {
         OnWarmupStarted();
         GameManager.instance.eventManager.PlayerDeath.AddListener(OnPlayerDeath);
         GameManager.instance.eventManager.EnemyDeath.AddListener(OnEnemyDeath);
+        GameManager.instance.eventManager.EndGame.AddListener(OnEndGame);
         enemySpawnManager = GameManager.instance.enemySpawnManager;
 	}
 	
@@ -149,6 +150,13 @@ public class WaveSystem : GameMode {
     {
         enemies.RemoveAll(X => !X.alive);
         killcounter++;
+    }
+
+    void OnEndGame()
+    {
+        ChangeState(WaveSystemState.GameOver);
+        GameManager.instance.eventManager.PlayerDeath.RemoveListener(OnPlayerDeath);
+        GameManager.instance.player.GetComponent<CharacterController2D>().enabled = false;
     }
 
     #region Warmup

@@ -35,7 +35,11 @@ public class CurrencyManager : MonoBehaviour {
     void GainXP(int oXP)
     {
         xP += oXP;
+
         //show xp popup
+        GameObject popup = Instantiate((GameObject)Resources.Load("UI/XPPopup"), GameManager.instance.player.transform.position, Quaternion.identity);
+        popup.GetComponent<FloatingTextScript>().SetText(oXP.ToString() + "XP");
+
         if (xP >= xPForNextLevel)
         {
             CalculateCurrentLevel();
@@ -104,6 +108,12 @@ public class CurrencyManager : MonoBehaviour {
     public void AddCoins(int amount)
     {
         coins += amount;
+
+        //show popup
+        GameObject popup = Instantiate((GameObject)Resources.Load("UI/GoldPopup"), GameManager.instance.player.transform.position, Quaternion.identity);
+        popup.GetComponent<FloatingTextScript>().SetText(amount.ToString() + "$");
+
+
         GameManager.instance.eventManager.PlayerCurrencyChanged.Invoke(this);
     }
 

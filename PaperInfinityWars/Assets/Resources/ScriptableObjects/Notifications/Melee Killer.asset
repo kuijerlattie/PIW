@@ -11,5 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b1cd3fbb9a752e4aaf2aba9bed4df7e, type: 3}
   m_Name: Melee Killer
   m_EditorClassIdentifier: 
-  notification: {fileID: 0}
+  notification: {fileID: 1006180273847196, guid: 73a03da7e3c631a4faa938ed2a9ec67c,
+    type: 2}
   ChallengeID: 1

@@ -73,6 +73,11 @@ public abstract class KillablePawn : MonoBehaviour {
         {
             _hitpoints -= iDamage;
             OnDamageTaken();
+
+            //show damage popup
+            GameObject popup = Instantiate((GameObject)Resources.Load("UI/DamagePopup"), transform.position, Quaternion.identity);
+            popup.GetComponent<FloatingTextScript>().SetText(iDamage.ToString());
+
             if (invincibleAfterHit) //if you are invincible after being hit, start invincible timer and set invincible to true.
             {
                 invincibleTimer = invincibleTime;
