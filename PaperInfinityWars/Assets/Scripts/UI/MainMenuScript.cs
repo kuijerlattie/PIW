@@ -18,16 +18,24 @@ public class MainMenuScript : MonoBehaviour {
     public Button buttonStats;
 
     public string FirstLevel = "FantasyHub";
+    [FMODUnity.EventRef]
+    public string mainMenuMusicPath = "";
+
+    FMOD.Studio.EventInstance mainMenuMusicEvent;
+
 
 	// Use this for initialization
 	void Start () {
         ShowMainScreen();
         GameManager.instance.eventManager.OnLoad.AddListener(OnLoad);
+        mainMenuMusicEvent = FMODUnity.RuntimeManager.CreateInstance(mainMenuMusicPath);
+        mainMenuMusicEvent.start();
     }
 
     void OnDisable()
     {
         GameManager.instance.eventManager.OnLoad.RemoveListener(OnLoad);
+        mainMenuMusicEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     void OnLoad(SaveData saveData)

@@ -329,6 +329,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114262036285927972, guid: 482ae3d98696b3b458434e13d917953a,
+        type: 2}
+      propertyPath: mainMenuMusicPath
+      value: event:/Music/MainMenu/MainMenuTheme
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 482ae3d98696b3b458434e13d917953a, type: 2}
   m_IsPrefabAsset: 0

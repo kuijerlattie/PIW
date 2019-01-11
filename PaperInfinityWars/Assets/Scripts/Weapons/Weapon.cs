@@ -19,6 +19,13 @@ public class Weapon : MonoBehaviour {
     protected Animator _animator;
     public AnimatorOverrideController animationOverrideController;
 
+    [FMODUnity.EventRef]
+    public string attackSoundPath = "";
+    [FMODUnity.EventRef]
+    public string hitSoundPath = "";
+    [FMODUnity.EventRef]
+    public string equipSoundPath = "";
+
     public enum WeaponType
     {
         Melee,
@@ -41,7 +48,7 @@ public class Weapon : MonoBehaviour {
         }
 	}
 
-    public void setanimator(Animator oAnimator)
+    public void SetAnimator(Animator oAnimator)
     {
         _animator = oAnimator;
     }
@@ -49,6 +56,7 @@ public class Weapon : MonoBehaviour {
     public void OnEquip()
     {
         _animator.runtimeAnimatorController = animationOverrideController;
+        FMODUnity.RuntimeManager.PlayOneShot(equipSoundPath, owner.transform.position);
     }
 
     public void AnimationOver()
@@ -60,6 +68,7 @@ public class Weapon : MonoBehaviour {
     public void AnimationStarted()
     {
         isAttacking = true;
+        FMODUnity.RuntimeManager.PlayOneShot(attackSoundPath, owner.transform.position);
     }
 
     public virtual void Attack() { }

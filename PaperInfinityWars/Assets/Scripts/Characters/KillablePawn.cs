@@ -78,6 +78,10 @@ public abstract class KillablePawn : MonoBehaviour {
             GameObject popup = Instantiate((GameObject)Resources.Load("UI/DamagePopup"), transform.position, Quaternion.identity);
             popup.GetComponent<FloatingTextScript>().SetText(iDamage.ToString());
 
+            //play hit sound based on weapon
+
+            FMODUnity.RuntimeManager.PlayOneShot(weapon.hitSoundPath, transform.position);
+
             if (invincibleAfterHit) //if you are invincible after being hit, start invincible timer and set invincible to true.
             {
                 invincibleTimer = invincibleTime;

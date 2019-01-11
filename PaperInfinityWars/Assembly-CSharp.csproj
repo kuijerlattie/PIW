@@ -53,6 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
+     <Compile Include="Assets\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
      <Compile Include="Assets\Scripts\achievables\Challenges\Carreer\CareerKillerChallenge.cs" />
      <Compile Include="Assets\Scripts\achievables\Challenges\ChallengeBase.cs" />
      <Compile Include="Assets\Scripts\achievables\Challenges\ChallengeNotification.cs" />
@@ -363,6 +365,10 @@
  <Reference Include="Boo.Lang">
  <HintPath>D:/apps/Unity201829f1/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{8E68BF5B-366F-975C-8151-958D52F8BF05}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

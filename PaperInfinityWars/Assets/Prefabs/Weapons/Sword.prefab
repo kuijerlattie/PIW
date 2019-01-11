@@ -131,4 +131,7 @@ MonoBehaviour:
   owner: {fileID: 0}
   animationOverrideController: {fileID: 22100000, guid: 46d5af63cff7c7a48beeaa599223d57f,
     type: 2}
+  attackSoundPath: event:/Weapons/Sword/SwordSwing
+  hitSoundPath: event:/Weapons/Sword/SwordHit
+  equipSoundPath: 
   weaponType: 0
