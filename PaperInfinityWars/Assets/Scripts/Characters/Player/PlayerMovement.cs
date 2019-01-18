@@ -32,6 +32,10 @@ public class PlayerMovement : MonoBehaviour {
         {
             GetComponent<WeaponSlots>().Attack();
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            GetComponent<WeaponSlots>().UseEquipment();
+        }
         if (Input.GetKeyDown(KeyCode.Q))
         {
             //q scroll weapon back

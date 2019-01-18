@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour {
 
-    [HideInInspector]
     public int ID = 0;
     [SerializeField]
     protected int damage = 0;
@@ -18,6 +18,12 @@ public class Weapon : MonoBehaviour {
     public WeaponSlots owner;
     protected Animator _animator;
     public AnimatorOverrideController animationOverrideController;
+
+    public Image equipImage;
+    public int storeCost;
+    public string storeName;
+    public string StoreDescription;
+
 
     [FMODUnity.EventRef]
     public string attackSoundPath = "";
@@ -34,11 +40,6 @@ public class Weapon : MonoBehaviour {
     }
 
     public WeaponType weaponType = WeaponType.Melee;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	protected virtual void Update () {
@@ -57,6 +58,7 @@ public class Weapon : MonoBehaviour {
     {
         _animator.runtimeAnimatorController = animationOverrideController;
         FMODUnity.RuntimeManager.PlayOneShot(equipSoundPath, owner.transform.position);
+        GameManager.instance.eventManager.WeaponChanged.Invoke(this);
     }
 
     public void AnimationOver()

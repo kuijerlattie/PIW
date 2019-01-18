@@ -17,6 +17,8 @@ public class WeaponSlots : MonoBehaviour {
     }
 
     public GameObject hand;
+    public GameObject testEquipment;
+    Weapon equipment;
 
     void Start()
     {
@@ -24,6 +26,7 @@ public class WeaponSlots : MonoBehaviour {
         _animator = GetComponentInChildren<Animator>();
         selectedweapon = 1;
         EquipWeapon(testweapon);
+        EquipEquipment(testEquipment);
     }
 
     public void NextWeapon()
@@ -53,10 +56,21 @@ public class WeaponSlots : MonoBehaviour {
         //instantize weapon to hand
         RemoveWeapon();
         GameObject weapontoinstantiate = Instantiate(oWeapon, hand.transform);
-        weaponlist[selectedweapon-1] = weapontoinstantiate.GetComponent<Weapon>();
+        weaponlist[selectedweapon - 1] = weapontoinstantiate.GetComponent<Weapon>();
         weaponlist[selectedweapon - 1].owner = this;
         weapontoinstantiate.GetComponent<Weapon>().SetAnimator(_animator);
         ShowActiveWeapon();
+    }
+
+    protected void EquipEquipment(GameObject oWeapon)
+    {
+        //instantize weapon to hand
+        Destroy(equipment.gameObject);
+        GameObject weapontoinstantiate = Instantiate(oWeapon, hand.transform);
+        equipment = weapontoinstantiate.GetComponent<Weapon>();
+        equipment.owner = this;
+        weapontoinstantiate.GetComponent<Weapon>().SetAnimator(_animator);
+        GameManager.instance.eventManager.EquipmentChanged.Invoke(equipment);
     }
 
     protected void EquipWeapon(int iSlot, GameObject oWeapon)
@@ -99,6 +113,14 @@ public class WeaponSlots : MonoBehaviour {
         }
     }
 
+    public void UseEquipment()
+    {
+        if (equipment != null)
+        {
+            equipment.Attack();
+        }
+    }
+
     public float GetRange()
     {
         if (currentweapon != null)
@@ -117,6 +139,7 @@ public class WeaponSlots : MonoBehaviour {
         GameManager.instance.savegameManager.saveData.weaponslot2 = weaponlist[1] == null ? 0 : weaponlist[1].ID;
         GameManager.instance.savegameManager.saveData.weaponslot3 = weaponlist[2] == null ? 0 : weaponlist[2].ID;
         GameManager.instance.savegameManager.saveData.weaponslot4 = weaponlist[3] == null ? 0 : weaponlist[3].ID;
+        GameManager.instance.savegameManager.saveData.EquipmentSlot = weaponlist[3] == null ? 0 : weaponlist[3].ID;
     }
 
     public void LoadEquipedWeapons(SaveData saveData)
@@ -136,6 +159,11 @@ public class WeaponSlots : MonoBehaviour {
         if (saveData.weaponslot1 != 0)
         {
             EquipWeapon(4, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot1));
+        }
+
+        if (saveData.EquipmentSlot != 0)
+        {
+            EquipEquipment(GameManager.instance.itemManager.GetWeaponByID(saveData.EquipmentSlot));
         }
     }
 }

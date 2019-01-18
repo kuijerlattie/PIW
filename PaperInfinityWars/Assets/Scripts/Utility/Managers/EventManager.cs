@@ -52,4 +52,11 @@ public class EventManager : MonoBehaviour {
     public class ShowNotificationEvent : UnityEvent<Notification> { }
     public ShowNotificationEvent ShowNotification = new ShowNotificationEvent();
     #endregion
+
+    #region Weapons
+    public class WeaponChangedEvent : UnityEvent<Weapon> { }
+    public WeaponChangedEvent WeaponChanged = new WeaponChangedEvent();
+    public class EquipmentChangedEvent : UnityEvent<Weapon> { }
+    public EquipmentChangedEvent EquipmentChanged = new EquipmentChangedEvent();
+    #endregion
 }

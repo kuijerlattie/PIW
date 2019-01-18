@@ -67,6 +67,7 @@ public class SaveData
     public int weaponslot2 = 0;
     public int weaponslot3 = 0;
     public int weaponslot4 = 0;
+    public int EquipmentSlot = 0;
     public string lastHub = "";
 
     //wavemode stats;

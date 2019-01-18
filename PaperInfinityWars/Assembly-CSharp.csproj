@@ -101,7 +101,9 @@
      <Compile Include="Assets\Scripts\Utility\Notification.cs" />
      <Compile Include="Assets\Scripts\Utility\NotificationDataBase.cs" />
      <Compile Include="Assets\Scripts\Utility\SpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\Weapons\GrenadeScript.cs" />
      <Compile Include="Assets\Scripts\Weapons\MeleeWeapon.cs" />
+     <Compile Include="Assets\Scripts\Weapons\ThrowableExplosiveWeapon.cs" />
      <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
      <Compile Include="Assets\Scripts\Weapons\WeaponAnimationTriggerScript.cs" />
      <Compile Include="Assets\Scripts\Weapons\WeaponSlots.cs" />
