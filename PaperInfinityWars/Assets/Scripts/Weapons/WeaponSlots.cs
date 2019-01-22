@@ -9,7 +9,7 @@ public class WeaponSlots : MonoBehaviour {
     [SerializeField] int selectedweapon = 1;
     Weapon[] weaponlist;
     protected Animator _animator;
-    public GameObject testweapon;
+    //public GameObject testweapon;
 
     public Weapon currentweapon
     {
@@ -17,7 +17,7 @@ public class WeaponSlots : MonoBehaviour {
     }
 
     public GameObject hand;
-    public GameObject testEquipment;
+    //public GameObject testEquipment;
     Weapon equipment;
 
     void Start()
@@ -25,8 +25,9 @@ public class WeaponSlots : MonoBehaviour {
         weaponlist = new Weapon[weaponSlots];
         _animator = GetComponentInChildren<Animator>();
         selectedweapon = 1;
-        EquipWeapon(testweapon);
-        EquipEquipment(testEquipment);
+        LoadEquipedWeapons(GameManager.instance.savegameManager.saveData);
+        //EquipWeapon(testweapon);
+        //EquipEquipment(testEquipment);
     }
 
     public void NextWeapon()
@@ -56,8 +57,8 @@ public class WeaponSlots : MonoBehaviour {
         //instantize weapon to hand
         RemoveWeapon();
         GameObject weapontoinstantiate = Instantiate(oWeapon, hand.transform);
-        weaponlist[selectedweapon - 1] = weapontoinstantiate.GetComponent<Weapon>();
-        weaponlist[selectedweapon - 1].owner = this;
+        weaponlist[selectedweapon] = weapontoinstantiate.GetComponent<Weapon>();
+        weaponlist[selectedweapon].owner = this;
         weapontoinstantiate.GetComponent<Weapon>().SetAnimator(_animator);
         ShowActiveWeapon();
     }
@@ -65,7 +66,8 @@ public class WeaponSlots : MonoBehaviour {
     protected void EquipEquipment(GameObject oWeapon)
     {
         //instantize weapon to hand
-        Destroy(equipment.gameObject);
+        if (equipment != null)
+            Destroy(equipment.gameObject);
         GameObject weapontoinstantiate = Instantiate(oWeapon, hand.transform);
         equipment = weapontoinstantiate.GetComponent<Weapon>();
         equipment.owner = this;
@@ -73,7 +75,7 @@ public class WeaponSlots : MonoBehaviour {
         GameManager.instance.eventManager.EquipmentChanged.Invoke(equipment);
     }
 
-    protected void EquipWeapon(int iSlot, GameObject oWeapon)
+    public void EquipWeapon(int iSlot, GameObject oWeapon)
     {
         selectedweapon = iSlot - 1;
         EquipWeapon(oWeapon);
@@ -81,15 +83,15 @@ public class WeaponSlots : MonoBehaviour {
 
     protected void RemoveWeapon()
     {
-        RemoveWeapon(selectedweapon);
+            RemoveWeapon(selectedweapon);
     }
 
     protected void RemoveWeapon(int iSlot)
     {
-        if (weaponlist[iSlot -1] != null)
+        if (weaponlist[iSlot] != null)
         {
             Destroy(weaponlist[iSlot - 1].gameObject);
-            weaponlist[iSlot - 1] = null;
+            weaponlist[iSlot] = null;
         }
     }
 
@@ -146,6 +148,7 @@ public class WeaponSlots : MonoBehaviour {
     {
         if (saveData.weaponslot1 != 0)
         {
+            Debug.Log("'Loading weaponslot 1");
             EquipWeapon(1, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot1));
         }
         if (saveData.weaponslot1 != 0)

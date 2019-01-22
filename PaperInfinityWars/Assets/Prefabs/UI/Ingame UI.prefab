@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 223140664183309042}
   - component: {fileID: 114305980346950534}
   - component: {fileID: 114058926317016094}
+  - component: {fileID: 114203451200284240}
   m_Layer: 5
   m_Name: Loadout
   m_TagString: Untagged
@@ -112,7 +113,7 @@ GameObject:
   - component: {fileID: 222543565573123540}
   - component: {fileID: 114580422546506114}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: EquipmentCharges
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +165,7 @@ GameObject:
   - component: {fileID: 222309821591476666}
   - component: {fileID: 114785362285325978}
   m_Layer: 5
-  m_Name: Image
+  m_Name: EquipmentChargeBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,6 +717,21 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114203451200284240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1024382039181976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2496a02a19919104f96bb473fb1fa074, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeaponIcon: {fileID: 114262541717242418}
+  currentEquipmentIcon: {fileID: 114315996885651876}
+  currentEquipmentCharge: {fileID: 114785362285325978}
+  currentEquipmentCount: {fileID: 114580422546506114}
 --- !u!114 &114215680381416630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2083,11 +2099,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 4a7426334ac5b3048b940a21c84e6d4f, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0

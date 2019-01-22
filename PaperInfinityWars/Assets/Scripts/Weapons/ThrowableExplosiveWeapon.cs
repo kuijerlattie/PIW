@@ -9,6 +9,8 @@ public class ThrowableExplosiveWeapon : Weapon {
     private float cooldownTimer = 0f;
     public float throwstrength = 500f;
 
+    private float ChargeRequired = 30f; //in seconds
+
     bool cooldown = false;
     public GameObject throwable;
 
@@ -19,6 +21,19 @@ public class ThrowableExplosiveWeapon : Weapon {
 
     protected override void Update()
     {
+        if (currentUses < maxStackedUses)
+        {
+            //charge next use
+            _chargeprogress += Time.deltaTime;
+            if (_chargeprogress > ChargeRequired)
+            {
+                currentUses++;
+                _chargeprogress = 0f;
+            }
+            chargeprogress = _chargeprogress / ChargeRequired;
+
+            GameManager.instance.eventManager.EquipmentChanged.Invoke(this);
+        }
         base.Update();
         if (cooldown)
         {
@@ -30,9 +45,8 @@ public class ThrowableExplosiveWeapon : Weapon {
 
     public override void Attack()
     {
-        if (!cooldown)
+        if (currentUses > 0)
         {
-            cooldownTimer = cooldownTime;
             //create grenade
             GameObject nade = Instantiate(throwable, this.transform.position, Quaternion.identity);
             nade.GetComponent<GrenadeScript>().Initialize(this, this.damage, this.range, this.fuseTime);
@@ -40,7 +54,7 @@ public class ThrowableExplosiveWeapon : Weapon {
             Vector3 playerpos = Camera.main.WorldToScreenPoint(GameManager.instance.player.transform.position);
             Vector2 throwdirection = Input.mousePosition - playerpos;
             nade.GetComponent<Rigidbody2D>().AddForce(throwdirection.normalized * throwstrength); //replace with mouse position based force (so you can aim the nade with your mouse)
-            cooldown = true;
+            currentUses--;
         }
         //else 
         //{

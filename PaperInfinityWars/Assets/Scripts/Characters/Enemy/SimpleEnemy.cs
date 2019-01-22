@@ -11,11 +11,13 @@ public class SimpleEnemy : KillablePawn {
     private float timebetweenjumps = 0.3f;
     int xpforkill = 10;
     WeaponSlots weaponSlots = null;
+    public GameObject weapon;
 
 	// Use this for initialization
 	protected override void Start () {
         base.Start();
         weaponSlots = GetComponent<WeaponSlots>();
+        weaponSlots.EquipWeapon(1, weapon);
 	}
 
     // Update is called once per frame

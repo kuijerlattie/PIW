@@ -1998,11 +1998,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76dd5b40f8f5fb4784a338c371dac14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  godmode: 0
+  godmode: 1
   invincibleAfterHit: 1
   invincibleTime: 0.4
   alive: 0
   movementspeed: 0.5
+  weapon: {fileID: 1758576468046026, guid: c463a481f6006c64fb22e055c1b2a2d2, type: 2}
 --- !u!114 &114886498432404980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2015,7 +2016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponSlots: 1
-  testweapon: {fileID: 1758576468046026, guid: c463a481f6006c64fb22e055c1b2a2d2, type: 2}
+  selectedweapon: 1
   hand: {fileID: 1350948276895058}
 --- !u!135 &135348451803422586
 SphereCollider:

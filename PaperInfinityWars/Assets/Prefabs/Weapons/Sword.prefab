@@ -131,6 +131,14 @@ MonoBehaviour:
   owner: {fileID: 0}
   animationOverrideController: {fileID: 22100000, guid: 46d5af63cff7c7a48beeaa599223d57f,
     type: 2}
+  isEquipment: 0
+  currentUses: 3
+  maxStackedUses: 3
+  chargeprogress: 0
+  equipImage: {fileID: 21300000, guid: 14fbb30f044e6a240ae77e5932afa814, type: 3}
+  storeCost: 0
+  storeName: Sword
+  StoreDescription: A basic sword that does 1 damage per hit
   attackSoundPath: event:/Weapons/Sword/SwordSwing
   hitSoundPath: event:/Weapons/Sword/SwordHit
   equipSoundPath: 

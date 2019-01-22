@@ -9,8 +9,9 @@ public class PlayerMovement : MonoBehaviour {
     float horizontalMove = 0f;
     bool jump = false;
 
-    void Start()
+    void OnEnable()
     {
+        Debug.Log("registered for load");
         GameManager.instance.eventManager.OnSave.AddListener(SetSaveData);
         GameManager.instance.eventManager.OnLoad.AddListener(SetLoadData);
     }

@@ -83,11 +83,15 @@
      <Compile Include="Assets\Scripts\UI\FloatingTextScript.cs" />
      <Compile Include="Assets\Scripts\UI\GameModeStarters\WaveModeStarter.cs" />
      <Compile Include="Assets\Scripts\UI\In-world UI\ShowUIScript.cs" />
+     <Compile Include="Assets\Scripts\UI\LoadoutUIScript.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuChallengeUI.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\UI\PauseScript.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerInfoUIScript.cs" />
      <Compile Include="Assets\Scripts\UI\RoundCounter.cs" />
+     <Compile Include="Assets\Scripts\UI\WeaponStore\SelectedWeaponStoreScript.cs" />
+     <Compile Include="Assets\Scripts\UI\WeaponStore\WeaponStoreItem.cs" />
+     <Compile Include="Assets\Scripts\UI\WeaponStore\WeaponStoreScript.cs" />
      <Compile Include="Assets\Scripts\Utility\CameraFollowScript.cs" />
      <Compile Include="Assets\Scripts\Utility\EnemySpawnManager.cs" />
      <Compile Include="Assets\Scripts\Utility\EnemySpawnPoint.cs" />

@@ -58,6 +58,14 @@ MonoBehaviour:
   isAttacking: 0
   owner: {fileID: 0}
   animationOverrideController: {fileID: 0}
+  isEquipment: 1
+  currentUses: 3
+  maxStackedUses: 3
+  chargeprogress: 0
+  equipImage: {fileID: 21300000, guid: f4f1e32e8a865ed4795254bc0a2d2f54, type: 3}
+  storeCost: 100
+  storeName: Grenades
+  StoreDescription: Grenades that recharge over time
   attackSoundPath: 
   hitSoundPath: 
   equipSoundPath: 

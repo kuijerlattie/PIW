@@ -18,8 +18,14 @@ public class Weapon : MonoBehaviour {
     public WeaponSlots owner;
     protected Animator _animator;
     public AnimatorOverrideController animationOverrideController;
+    public bool isEquipment = false;
+    public int currentUses = 3;
+    public int maxStackedUses = 3;
+    [HideInInspector]
+    public float chargeprogress = 0f;
+    protected float _chargeprogress = 0f;
 
-    public Image equipImage;
+    public Sprite equipImage;
     public int storeCost;
     public string storeName;
     public string StoreDescription;

@@ -11,6 +11,7 @@ public class SavegameManager : MonoBehaviour
     public bool SaveExists = false;
     // Use this for initialization
     void Start () {
+        Debug.Log("loading data");
         Load();
         GameManager.instance.eventManager.GameOver.AddListener(GameOverListener);
 	}
@@ -63,7 +64,7 @@ public class SaveData
     //player stats/info;
     public int xp = 0;
     public int coins = 0;
-    public int weaponslot1 = 0;
+    public int weaponslot1 = 1;
     public int weaponslot2 = 0;
     public int weaponslot3 = 0;
     public int weaponslot4 = 0;
