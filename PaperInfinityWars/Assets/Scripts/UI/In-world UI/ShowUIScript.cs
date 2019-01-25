@@ -24,6 +24,11 @@ public class ShowUIScript : MonoBehaviour {
             UI.SetActive(!UI.activeInHierarchy);
             interactIcon.SetActive(!UI.activeInHierarchy);
             UIActive = UI.activeInHierarchy;
+            GameManager.instance.player.GetComponent<CharacterController2D>().enabled = !UIActive;
+            if (UIActive)
+                GameManager.instance.eventManager.ShowCoins.Invoke(9999f);
+            else
+                GameManager.instance.eventManager.HideCoins.Invoke();
         }
     }
 
@@ -44,6 +49,7 @@ public class ShowUIScript : MonoBehaviour {
             interactIcon.SetActive(false);
             UIActive = false;
             inRange = false;
+            GameManager.instance.player.GetComponent<CharacterController2D>().enabled = true;
         }
     }
 }

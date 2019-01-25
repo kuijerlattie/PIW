@@ -114,7 +114,7 @@ public class MainMenuScript : MonoBehaviour {
         canvasMainScreen.gameObject.SetActive(false);
         canvasChallenges.gameObject.SetActive(false);
         canvasMedals.gameObject.SetActive(false);
-        canvasStats.gameObject.SetActive(true);
+        canvasStats.gameObject.SetActive(false);
         canvasSettings.gameObject.SetActive(false);
         canvasQuit.gameObject.SetActive(true);
     }

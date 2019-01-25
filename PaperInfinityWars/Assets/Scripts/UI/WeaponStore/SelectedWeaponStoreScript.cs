@@ -18,10 +18,18 @@ public class SelectedWeaponStoreScript : MonoBehaviour {
 
     public void SetSelectedWeapon(Weapon oWeapon)
     {
-        Debug.Log("showing " + oWeapon.storeName);
-        weaponImage.sprite = oWeapon.equipImage;
-        nameText.text = oWeapon.storeName;
-        descriptionText.text = oWeapon.StoreDescription;
-        priceText.text = oWeapon.storeCost.ToString();
+        if (oWeapon != null)
+        {
+            Debug.Log("showing " + oWeapon.storeName);
+            weaponImage.sprite = oWeapon.equipImage;
+            nameText.text = oWeapon.storeName;
+            descriptionText.text = oWeapon.StoreDescription;
+            priceText.text = oWeapon.storeCost.ToString();
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -9,7 +9,6 @@ public class WeaponSlots : MonoBehaviour {
     [SerializeField] int selectedweapon = 1;
     Weapon[] weaponlist;
     protected Animator _animator;
-    //public GameObject testweapon;
 
     public Weapon currentweapon
     {
@@ -17,17 +16,13 @@ public class WeaponSlots : MonoBehaviour {
     }
 
     public GameObject hand;
-    //public GameObject testEquipment;
     Weapon equipment;
 
-    void Start()
+    void OnEnable()
     {
         weaponlist = new Weapon[weaponSlots];
         _animator = GetComponentInChildren<Animator>();
-        selectedweapon = 1;
-        LoadEquipedWeapons(GameManager.instance.savegameManager.saveData);
-        //EquipWeapon(testweapon);
-        //EquipEquipment(testEquipment);
+        selectedweapon = 1; //1 based
     }
 
     public void NextWeapon()
@@ -57,13 +52,13 @@ public class WeaponSlots : MonoBehaviour {
         //instantize weapon to hand
         RemoveWeapon();
         GameObject weapontoinstantiate = Instantiate(oWeapon, hand.transform);
-        weaponlist[selectedweapon] = weapontoinstantiate.GetComponent<Weapon>();
-        weaponlist[selectedweapon].owner = this;
+        weaponlist[selectedweapon-1] = weapontoinstantiate.GetComponent<Weapon>();
+        weaponlist[selectedweapon-1].owner = this;
         weapontoinstantiate.GetComponent<Weapon>().SetAnimator(_animator);
         ShowActiveWeapon();
     }
 
-    protected void EquipEquipment(GameObject oWeapon)
+    public void EquipEquipment(GameObject oWeapon)
     {
         //instantize weapon to hand
         if (equipment != null)
@@ -77,21 +72,21 @@ public class WeaponSlots : MonoBehaviour {
 
     public void EquipWeapon(int iSlot, GameObject oWeapon)
     {
-        selectedweapon = iSlot - 1;
+        selectedweapon = iSlot;
         EquipWeapon(oWeapon);
     }
 
     protected void RemoveWeapon()
     {
-            RemoveWeapon(selectedweapon);
+        RemoveWeapon(selectedweapon);
     }
 
     protected void RemoveWeapon(int iSlot)
     {
-        if (weaponlist[iSlot] != null)
+        if (weaponlist.Length != 0 && weaponlist[iSlot-1] != null)
         {
             Destroy(weaponlist[iSlot - 1].gameObject);
-            weaponlist[iSlot] = null;
+            weaponlist[iSlot-1] = null;
         }
     }
 
@@ -141,27 +136,26 @@ public class WeaponSlots : MonoBehaviour {
         GameManager.instance.savegameManager.saveData.weaponslot2 = weaponlist[1] == null ? 0 : weaponlist[1].ID;
         GameManager.instance.savegameManager.saveData.weaponslot3 = weaponlist[2] == null ? 0 : weaponlist[2].ID;
         GameManager.instance.savegameManager.saveData.weaponslot4 = weaponlist[3] == null ? 0 : weaponlist[3].ID;
-        GameManager.instance.savegameManager.saveData.EquipmentSlot = weaponlist[3] == null ? 0 : weaponlist[3].ID;
+        GameManager.instance.savegameManager.saveData.EquipmentSlot = equipment == null ? 0 : equipment.ID;
     }
 
     public void LoadEquipedWeapons(SaveData saveData)
     {
         if (saveData.weaponslot1 != 0)
         {
-            Debug.Log("'Loading weaponslot 1");
             EquipWeapon(1, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot1));
         }
-        if (saveData.weaponslot1 != 0)
+        if (saveData.weaponslot2 != 0)
         {
-            EquipWeapon(2, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot1));
+            EquipWeapon(2, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot2));
         }
-        if (saveData.weaponslot1 != 0)
+        if (saveData.weaponslot3 != 0)
         {
-            EquipWeapon(3, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot1));
+            EquipWeapon(3, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot3));
         }
-        if (saveData.weaponslot1 != 0)
+        if (saveData.weaponslot4 != 0)
         {
-            EquipWeapon(4, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot1));
+            EquipWeapon(4, GameManager.instance.itemManager.GetWeaponByID(saveData.weaponslot4));
         }
 
         if (saveData.EquipmentSlot != 0)

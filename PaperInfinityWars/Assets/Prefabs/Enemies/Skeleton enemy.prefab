@@ -1984,9 +1984,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropTable:
   - item: {fileID: 1373097049332248, guid: 0241f4b1e590a2e4aa002db98fb10ce4, type: 2}
-    dropchance: 100
+    dropchance: 80
   - item: {fileID: 1084937758019224, guid: 1f6bd9608411dbc4e868bfdf8075c9a4, type: 2}
-    dropchance: 20
+    dropchance: 10
 --- !u!114 &114705235073023158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2003,6 +2003,7 @@ MonoBehaviour:
   invincibleTime: 0.4
   alive: 0
   movementspeed: 0.5
+  xpforkill: 5
   weapon: {fileID: 1758576468046026, guid: c463a481f6006c64fb22e055c1b2a2d2, type: 2}
 --- !u!114 &114886498432404980
 MonoBehaviour:

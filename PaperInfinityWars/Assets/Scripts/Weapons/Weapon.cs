@@ -29,6 +29,8 @@ public class Weapon : MonoBehaviour {
     public int storeCost;
     public string storeName;
     public string StoreDescription;
+    [HideInInspector]
+    public bool unlocked = false;
 
 
     [FMODUnity.EventRef]
@@ -64,7 +66,8 @@ public class Weapon : MonoBehaviour {
     {
         _animator.runtimeAnimatorController = animationOverrideController;
         FMODUnity.RuntimeManager.PlayOneShot(equipSoundPath, owner.transform.position);
-        GameManager.instance.eventManager.WeaponChanged.Invoke(this);
+        if (owner.tag == "Player")
+            GameManager.instance.eventManager.WeaponChanged.Invoke(this);
     }
 
     public void AnimationOver()

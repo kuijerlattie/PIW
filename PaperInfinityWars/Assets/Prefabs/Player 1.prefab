@@ -324,7 +324,6 @@ GameObject:
   - component: {fileID: 61175045607897206}
   - component: {fileID: 114230622757271242}
   - component: {fileID: 114255342653415442}
-  - component: {fileID: 114720664904187226}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: Player
@@ -1101,22 +1100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSlots: 4
   selectedweapon: 1
-  testweapon: {fileID: 1758576468046026, guid: c463a481f6006c64fb22e055c1b2a2d2, type: 2}
   hand: {fileID: 1552676999937138}
-  testEquipment: {fileID: 1195465574196680, guid: 1cd1215cb56ec5d45ad03954436b8543,
-    type: 2}
---- !u!114 &114720664904187226
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1719302320050194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: 0
 --- !u!114 &114723731707969582
 MonoBehaviour:
   m_ObjectHideFlags: 1

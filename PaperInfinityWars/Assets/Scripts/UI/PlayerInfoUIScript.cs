@@ -33,12 +33,21 @@ public class PlayerInfoUIScript : MonoBehaviour {
     {
         GameManager.instance.eventManager.PlayerHitpointsChanged.AddListener(OnPlayerHitpointsChanged);
         GameManager.instance.eventManager.PlayerCurrencyChanged.AddListener(OnPlayerCurrencyChanged);
+        GameManager.instance.eventManager.ShowCoins.AddListener(ShowCoinsFor);
+        GameManager.instance.eventManager.HideCoins.AddListener(HideCoinsNow);
     }
 
     void OnDisable()
     {
         GameManager.instance.eventManager.PlayerHitpointsChanged.RemoveListener(OnPlayerHitpointsChanged);
         GameManager.instance.eventManager.PlayerCurrencyChanged.RemoveListener(OnPlayerCurrencyChanged);
+        GameManager.instance.eventManager.ShowCoins.RemoveListener(ShowCoinsFor);
+        GameManager.instance.eventManager.HideCoins.RemoveListener(HideCoinsNow);
+    }
+
+    void Start()
+    {
+        OnPlayerCurrencyChanged(GameManager.instance.currencyManager);
     }
 
     // Update is called once per frame
@@ -85,6 +94,17 @@ public class PlayerInfoUIScript : MonoBehaviour {
     {
         hitpoints = player.HitPoints;
         maxhitpoints = player.MaxHitpoints;
+    }
+
+    public void ShowCoinsFor(float time)
+    {
+        coinsFadeTimer = time;
+        coinsImage.gameObject.SetActive(true);
+    }
+
+    public void HideCoinsNow()
+    {
+        coinsFadeTimer = 0;
     }
 
     void OnPlayerCurrencyChanged(CurrencyManager currency)

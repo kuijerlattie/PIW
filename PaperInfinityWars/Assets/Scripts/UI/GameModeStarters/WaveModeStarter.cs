@@ -15,6 +15,7 @@ public class WaveModeStarter : MonoBehaviour{
         system.RareEnemies = waveSystemSO.RareEnemyList;
         system.BossEnemies = waveSystemSO.BossEnemyList;
         system.previousHub = SceneManager.GetActiveScene().name;
+        GameManager.instance.savegameManager.Save();
         SceneManager.LoadScene(waveSystemSO.SceneName);
     }
 }

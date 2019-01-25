@@ -11,15 +11,17 @@ public class PlayerMovement : MonoBehaviour {
 
     void OnEnable()
     {
-        Debug.Log("registered for load");
         GameManager.instance.eventManager.OnSave.AddListener(SetSaveData);
-        GameManager.instance.eventManager.OnLoad.AddListener(SetLoadData);
+    }
+
+    void Start()
+    {
+        GetComponent<WeaponSlots>().LoadEquipedWeapons(GameManager.instance.savegameManager.saveData);
     }
 
     void OnDisable()
     {
         GameManager.instance.eventManager.OnSave.RemoveListener(SetSaveData);
-        GameManager.instance.eventManager.OnLoad.RemoveListener(SetLoadData);
     }
 
     // Update is called once per frame
@@ -29,20 +31,20 @@ public class PlayerMovement : MonoBehaviour {
         {
             jump = true;
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && controller.enabled)
         {
             GetComponent<WeaponSlots>().Attack();
         }
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && controller.enabled)
         {
             GetComponent<WeaponSlots>().UseEquipment();
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && controller.enabled)
         {
             //q scroll weapon back
             GetComponent<WeaponSlots>().NextWeapon();
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && controller.enabled)
         {
             //e to scroll weapon forward
             GetComponent<WeaponSlots>().PreviousWeapon();

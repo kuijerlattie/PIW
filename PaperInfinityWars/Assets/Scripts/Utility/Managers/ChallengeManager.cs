@@ -19,7 +19,6 @@ namespace Challenges
 
         public void Initialize()
         {
-            Debug.Log("challengemanager enabled!");
             GameManager.instance.eventManager.LevelUp.AddListener(OnLevelUp);
 
             //adding challenges

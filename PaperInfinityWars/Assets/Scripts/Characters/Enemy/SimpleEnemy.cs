@@ -9,7 +9,7 @@ public class SimpleEnemy : KillablePawn {
     public float movementspeed = 0.5f;
     private float jumptimer = 0f;
     private float timebetweenjumps = 0.3f;
-    int xpforkill = 10;
+    public int xpforkill = 5;
     WeaponSlots weaponSlots = null;
     public GameObject weapon;
 
@@ -33,8 +33,6 @@ public class SimpleEnemy : KillablePawn {
                 return;
             }
         }
-
-        
     
         float movement = 0;
 
@@ -64,8 +62,6 @@ public class SimpleEnemy : KillablePawn {
                 weaponSlots.Attack();
             }
         }
-
-        
     }
 
     protected override void OnDeath(KillablePawn victim, KillablePawn killer, Weapon weapon)

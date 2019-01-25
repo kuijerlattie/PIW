@@ -64,7 +64,7 @@ public class SaveData
     //player stats/info;
     public int xp = 0;
     public int coins = 0;
-    public int weaponslot1 = 1;
+    public int weaponslot1 = 0;
     public int weaponslot2 = 0;
     public int weaponslot3 = 0;
     public int weaponslot4 = 0;
@@ -82,6 +82,9 @@ public class SaveData
 
     //challenge progress;
     public List<ChallengeProgress> challenges = new List<ChallengeProgress>();
+
+    //weapon unlocks, only save what IS unlocked
+    public Dictionary<int, bool> weaponUnlocks = new Dictionary<int, bool>();
 }
 
 [Serializable]

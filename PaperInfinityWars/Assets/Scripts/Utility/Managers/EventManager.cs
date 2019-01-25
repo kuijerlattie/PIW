@@ -26,6 +26,10 @@ public class EventManager : MonoBehaviour {
     public PlayerHitpointsChangedEvent PlayerHitpointsChanged = new PlayerHitpointsChangedEvent();
     public class PlayerCurrencyChangedEvent : UnityEvent<CurrencyManager> { }
     public PlayerCurrencyChangedEvent PlayerCurrencyChanged = new PlayerCurrencyChangedEvent();
+    public class ShowCoinsEvent : UnityEvent<float> { }
+    public ShowCoinsEvent ShowCoins = new ShowCoinsEvent();
+    public class HideCoinsEvent : UnityEvent { }
+    public HideCoinsEvent HideCoins = new HideCoinsEvent();
     public class XPDropEvent : UnityEvent<int> { }
     public XPDropEvent XPDrop = new XPDropEvent();
     public class LevelUpEvent : UnityEvent<CurrencyManager> { }

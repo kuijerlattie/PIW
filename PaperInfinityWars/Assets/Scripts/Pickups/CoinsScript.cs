@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CoinsScript : PickupBaseScript {
 
-    public int coinvalue = 1;
+    public int minCoinValue = 1;
+    public int maxCoinValue = 5;
     
     protected override void OnPickup()
     {
-        GameManager.instance.currencyManager.AddCoins(coinvalue);
+        GameManager.instance.currencyManager.AddCoins(Random.Range(minCoinValue, maxCoinValue));
     }
 }

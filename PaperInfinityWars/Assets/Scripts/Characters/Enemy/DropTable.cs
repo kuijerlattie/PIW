@@ -17,6 +17,7 @@ public class DropTable : MonoBehaviour {
     {
         foreach (DropTableEntry entry in dropTable)
         {
+            Debug.Log("entry tested");
             if (Random.Range(1,100) <= entry.dropchance)
             {
                 Instantiate(entry.item, gameObject.transform.position, Quaternion.identity);

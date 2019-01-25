@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour {
             challengeManager.Initialize();
             savegameManager = gameObject.AddComponent<SavegameManager>();
             enemySpawnManager = gameObject.AddComponent<EnemySpawnManager>();
+            eventManager.OnLoad.AddListener(itemManager.LoadWeaponUnlocks);
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else if (instance != this)

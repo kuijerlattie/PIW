@@ -270,9 +270,9 @@ public class WaveSystem : GameMode {
         GameManager.instance.savegameManager.saveData.wmTotalGameTime += totalGameTimer;
         if (GameManager.instance.savegameManager.saveData.wmLongestMatch < totalGameTimer) GameManager.instance.savegameManager.saveData.wmLongestMatch = totalGameTimer;
         GameManager.instance.savegameManager.saveData.wmTotalRounds += round-1;
-        if (GameManager.instance.savegameManager.saveData.wmBestRound < round - 1) GameManager.instance.savegameManager.saveData.wmBestRound = round - 1;
+        if (GameManager.instance.savegameManager.saveData.wmBestRound < round - 1) GameManager.instance.savegameManager.saveData.wmBestRound = round;
         GameManager.instance.savegameManager.saveData.wmTotalKills += killcounter;
-        if (GameManager.instance.savegameManager.saveData.wmTotalKills < killcounter) GameManager.instance.savegameManager.saveData.wmTotalKills = killcounter;
+        if (GameManager.instance.savegameManager.saveData.wmBestKills < killcounter) GameManager.instance.savegameManager.saveData.wmBestKills = killcounter;
         GameManager.instance.savegameManager.Save();
     }
 

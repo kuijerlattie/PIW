@@ -11,4 +11,19 @@ public class ItemDatabase : ScriptableObject {
     {
         return weapons.Find(X => X.GetComponent<Weapon>().ID == oID);
     }
+
+    public void LoadWeaponUnlocks(SaveData savedata = null)
+    {
+        foreach (GameObject w in weapons)
+        {
+            if (GameManager.instance.savegameManager.saveData.weaponUnlocks.ContainsKey(w.GetComponent<Weapon>().ID))
+            {
+                w.GetComponent<Weapon>().unlocked = true;
+            }
+            else
+            {
+                w.GetComponent<Weapon>().unlocked = false;
+            }
+        }
+    }
 }
