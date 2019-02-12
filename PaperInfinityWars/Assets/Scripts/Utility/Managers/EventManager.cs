@@ -12,6 +12,15 @@ public class EventManager : MonoBehaviour {
     public OnLoadEvent OnLoad = new OnLoadEvent();
     #endregion
 
+    #region Settings
+    public class OnSettingsChangeEvent : UnityEvent { }
+    public OnSettingsChangeEvent OnSettingsChange = new OnSettingsChangeEvent();
+    public class OnSettingsLoadEvent : UnityEvent<Settings> { }
+    public OnSettingsLoadEvent OnSettingsLoad = new OnSettingsLoadEvent();
+    public class OnSettingsSaveEvent : UnityEvent { }
+    public OnSettingsSaveEvent OnSettingsSave = new OnSettingsSaveEvent();
+    #endregion
+
     #region Combat
     /// <summary>
     /// passes victim, killer, weapon of killer

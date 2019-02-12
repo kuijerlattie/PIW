@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]
     public CurrencyManager currencyManager;
     [HideInInspector]
+    public SettingsManager settingsManager;
+    [HideInInspector]
     public SavegameManager savegameManager;
     [HideInInspector]
     public EventManager eventManager;
@@ -45,8 +47,10 @@ public class GameManager : MonoBehaviour {
             currencyManager = gameObject.AddComponent<CurrencyManager>();
             challengeManager = gameObject.AddComponent<ChallengeManager>();
             challengeManager.Initialize();
+            settingsManager = gameObject.AddComponent<SettingsManager>();
             savegameManager = gameObject.AddComponent<SavegameManager>();
             enemySpawnManager = gameObject.AddComponent<EnemySpawnManager>();
+
             eventManager.OnLoad.AddListener(itemManager.LoadWeaponUnlocks);
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
