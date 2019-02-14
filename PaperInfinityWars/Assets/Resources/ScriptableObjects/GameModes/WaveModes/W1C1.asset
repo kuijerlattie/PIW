@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: W1C1
   CommonEnemyList:
-  - {fileID: 1967795889521732, guid: 51d07e42c7973dc4c8deb8edbe408255, type: 2}
+  - {fileID: 1998976293539550, guid: 156633e38eaec304cb0083a6558267e9, type: 2}
   RareEnemyList:
   - {fileID: 1967795889521732, guid: 51d07e42c7973dc4c8deb8edbe408255, type: 2}
   BossEnemyList:
