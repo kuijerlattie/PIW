@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: 0f1d939d74cdcf040b3d54bcb6057d76
+timeCreated: 1535137526
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: PUB_Chimney
+    100004: PUB_Door
+    100006: PUB_DoorFrame
+    100008: PUB_DoorHandle
+    100010: PUB_Frame
+    100012: PUB_Roof
+    100014: PUB_RoofFrame
+    100016: PUB_Sign
+    100018: PUB_SignFrame
+    100020: PUB_SignHolder
+    100022: PUB_Window
+    100024: PUB_WindowFrame
+    400000: //RootNode
+    400002: PUB_Chimney
+    400004: PUB_Door
+    400006: PUB_DoorFrame
+    400008: PUB_DoorHandle
+    400010: PUB_Frame
+    400012: PUB_Roof
+    400014: PUB_RoofFrame
+    400016: PUB_Sign
+    400018: PUB_SignFrame
+    400020: PUB_SignHolder
+    400022: PUB_Window
+    400024: PUB_WindowFrame
+    2100000: lambert1
+    2100002: House_Final_phong1
+    2100004: lambert5
+    2300000: //RootNode
+    2300002: PUB_Chimney
+    2300004: PUB_Door
+    2300006: PUB_DoorFrame
+    2300008: PUB_DoorHandle
+    2300010: PUB_Frame
+    2300012: PUB_Roof
+    2300014: PUB_RoofFrame
+    2300016: PUB_Sign
+    2300018: PUB_SignFrame
+    2300020: PUB_SignHolder
+    2300022: PUB_Window
+    2300024: PUB_WindowFrame
+    3300000: //RootNode
+    3300002: PUB_Chimney
+    3300004: PUB_Door
+    3300006: PUB_DoorFrame
+    3300008: PUB_DoorHandle
+    3300010: PUB_Frame
+    3300012: PUB_Roof
+    3300014: PUB_RoofFrame
+    3300016: PUB_Sign
+    3300018: PUB_SignFrame
+    3300020: PUB_SignHolder
+    3300022: PUB_Window
+    3300024: PUB_WindowFrame
+    4300000: PUB
+    4300002: PUB_Door
+    4300004: PUB_DoorFrame
+    4300006: PUB_DoorHandle
+    4300008: PUB_Chimney
+    4300010: PUB_Roof
+    4300012: PUB_Frame
+    4300014: PUB_Window
+    4300016: PUB_WindowFrame
+    4300018: PUB_RoofFrame
+    4300020: PUB_SignFrame
+    4300022: PUB_Sign
+    4300024: PUB_SignHolder
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
