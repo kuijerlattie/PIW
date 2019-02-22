@@ -54,19 +54,19 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\FMODMigrationUtil.cs" />
-     <Compile Include="Assets\RealToon\Editor\RealToonShaderGUI.cs" />
-     <Compile Include="Assets\RealToon\Editor\RealToonShaderGUI_Lite.cs" />
+     <Compile Include="Assets\Materials\RealToon\Editor\RealToonShaderGUI.cs" />
+     <Compile Include="Assets\Materials\RealToon\Editor\RealToonShaderGUI_Lite.cs" />
+     <Compile Include="Assets\Materials\ShadersReady\ToonShader\Editor\ToonBumpDissolveEditor.cs" />
+     <Compile Include="Assets\Materials\ShadersReady\ToonShader\Editor\ToonBumpEditor.cs" />
+     <Compile Include="Assets\Materials\ShadersReady\ToonShader\Editor\ToonBumpMultiTextureEditor.cs" />
+     <Compile Include="Assets\Materials\ShadersReady\ToonShader\Editor\ToonCrystalEditor.cs" />
+     <Compile Include="Assets\Materials\ShadersReady\ToonShader\Editor\ToonDiffuseDissolveEditor.cs" />
+     <Compile Include="Assets\Materials\ShadersReady\ToonShader\Editor\ToonDiffuseEditor.cs" />
+     <Compile Include="Assets\Materials\ShadersReady\ToonShader\Editor\ToonDiffuseMultiTextureEditor.cs" />
+     <Compile Include="Assets\Materials\ShadersReady\ToonShader\Editor\ToonGrassEditor.cs" />
      <Compile Include="Assets\ResonanceAudio\Editor\FmodResonanceAudioRoomEditor.cs" />
      <Compile Include="Assets\Scripts\Editor\CalculateNavigation.cs" />
      <Compile Include="Assets\Scripts\Editor\ResetPlayerProgress.cs" />
-     <Compile Include="Assets\ShadersReady\ToonShader\Editor\ToonBumpDissolveEditor.cs" />
-     <Compile Include="Assets\ShadersReady\ToonShader\Editor\ToonBumpEditor.cs" />
-     <Compile Include="Assets\ShadersReady\ToonShader\Editor\ToonBumpMultiTextureEditor.cs" />
-     <Compile Include="Assets\ShadersReady\ToonShader\Editor\ToonCrystalEditor.cs" />
-     <Compile Include="Assets\ShadersReady\ToonShader\Editor\ToonDiffuseDissolveEditor.cs" />
-     <Compile Include="Assets\ShadersReady\ToonShader\Editor\ToonDiffuseEditor.cs" />
-     <Compile Include="Assets\ShadersReady\ToonShader\Editor\ToonDiffuseMultiTextureEditor.cs" />
-     <Compile Include="Assets\ShadersReady\ToonShader\Editor\ToonGrassEditor.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>E:/PIWOfficial/PIW/PaperInfinityWars/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

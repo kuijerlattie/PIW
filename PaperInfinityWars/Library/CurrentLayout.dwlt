@@ -106,8 +106,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 579, y: 471}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 581, y: 471}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
   controlID: 63
 --- !u!114 &6
@@ -255,8 +255,8 @@ MonoBehaviour:
     y: 0
     width: 389
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -288,14 +288,14 @@ MonoBehaviour:
     height: 655
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 16072.973296956006
+  lastFramingTime: 4753.421889685203
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -23.773813, y: 5.383936, z: 30.153458}
+    m_Target: {x: 2.72814, y: 15.296888, z: -3.4591246}
     speed: 2
-    m_Value: {x: -23.773813, y: 5.383936, z: 30.153458}
+    m_Value: {x: 2.72814, y: 15.296888, z: -3.4591246}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -323,13 +323,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.17593312, y: 0.07376485, z: -0.013220342, w: -0.98154545}
+    m_Target: {x: 0.06909169, y: 0.07564797, z: -0.005255591, w: 0.99472415}
     speed: 2
-    m_Value: {x: -0.17593312, y: 0.07376485, z: -0.013220342, w: -0.98154545}
+    m_Value: {x: 0.06909169, y: 0.07564797, z: -0.005255591, w: 0.99472415}
   m_Size:
-    m_Target: 40.010372
+    m_Target: 16.976824
     speed: 2
-    m_Value: 40.010372
+    m_Value: 16.976824
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -446,21 +446,21 @@ MonoBehaviour:
     height: 655
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 2210}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 40e1e9ff4ed3fffff0d3ffffb0d6fffff4daffffa2dbffff8edcffffbedfffff0ce1ffffcee5ffffd0e5ffff34e6ffff36e6ffff56e7ffff80e7ffffe8e7ffff0ee8ffff18e9ffff22e9ffff18edffff0cf1ffff86f2ffffdaf4ffff04f6ffff08f6ffff0ef6ffff22f6ffff32f6ffff52f6ffff54f6ffffa2f6ffffb2f6ffffe0f6ffffeaf7ffff8cf8ffff02faffff58faffffe6fbffff000000001819000044190000221c00000a1e0000781e0000602100008021000060220000022400006e240000
+    m_ExpandedIDs: 38d3f3ff5691f8ff0cabfaff10abfaff1eabfaff20abfaff22abfaff32abfaff4aabfaff36b8faff50c6faff54c6faff5ac6faff74c6faff84c6faff96c6faff0ccafaff10cafaff16cafaff30cafaff40cafaff54cafaffcecdfaffd0cdfaff92d2faff96d2faff9cd2faff9ed2faffa2d2faffa8d2faffbcd2faffccd2faffead2faff9cddfaffa0ddfaffa6ddfaffbaddfaffcaddfaffeaddfaffd6e2faffe4e2faffe8e2faffeee2fafff0e2fafff4e2fafffae2faff14e3faff24e3faff36e3faff5ce3faff5abffbfff6c6fbff46d8fbfff8d9fbffb6defbffbce1fbffd451feff76deffffc2e7ffffe6fbffff00000000a21e00009820000016290000822b0000e0d5000014d7000036d700007cdb0000e4db000018dc00009cdd0000a0dd0000b8dd0000e4dd0000fcdd0000d2de000046df0000b0e000002ee10000b6e100001ae30000a2e30000e8e300000ce4000006e5000046e6000096e60000eee60000f2e6000076e700007ae9000098e90000d0e900004eea000066ea000082ea0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Point Light
-      m_OriginalName: Point Light
+      m_Name: Cube (2)
+      m_OriginalName: Cube (2)
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -2340952
+      m_UserData: -349378
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -600,7 +600,7 @@ MonoBehaviour:
     height: 250
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: clothes
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -611,20 +611,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials/Shader/HeadPiece
+    - Assets/Scenes/DevelopScene
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials/Shader/HeadPiece
+  - Assets/Scenes/DevelopScene
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\PIWOfficial\PIW\PaperInfinityWars
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 279}
-    m_SelectedIDs: 62160000
-    m_LastClickedID: 5730
-    m_ExpandedIDs: 00000000360b0000600c0000440d0000500e00006e0e0000a60e0000040f0000ba0f0000c40f0000061000002810000030100000be1000005411000058110000de110000f41200004c130000ba140000221500006c150000d01500009e160000a6160000d6160000d417000004180000a2540000a4540000405600009656000000ca9a3b
+    scrollPos: {x: 0, y: 187}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000600b0000740b0000dc0b0000ce0c0000e00d0000420f0000800f0000e40f00004c100000421100004e1100005e11000090110000da110000e4110000b812000072130000d21500005e16000060160000cc18000094190000741a00009a1a0000ce1a00003e1c0000861c00007e5800008058000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -652,7 +652,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000360b0000600c0000440d0000500e00006e0e0000a60e0000040f0000ba0f0000c40f0000061000002810000030100000be1000005411000058110000de110000f41200004c130000ba140000221500006c150000d01500009e160000a6160000d616000004180000a2540000a4540000
+    m_ExpandedIDs: 00000000600b0000ce0c0000d40c0000e00d0000420f0000800f0000e40f00004c100000421100004e11000090110000da110000e4110000921200003a1300007213000056140000d21500005e1600006016000028180000cc1800002219000094190000741a00009a1a0000ce1a00003e1c0000861c00007e58000080580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
