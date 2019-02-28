@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/DevelopScene/fantasycombat1.unity
+- path: Assets/Scenes/DevelopScene/fantasyhub1.unity
   isLoaded: 1
   isActive: 1
