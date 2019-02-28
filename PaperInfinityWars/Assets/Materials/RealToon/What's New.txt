@@ -1,0 +1,18 @@
+RealToon V5.1.2 Update (February 2019)
+=====================================
+[New]
+
+- Metallic (Reflection) [New Option/Feature]
+	* For metallic look.
+	
+	Note:
+	* If it's too bright, just adjust the main color.
+	* Metallic is dark color.
+
+- RealToon LWRP
+	* RealToon Lightweight Render Pipeline or LWRP version.
+	* Please read "Please read before you unpack or import.txt" for more info.
+
+
+[Other Notes]
+*If you encounter some problems just report or contact by email.

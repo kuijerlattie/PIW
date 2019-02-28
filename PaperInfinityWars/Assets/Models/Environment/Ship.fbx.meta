@@ -1,0 +1,224 @@
+fileFormatVersion: 2
+guid: f4452d381639fa54cbc342e7a5872a4e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Ship_Barrier
+    100004: Ship_BarrierPoles
+    100006: Ship_Cabinet
+    100008: Ship_CabinetRoof
+    100010: Ship_CabinetWindowa
+    100012: Ship_CabinetWindowMuntin
+    100014: Ship_Cannon
+    100016: Ship_CannonHolder
+    100018: Ship_Door
+    100020: Ship_FigureHead
+    100022: Ship_Fosicle
+    100024: Ship_Ladder
+    100026: Ship_Mast
+    100028: Ship_MastSteelFlagHolder
+    100030: Ship_Outline
+    100032: Ship_Sail
+    100034: Ship_SailSide
+    100036: Ship_ShroudHolder
+    100038: Ship_Shrouds
+    100040: Ship_SteeringWheel
+    100042: Ship_SteeringWheelDecoration
+    100044: Ship_WireMastHolder
+    100046: Ship_WoodenPlanks
+    100048: ShipGround
+    100050: Shrip_ShroudHolderPanel
+    400000: //RootNode
+    400002: Ship_Barrier
+    400004: Ship_BarrierPoles
+    400006: Ship_Cabinet
+    400008: Ship_CabinetRoof
+    400010: Ship_CabinetWindowa
+    400012: Ship_CabinetWindowMuntin
+    400014: Ship_Cannon
+    400016: Ship_CannonHolder
+    400018: Ship_Door
+    400020: Ship_FigureHead
+    400022: Ship_Fosicle
+    400024: Ship_Ladder
+    400026: Ship_Mast
+    400028: Ship_MastSteelFlagHolder
+    400030: Ship_Outline
+    400032: Ship_Sail
+    400034: Ship_SailSide
+    400036: Ship_ShroudHolder
+    400038: Ship_Shrouds
+    400040: Ship_SteeringWheel
+    400042: Ship_SteeringWheelDecoration
+    400044: Ship_WireMastHolder
+    400046: Ship_WoodenPlanks
+    400048: ShipGround
+    400050: Shrip_ShroudHolderPanel
+    2100000: lambert1
+    2100002: lambert4
+    2100004: lambert5
+    2100006: lambert2
+    2300000: //RootNode
+    2300002: Ship_Barrier
+    2300004: Ship_BarrierPoles
+    2300006: Ship_Cabinet
+    2300008: Ship_CabinetRoof
+    2300010: Ship_CabinetWindowa
+    2300012: Ship_CabinetWindowMuntin
+    2300014: Ship_Cannon
+    2300016: Ship_CannonHolder
+    2300018: Ship_Door
+    2300020: Ship_FigureHead
+    2300022: Ship_Fosicle
+    2300024: Ship_Ladder
+    2300026: Ship_Mast
+    2300028: Ship_MastSteelFlagHolder
+    2300030: Ship_Outline
+    2300032: Ship_Sail
+    2300034: Ship_SailSide
+    2300036: Ship_ShroudHolder
+    2300038: Ship_Shrouds
+    2300040: Ship_SteeringWheel
+    2300042: Ship_SteeringWheelDecoration
+    2300044: Ship_WireMastHolder
+    2300046: Ship_WoodenPlanks
+    2300048: ShipGround
+    2300050: Shrip_ShroudHolderPanel
+    3300000: //RootNode
+    3300002: Ship_Barrier
+    3300004: Ship_BarrierPoles
+    3300006: Ship_Cabinet
+    3300008: Ship_CabinetRoof
+    3300010: Ship_CabinetWindowa
+    3300012: Ship_CabinetWindowMuntin
+    3300014: Ship_Cannon
+    3300016: Ship_CannonHolder
+    3300018: Ship_Door
+    3300020: Ship_FigureHead
+    3300022: Ship_Fosicle
+    3300024: Ship_Ladder
+    3300026: Ship_Mast
+    3300028: Ship_MastSteelFlagHolder
+    3300030: Ship_Outline
+    3300032: Ship_Sail
+    3300034: Ship_SailSide
+    3300036: Ship_ShroudHolder
+    3300038: Ship_Shrouds
+    3300040: Ship_SteeringWheel
+    3300042: Ship_SteeringWheelDecoration
+    3300044: Ship_WireMastHolder
+    3300046: Ship_WoodenPlanks
+    3300048: ShipGround
+    3300050: Shrip_ShroudHolderPanel
+    4300000: Ship
+    4300002: Ship_SteeringWheel
+    4300004: Ship_SteeringWheelDecoration
+    4300006: ShipGround
+    4300008: Ship_Outline
+    4300010: Ship_WoodenPlanks
+    4300012: Ship_Shrouds
+    4300014: Shrip_ShroudHolderPanel
+    4300016: Ship_ShroudHolder
+    4300018: Ship_FigureHead
+    4300020: Ship_Fosicle
+    4300022: Ship_Barrier
+    4300024: Ship_BarrierPoles
+    4300026: Ship_Mast
+    4300028: Ship_MastSteelFlagHolder
+    4300030: Ship_Sail
+    4300032: Ship_SailSide
+    4300034: Ship_WireMastHolder
+    4300036: Ship_Cabinet
+    4300038: Ship_CabinetWindowa
+    4300040: Ship_CabinetWindowMuntin
+    4300042: Ship_CabinetRoof
+    4300044: Ship_Door
+    4300046: Ship_Ladder
+    4300048: Ship_Cannon
+    4300050: Ship_CannonHolder
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 1e9c08c6a606be54287d3b632fc76c60
+timeCreated: 1536069526
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Priest__Head
+    100004: Priest__Hips
+    100006: Priest__LeftArm
+    100008: Priest__LeftFoot
+    100010: Priest__LeftForeArm
+    100012: Priest__LeftHand
+    100014: Priest__LeftLeg
+    100016: Priest__LeftLegUP
+    100018: Priest__LeftShoulder
+    100020: Priest__Neck
+    100022: Priest__Reference
+    100024: Priest__RightArm
+    100026: Priest__RightFoot
+    100028: Priest__RightForeArm
+    100030: Priest__RightHand
+    100032: Priest__RightLeg
+    100034: Priest__RightLegUP
+    100036: Priest__RightShoulder
+    100038: Priest__Spine
+    100040: Priest__Spine1
+    100042: Priest__Spine2
+    100044: Priest_Body
+    100046: Priest_BottomRobe
+    100048: Priest_TopRobe
+    100050: Sword
+    400000: //RootNode
+    400002: Priest__Head
+    400004: Priest__Hips
+    400006: Priest__LeftArm
+    400008: Priest__LeftFoot
+    400010: Priest__LeftForeArm
+    400012: Priest__LeftHand
+    400014: Priest__LeftLeg
+    400016: Priest__LeftLegUP
+    400018: Priest__LeftShoulder
+    400020: Priest__Neck
+    400022: Priest__Reference
+    400024: Priest__RightArm
+    400026: Priest__RightFoot
+    400028: Priest__RightForeArm
+    400030: Priest__RightHand
+    400032: Priest__RightLeg
+    400034: Priest__RightLegUP
+    400036: Priest__RightShoulder
+    400038: Priest__Spine
+    400040: Priest__Spine1
+    400042: Priest__Spine2
+    400044: Priest_Body
+    400046: Priest_BottomRobe
+    400048: Priest_TopRobe
+    400050: Sword
+    2100000: lambert8
+    2100002: lambert4
+    2100004: lambert6
+    4300000: Priest_Body
+    4300002: Priest_TopRobe
+    4300004: Priest_BottomRobe
+    7400000: Idle
+    9500000: //RootNode
+    13700000: Priest_Body
+    13700002: Priest_BottomRobe
+    13700004: Priest_TopRobe
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 20
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Priest__Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__LeftLegUP
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__RightLegUP
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Priest__Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Priest(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__Reference
+      parentName: Priest(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__Hips
+      parentName: Priest__Reference
+      position: {x: -0, y: 0.5921182, z: 9.703626e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__Spine
+      parentName: Priest__Hips
+      position: {x: -0, y: 0.07, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__Spine1
+      parentName: Priest__Spine
+      position: {x: -0, y: 0.12666664, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__Spine2
+      parentName: Priest__Spine1
+      position: {x: -0, y: 0.16645713, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__LeftShoulder
+      parentName: Priest__Spine2
+      position: {x: -0.019068243, y: 0.012835312, z: 0}
+      rotation: {x: 0, y: -0, z: -0.000006416546, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__LeftArm
+      parentName: Priest__LeftShoulder
+      position: {x: -0.029290577, y: 0.00074173533, z: 0}
+      rotation: {x: 0, y: 0, z: 0.000006416546, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__LeftForeArm
+      parentName: Priest__LeftArm
+      position: {x: -0.19307098, y: 0, z: 0.00000005466265}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__LeftHand
+      parentName: Priest__LeftForeArm
+      position: {x: -0.22022778, y: 0.012464904, z: 0.00000006026627}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__Neck
+      parentName: Priest__Spine2
+      position: {x: -0, y: 0.09128021, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__Head
+      parentName: Priest__Neck
+      position: {x: -0, y: 0.24607573, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__RightShoulder
+      parentName: Priest__Spine2
+      position: {x: 0.0190682, y: 0.012835006, z: 0}
+      rotation: {x: 1, y: 0.000006416546, z: 3.9290016e-22, w: -6.123234e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__RightArm
+      parentName: Priest__RightShoulder
+      position: {x: 0.029290602, y: -0.0007415827, z: 0}
+      rotation: {x: 0, y: 0, z: 0.000006416546, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__RightForeArm
+      parentName: Priest__RightArm
+      position: {x: 0.19307117, y: 0, z: -0.000000023015879}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__RightHand
+      parentName: Priest__RightForeArm
+      position: {x: 0.22022796, y: -0.012464981, z: -0.000000027741546}
+      rotation: {x: 0.00000012044124, y: -0.00000009599337, z: 0.99926245, w: 0.038400874}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sword
+      parentName: Priest__RightHand
+      position: {x: -0.009165676, y: -6.026349e-10, z: 0.0013682089}
+      rotation: {x: 0.6047788, y: 0.3276474, z: 0.6332502, w: 0.3548014}
+      scale: {x: 1.2166667, y: 1.2166667, z: 1.2166667}
+    - name: Priest__LeftLegUP
+      parentName: Priest__Hips
+      position: {x: -0.030303659, y: -0.043701246, z: 0}
+      rotation: {x: -0.0000029783696, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__LeftLeg
+      parentName: Priest__LeftLegUP
+      position: {x: -0.015263958, y: -0.28761306, z: 0.016812477}
+      rotation: {x: 0.0000021451108, y: 0.0000005427387, z: -1.1642346e-12, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__LeftFoot
+      parentName: Priest__LeftLeg
+      position: {x: -0.0006813802, y: -0.24299234, z: -0.018495262}
+      rotation: {x: 0.0000008332588, y: -0.00000054273863, z: 4.5224173e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__RightLegUP
+      parentName: Priest__Hips
+      position: {x: 0.030303702, y: -0.04370121, z: 0}
+      rotation: {x: 1, y: -0, z: 0, w: 0.000004660532}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__RightLeg
+      parentName: Priest__RightLegUP
+      position: {x: 0.015264062, y: 0.28761292, z: -0.01681494}
+      rotation: {x: 0.0000041404605, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest__RightFoot
+      parentName: Priest__RightLeg
+      position: {x: 0.00068114756, y: 0.24299236, z: 0.018495232}
+      rotation: {x: 0.0000005031136, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest_Body
+      parentName: Priest(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest_BottomRobe
+      parentName: Priest_Body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Priest_TopRobe
+      parentName: Priest_Body
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
