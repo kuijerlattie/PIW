@@ -342,22 +342,34 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114262036285927972, guid: 482ae3d98696b3b458434e13d917953a,
+    - target: {fileID: 224364691226164640, guid: 482ae3d98696b3b458434e13d917953a,
         type: 2}
-      propertyPath: mainMenuMusicPath
-      value: event:/Music/MainMenu/MainMenuTheme
-      objectReference: {fileID: 0}
-    - target: {fileID: 114818877935309024, guid: 482ae3d98696b3b458434e13d917953a,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
-      objectReference: {fileID: 0}
-    - target: {fileID: 1173695032734468, guid: 482ae3d98696b3b458434e13d917953a, type: 2}
-      propertyPath: m_IsActive
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1840064638665322, guid: 482ae3d98696b3b458434e13d917953a, type: 2}
-      propertyPath: m_IsActive
+    - target: {fileID: 224364691226164640, guid: 482ae3d98696b3b458434e13d917953a,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224972834944337832, guid: 482ae3d98696b3b458434e13d917953a,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000023882423
+      objectReference: {fileID: 0}
+    - target: {fileID: 224026822333599500, guid: 482ae3d98696b3b458434e13d917953a,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224026822333599500, guid: 482ae3d98696b3b458434e13d917953a,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224026822333599500, guid: 482ae3d98696b3b458434e13d917953a,
+        type: 2}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

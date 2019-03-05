@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ShowUIScript : MonoBehaviour {
@@ -14,13 +15,13 @@ public class ShowUIScript : MonoBehaviour {
         UI.SetActive(false);
         interactIcon.SetActive(false);
         UIActive = false;
+        interactIcon.GetComponent<TextMeshProUGUI>().text = KeyBindingManager.inputKeys["Use"].ToString();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && inRange)
+        if (KeyBindingManager.GetInputDown("Use") && inRange)
         {
-            Debug.Log("f got pressed");
             UI.SetActive(!UI.activeInHierarchy);
             interactIcon.SetActive(!UI.activeInHierarchy);
             UIActive = UI.activeInHierarchy;

@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public CharacterController2D controller;
 
-    float horizontalMove = 0f;
+    public float horizontalMove = 0f;
     bool jump = false;
 
     void OnEnable()
@@ -26,25 +26,43 @@ public class PlayerMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        horizontalMove = Input.GetAxisRaw("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(KeyBindingManager.GetInput("MoveLeft"))
+        {
+            horizontalMove = -1;
+        }
+        if (KeyBindingManager.GetInput("MoveRight"))
+        {
+            horizontalMove = 1;
+        }
+
+        if(KeyBindingManager.GetInputUp("MoveLeft") && !KeyBindingManager.GetInputDown("MoveRight"))
+        {
+            horizontalMove = 0;
+        }
+
+        if (KeyBindingManager.GetInputUp("MoveRight") && !KeyBindingManager.GetInputDown("MoveLeft"))
+        {
+            horizontalMove = 0;
+        }
+
+        if (KeyBindingManager.GetInputDown("Jump"))
         {
             jump = true;
         }
-        if (Input.GetMouseButtonDown(0) && controller.enabled)
+        if (KeyBindingManager.GetInputDown("Attack") && controller.enabled)
         {
             GetComponent<WeaponSlots>().Attack();
         }
-        if (Input.GetMouseButtonDown(1) && controller.enabled)
+        if (KeyBindingManager.GetInputDown("Equipment") && controller.enabled)
         {
             GetComponent<WeaponSlots>().UseEquipment();
         }
-        if (Input.GetKeyDown(KeyCode.Q) && controller.enabled)
+        if (KeyBindingManager.GetInputDown("NextWeapon") && controller.enabled)
         {
             //q scroll weapon back
             GetComponent<WeaponSlots>().NextWeapon();
         }
-        if (Input.GetKeyDown(KeyCode.E) && controller.enabled)
+        if (KeyBindingManager.GetInputDown("PreviousWeapon") && controller.enabled)
         {
             //e to scroll weapon forward
             GetComponent<WeaponSlots>().PreviousWeapon();

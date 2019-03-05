@@ -85,6 +85,7 @@ public class SaveData
 
     //weapon unlocks, only save what IS unlocked
     public Dictionary<int, bool> weaponUnlocks = new Dictionary<int, bool>();
+
 }
 
 [Serializable]
